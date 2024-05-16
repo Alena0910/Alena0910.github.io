@@ -1,0 +1,14 @@
+.routes-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.app-body{
+    height: 100%;
+}

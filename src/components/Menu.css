@@ -1,34 +1,33 @@
 .click-menu {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .menu-button {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 8px;
-  }
-  
-  .options {
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    border: 1px solid #ddd;
-    z-index: 1;
-    padding: 0;
-    list-style-type: none;
-    margin: 0;
-  }
-  
-  .options li {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .options li:hover {
-    background-color: #f1f1f1;
-  }
-  
+  position: relative;
+  display: inline-block;
+}
+
+.menu-button {
+  background-color: #ffffff33;
+  border: none;
+  color:rgb(39, 48, 66);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.options {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.options li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.options li:hover {
+  background-color: #f1f1f1;
+}

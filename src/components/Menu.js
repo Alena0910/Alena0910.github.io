@@ -24,7 +24,7 @@ const Menu = ({ options, onSelect }) => {
   return (
     <div className="click-menu">
       <button className="menu-button" onClick={toggleMenu}>
-        Menu
+        <i className="bi bi-list"/>
       </button>
       {isOpen && (
         <ul className="options">
