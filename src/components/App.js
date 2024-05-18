@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import IssueList from '/src/components/body/IssueList.js';
 import Profile from '/src/components/body/Profile.js';
-import Home from '/src/components/Home.js';
+import Home from '/src/components/body/Home.js';
 import './App.css';
+import IssueList from './body/issueList';
 
 
 class App extends Component{
@@ -16,8 +16,10 @@ class App extends Component{
 				<div className="routes-container">
 					<Routes>
 						<Route path="/" element={<Home/>} />
-						<Route path="/issueList" element={<IssueList/>} />
 						<Route path="/profile" element={<Profile/>} />
+						<Route path="/issue-list" element={<IssueList/>} >
+							<Route path=":id" element={<IssueList/>} />
+						</Route>
 					</Routes>
 				</div>
 				<Footer/>

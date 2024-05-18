@@ -1,12 +1,15 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import './IssueList.css';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { useEffect } from 'react';
+import backgroundImg from '/src/components/body/backgroundImg.jpg';
+import Cards from "./Cards";
+import { Link } from "react-router-dom";
+
 
 function IssueList(){
 
     const [dataFromApi, setDataFromApi] = useState([]);
+
 
     useEffect(() => {
         getPrivateRepositories();
@@ -15,7 +18,7 @@ function IssueList(){
     async function getPrivateRepositories() {
         axios.get('https://api.github.com/repos/Alena0910/Alena0910.github.io/issues', {
             headers: {
-                'Authorization': `token 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`,
+                'Authorization': `token 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`,
             }
         })
         .then((res) => {
@@ -29,17 +32,17 @@ function IssueList(){
     }
 
     return(
-        <div className="articleList">
-            <Link to="/profile">Profile</Link>
-            <div className="article-container">
+        <div className="article-container">
+            <img src={ backgroundImg } className='background-img'></img>
+            <div className="list-container">
                 {dataFromApi.map(d=>(
-                    <div key={d.id} className="articles">
+                    <Link key={d.id} className="articles" to="/issue-list/:id" element={<Cards data={d}/>}>
                         <h3>{d.title}</h3>
                         <p>作者: {d.user.login}</p>
                         <p>創建時間: {d.created_at}</p>
-                        <p>{d.body}</p>
-                    </div>
+                    </Link>
                 ))}
+                <Link to="/" className="home-link">Home</Link>
             </div>
         </div>
     );
