@@ -10,8 +10,8 @@ function Home() {
       <div className='home-content'>
         <div className='home-text'>不用為了天亮去跑<br/>跑下去<br/>天自己會亮<p className='quotation'>-- NewBalance × Papi酱</p></div>
         <div>
-            <Link to="/profile" className='home-link'>profile</Link>
-            <Link to="/issue-list" className='home-link'>issue list</Link>
+            <Link to="/about" className='home-link'>About</Link>
+            <Link to="/issue-list" className='home-link'>Issue list</Link>
         </div>
       </div>
     </div>

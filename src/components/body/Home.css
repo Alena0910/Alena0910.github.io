@@ -6,7 +6,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 1;
-    z-index: 20;
+    z-index: 10;
 }
 
 .home-text{
@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, Helvetica,'Roboto', sans-serif;
+    font-family: "ChenYuluoyan-Thin",Arial, Helvetica,'Roboto', sans-serif;
     margin: 0;
     flex-grow: 1;
 }
@@ -49,7 +49,7 @@
     top: 50%;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica,'Roboto', sans-serif;
+    font-family: "ChenYuluoyan-Thin",Arial, Helvetica,'Roboto', sans-serif;
     margin: 0;
     background-color: rgba(221, 235, 255, 0.496);
     z-index: 1000;
@@ -58,6 +58,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    flex-wrap: wrap;
 }
 
 .quotation{

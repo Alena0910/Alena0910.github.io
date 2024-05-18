@@ -1,9 +1,12 @@
-body {
-    font-family: Arial, Helvetica,'Roboto', sans-serif;
+html, body {
+    font-family: "ChenYuluoyan-Thin",Arial, Helvetica,'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.942);
+    background-color: rgb(0, 0, 0);
+    height:100%;
+    display: flex; /*使物件依序排列*/
+    flex-direction: column; /*使物件垂直排列*/
 }
 
 .row.content {
@@ -19,8 +22,8 @@ body {
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
     .sidenav {
-    height: auto;
-    padding: 15px;
+        height: auto;
+        padding: 15px;
     }
     .row.content {height: auto;} 
 }

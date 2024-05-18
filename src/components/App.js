@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Profile from '/src/components/body/Profile.js';
+import About from '/src/components/body/About.js';
 import Home from '/src/components/body/Home.js';
 import './App.css';
 import IssueList from './body/issueList';
@@ -16,7 +16,7 @@ class App extends Component{
 				<div className="routes-container">
 					<Routes>
 						<Route path="/" element={<Home/>} />
-						<Route path="/profile" element={<Profile/>} />
+						<Route path="/about" element={<About/>} />
 						<Route path="/issue-list" element={<IssueList/>} >
 							<Route path=":id" element={<IssueList/>} />
 						</Route>
