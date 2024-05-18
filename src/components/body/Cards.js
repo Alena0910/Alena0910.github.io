@@ -3,6 +3,9 @@ import { Link, useParams } from "react-router-dom";
 const Cards = (props) => {
     const { data } = props;
     const { CardsId } = useParams();
+
+    console.log("data ", data);
+
     return (
         <div>
             { data.filter((d) => d.id === CardsId).map((d) => (
