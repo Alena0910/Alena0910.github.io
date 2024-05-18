@@ -35,6 +35,7 @@ function IssueList(){
         <div className="article-container">
             <img src={ backgroundImg } className='background-img'></img>
             <div className="list-container">
+                <Link to="/" className="home-link">Home</Link>
                 {dataFromApi.map(d=>(
                     <Link key={d.id} className="articles" to="/issue-list/:id" element={<Cards data={d}/>}>
                         <h3>{d.title}</h3>
@@ -42,7 +43,6 @@ function IssueList(){
                         <p>創建時間: {d.created_at}</p>
                     </Link>
                 ))}
-                <Link to="/" className="home-link">Home</Link>
             </div>
         </div>
     );
