@@ -6,6 +6,7 @@ import About from '/src/components/body/About.js';
 import Home from '/src/components/body/Home.js';
 import './App.css';
 import IssueList from './body/issueList';
+import Cards from './body/Cards';
 
 
 class App extends Component{
@@ -18,7 +19,7 @@ class App extends Component{
 						<Route path="/" element={<Home/>} />
 						<Route path="/about" element={<About/>} />
 						<Route path="/issue-list" element={<IssueList/>} >
-							<Route path="/issue-list/:CardsId" element={<IssueList/>} />
+							<Route path="/issue-list/:CardsId" element={<Cards/>} />
 						</Route>
 					</Routes>
 				</div>
