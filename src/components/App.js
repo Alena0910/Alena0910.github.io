@@ -18,7 +18,7 @@ class App extends Component{
 						<Route path="/" element={<Home/>} />
 						<Route path="/about" element={<About/>} />
 						<Route path="/issue-list" element={<IssueList/>} >
-							<Route path=":id" element={<IssueList/>} />
+							<Route path="/issue-list/:CardsId" element={<IssueList/>} />
 						</Route>
 					</Routes>
 				</div>
