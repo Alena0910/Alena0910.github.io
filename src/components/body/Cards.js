@@ -3,7 +3,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 const Cards = () => {
     const { CardsId } = useParams();
     const { state } = useLocation();
-    const data = state?.d;
+    const data = state?.article;
 
     console.log("data ", data);
 

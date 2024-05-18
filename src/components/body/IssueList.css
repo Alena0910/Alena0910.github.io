@@ -6,7 +6,7 @@
     border-radius: 8px;
     padding: 10px;
     overflow: auto;
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     z-index: 1000;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -65,7 +65,7 @@
 }
 
 
-.home-link{
+.issueList-home-link{
     position: relative;
     margin: 10px;
     color: white;
@@ -79,4 +79,6 @@
     padding: 10px;
     border-radius: 8px;
     background-color: rgba(130, 194, 255, 0.497);
+    display: flex;
+    margin-top: 100px;
 }

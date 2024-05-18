@@ -35,10 +35,15 @@ function IssueList(){
         <div className="article-container">
             <img src={ backgroundImg } className='background-img'></img>
             <div className="list-container">
-                <Link to="/" className="home-link">Home</Link>
+                <Link to="/" className="issueList-home-link">Home</Link>
                 <div>
                     {dataFromApi.map(d=>(
-                        <Link key={d.id} className="articles" to={`/issue-list/${d.id}`} state={{d}}>
+                        <Link 
+                            key={d.id} 
+                            className="articles" 
+                            to={`/issue-list/${d.id}`} 
+                            state={{ article: d }}
+                        >
                             <h3>{d.title}</h3>
                             <p>作者: {d.user.login}</p>
                             <p>創建時間: {d.created_at}</p>
