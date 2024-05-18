@@ -38,7 +38,7 @@ function IssueList(){
                 <Link to="/" className="home-link">Home</Link>
                 <div>
                     {dataFromApi.map(d=>(
-                        <Link key={d.id} className="articles" to={`/issue-list/${d.id}`} element={<Cards data={d}/>}>
+                        <Link key={d.id} className="articles" to={`/issue-list/${d.id}`} state={{d}}>
                             <h3>{d.title}</h3>
                             <p>作者: {d.user.login}</p>
                             <p>創建時間: {d.created_at}</p>

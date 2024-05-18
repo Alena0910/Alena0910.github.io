@@ -1,8 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
-const Cards = (props) => {
-    const { data } = props;
+const Cards = () => {
     const { CardsId } = useParams();
+    const { state } = useLocation();
+    const data = state?.d;
 
     console.log("data ", data);
 
