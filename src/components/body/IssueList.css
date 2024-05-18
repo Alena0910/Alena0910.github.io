@@ -58,6 +58,12 @@
     overflow-y: scroll; 
 }
 
+.list-container:hover{
+    -ms-overflow-style: auto; /* for Internet Explorer, Edge */
+    scrollbar-width: thin; /* for Firefox */
+    overflow-x: hidden;
+}
+
 
 .home-link{
     position: relative;
