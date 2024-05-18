@@ -15,6 +15,8 @@ module.exports = {
 			template: './index.html'
 		}),
 	],
+
+	publicPath: '/',
 	
 	module: {
 		rules: [
