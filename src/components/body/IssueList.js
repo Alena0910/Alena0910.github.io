@@ -36,13 +36,16 @@ function IssueList(){
             <img src={ backgroundImg } className='background-img'></img>
             <div className="list-container">
                 <Link to="/" className="home-link">Home</Link>
-                {dataFromApi.map(d=>(
-                    <Link key={d.id} className="articles" to="/issue-list/:id" element={<Cards data={d}/>}>
-                        <h3>{d.title}</h3>
-                        <p>作者: {d.user.login}</p>
-                        <p>創建時間: {d.created_at}</p>
-                    </Link>
-                ))}
+                <div>
+                    {dataFromApi.map(d=>(
+                        <Link key={d.id} className="articles" to={`/issue-list/${d.id}`} component={<Cards data={d}/>}>
+                            <h3>{d.title}</h3>
+                            <p>作者: {d.user.login}</p>
+                            <p>創建時間: {d.created_at}</p>
+                            <p>測試-文章id: {d.id}</p>
+                        </Link>
+                    ))}
+                </div>
             </div>
         </div>
     );
