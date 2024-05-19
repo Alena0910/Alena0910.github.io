@@ -74,12 +74,8 @@
     font-weight: 600;
     z-index: 9999;
     align-items: center;
-    justify-content: center;
     font-family: Arial, Helvetica,'Roboto', sans-serif;
     padding: 10px;
     border-radius: 8px;
     background-color: rgba(130, 194, 255, 0.497);
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 80px;
 }
