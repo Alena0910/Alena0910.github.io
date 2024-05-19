@@ -33,7 +33,7 @@ const Sidebar = () => {
                 return (
                   <li key={index} className={item.cName}>
                     <Link to={item.path}>
-                      {item.icon} &ensp;
+                      &ensp; {item.icon} &ensp;
                       <span>{item.title}</span>
                     </Link>
                   </li>

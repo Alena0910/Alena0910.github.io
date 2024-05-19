@@ -3,13 +3,14 @@ import { Link, useLocation, useParams } from "react-router-dom";
 const Cards = () => {
     const { CardsId } = useParams();
     const { state } = useLocation();
-    const data = state?.article;
+    const data = state?.article || [];
 
     console.log("data ", data);
+    console.log("CardsId ", CardsId);
 
     return (
         <div>
-            { data.filter((d) => d.id === CardsId).map((d) => (
+            { data.filter((d) => d.id === parseInt(CardsId, 10)).map((d) => (
                     <div key={d.id} className="articles">
                         <h3>{d.title}</h3>
                         <p>作者: {d.user.login}</p>

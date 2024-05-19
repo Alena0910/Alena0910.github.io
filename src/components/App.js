@@ -4,9 +4,9 @@ import Header from './Header';
 import Footer from './Footer';
 import About from '/src/components/body/About.js';
 import Home from '/src/components/body/Home.js';
-import './App.css';
 import IssueList from './body/issueList';
 import Cards from './body/Cards';
+import './App.css';
 
 
 class App extends Component{
@@ -18,9 +18,8 @@ class App extends Component{
 					<Routes>
 						<Route path="/" element={<Home/>} />
 						<Route path="/about" element={<About/>} />
-						<Route path="/issue-list" element={<IssueList/>} >
-							<Route path="/issue-list/:CardsId" element={<Cards/>} />
-						</Route>
+						<Route path="/issue-list" element={<IssueList/>} />
+						<Route path="/issue-list/:CardsId" element={<Cards/>} />
 					</Routes>
 				</div>
 				<Footer/>

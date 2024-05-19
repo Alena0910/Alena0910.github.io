@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import './IssueList.css';
 import axios from 'axios';
 import backgroundImg from '/src/components/body/backgroundImg.jpg';
-import Cards from "./Cards";
 import { Link } from "react-router-dom";
 
 
