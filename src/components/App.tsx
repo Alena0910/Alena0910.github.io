@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import Header from './Header';
 import Footer from './Footer';
-import About from '/src/components/body/About.js';
-import Home from '/src/components/body/Home.js';
-import IssueList from './body/issueList';
+import About from './body/About';
+import Home from './body/Home';
+import IssueList from './body/IssueList';
 import Cards from './body/Cards';
 import './App.css';
 

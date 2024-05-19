@@ -3,6 +3,13 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 
+interface SidebarData {
+    title: string,
+    path: string,
+    icon: JSX.Element,
+    cName: string
+}[]
+
 export const SidebarData = [
     {
         title: 'Home',

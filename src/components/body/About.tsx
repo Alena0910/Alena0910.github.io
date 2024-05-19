@@ -1,10 +1,10 @@
-import React from 'react';
 import './About.css';
 import { Link } from 'react-router-dom';
-import picture from './/image/dailyfile.jpg';
-import backgroundImg from '/src/components/body/backgroundImg.jpg';
 
-function About() {
+const picture = require('./image/dailylife.jpg').default;
+const backgroundImg = require('./backgroundImg.jpg').default;
+
+export default function About(){
   return (
     <div className='about-container'>
       <img src={ backgroundImg } className='about-background-img'></img>
@@ -31,5 +31,3 @@ function About() {
     </div>
   );
 }
-
-export default About;
