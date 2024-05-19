@@ -15,6 +15,7 @@ html {
     padding: 10px;
     border-radius: 8px;
     background-color: rgba(130, 194, 255, 0.497);
+    display: inline-block;
 }
 
 .cards-background-img{
@@ -25,30 +26,45 @@ html {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 1;
-    z-index: -1;
+    z-index: 10;
     position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .cards-articles{
+    color: rgb(17, 17, 26);
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    overflow: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    max-height: 500px;
+    min-width: 70%;
+    max-width: 85%;
+
+    justify-content: center;
+    font-family: Arial, Helvetica,'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgba(221, 235, 255, 0.496);
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(26, 27, 28, 0.364);
-    color: white;
-    margin: 20px;
-    border-radius: 8px;
-    padding: 10px;
-    width: 100%;
-    text-decoration: none;
-    position: relative;
-    z-index: 1000;
+    flex-wrap: wrap;
 }
 
 .cards{
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
     justify-content: center;
     align-items: center;
-    min-width: 600px;
-    max-width: 700px;
+    height: 100vh;
+    font-family: Arial, Helvetica, 'Roboto', sans-serif;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

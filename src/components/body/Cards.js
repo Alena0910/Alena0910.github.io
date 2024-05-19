@@ -15,12 +15,13 @@ const Cards = () => {
                 <h3>{data.title}</h3>
                 <p>作者: {data.user.login}</p>
                 <p>創建時間: {data.created_at}</p>
-                <p>標籤: {data.labels.name}</p>
                 <p>文章ID: { CardsId }</p>
                 <p>{data.body}</p>
             </div>
-            <Link to="/" className="cards-link">Home</Link>
-            <Link to="/issue-list" className="cards-link">Back to Issue List</Link>
+            <div className="links-container">
+                <Link to="/" className="cards-link">Home</Link>
+                <Link to="/issue-list" className="cards-link">Back to Issue List</Link>
+            </div>
         </div>
     )
 }

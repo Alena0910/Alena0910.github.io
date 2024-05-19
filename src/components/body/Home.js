@@ -9,7 +9,7 @@ function Home() {
       <img src={ backgroundImg } className='home-img'></img>
       <div className='home-content'>
         <div className='home-text'>不用為了天亮去跑<br/>跑下去<br/>天自己會亮<p className='quotation'>-- NewBalance × Papi酱</p></div>
-        <div>
+        <div className='home-links-container'>
             <Link to="/about" className='home-link'>About</Link>
             <Link to="/issue-list" className='home-link'>Issue list</Link>
         </div>
