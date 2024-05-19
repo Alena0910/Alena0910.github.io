@@ -1,5 +1,4 @@
 import { Link, useLocation, useParams } from "react-router-dom";
-import backgroundImg from '/src/components/body/backgroundImg.jpg';
 import './Cards.css';
 
 const Cards = () => {
@@ -9,13 +8,9 @@ const Cards = () => {
 
     console.log("data ", data);
 
-    if (!data) {
-        return <div>Loading...</div>;
-    }
-
     return (
         <div className="cards">
-            <img src={ backgroundImg } className='cards-background-img'></img>
+            <img src="https://alena0910.github.io/images/backgroundImg.jpg" className='cards-background-img'></img>
             <div className="cards-articles">
                 <h3>{data.title}</h3>
                 <p>作者: {data.user.login}</p>
