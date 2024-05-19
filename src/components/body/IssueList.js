@@ -46,7 +46,6 @@ function IssueList(){
                             <h3>{d.title}</h3>
                             <p>作者: {d.user.login}</p>
                             <p>創建時間: {d.created_at}</p>
-                            <p>測試-文章id: {d.id}</p>
                         </Link>
                     ))}
                 </div>
