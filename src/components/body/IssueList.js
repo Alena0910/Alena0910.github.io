@@ -32,7 +32,7 @@ function IssueList(){
 
     return(
         <div className="article-container">
-            <img src={ backgroundImg } className='background-img'></img>
+            <img src={ backgroundImg } className='issue-background-img'></img>
             <div className="list-container">
                 <Link to="/" className="issueList-home-link">Home</Link>
                 <div>

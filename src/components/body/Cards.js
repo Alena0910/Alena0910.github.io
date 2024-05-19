@@ -14,8 +14,8 @@ const Cards = () => {
     }
 
     return (
-        <div>
-            <img src={ backgroundImg } className='background-img'></img>
+        <div className="cards">
+            <img src={ backgroundImg } className='cards-background-img'></img>
             <div className="cards-articles">
                 <h3>{data.title}</h3>
                 <p>作者: {data.user.login}</p>
@@ -25,7 +25,7 @@ const Cards = () => {
                 <p>{data.body}</p>
             </div>
             <Link to="/" className="cards-link">Home</Link>
-            <Link to="/issue-list" className="cards-link">Back to issue list</Link>
+            <Link to="/issue-list" className="cards-link">Back to Issue List</Link>
         </div>
     )
 }

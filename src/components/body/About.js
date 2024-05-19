@@ -7,7 +7,7 @@ import backgroundImg from '/src/components/body/backgroundImg.jpg';
 function About() {
   return (
     <div className='about-container'>
-      <img src={ backgroundImg } className='background-img'></img>
+      <img src={ backgroundImg } className='about-background-img'></img>
       <div className='about-content'>
             <div className='about-picture'>
                 <img src={ picture } alt="picture" width={'200px'}></img>
