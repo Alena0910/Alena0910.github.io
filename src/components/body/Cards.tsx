@@ -6,8 +6,6 @@ const Cards = () => {
     const { state } = useLocation();
     const data = state?.article || {};
 
-    console.log("data ", data);
-
     return (
         <div className="cards">
             <img src="https://alena0910.github.io/images/backgroundImg.jpg" className='cards-background-img'></img>

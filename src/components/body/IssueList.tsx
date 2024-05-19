@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from "react";
 import './IssueList.css';
 import axios from 'axios';
-import backgroundImg from '/src/components/body/backgroundImg.jpg';
 import { Link } from "react-router-dom";
+
+const backgroundImg = require('./backgroundImg.jpg').default;
+
+interface Issue {
+    id: number;
+    title: string;
+    user: {
+        login: string;
+    };
+    created_at: string;
+}
 
 
 function IssueList(){
 
-    const [dataFromApi, setDataFromApi] = useState([]);
+    const [dataFromApi, setDataFromApi] = useState<Issue[]>([]);
 
 
     useEffect(() => {
@@ -15,19 +25,18 @@ function IssueList(){
     }, []);
 
     async function getPrivateRepositories() {
-        axios.get('https://api.github.com/repos/Alena0910/Alena0910.github.io/issues', {
-            headers: {
-                'Authorization': `token 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`,
-            }
-        })
-        .then((res) => {
-            console.log("newData", res.data);
-            setDataFromApi(res.data);
-        })
-        .catch((error) => {
-            alert('Error:', error);
+        try{
+            const res = axios.get<Issue[]>('https://api.github.com/repos/Alena0910/Alena0910.github.io/issues', {
+                headers: {
+                    'Authorization': `token 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`,
+                }
+            })
+            setDataFromApi((await res).data);
+        }
+        catch(error){
+            alert('Error: ' + error);
             console.error('Error:', error);
-        });
+        }
     }
 
     return(

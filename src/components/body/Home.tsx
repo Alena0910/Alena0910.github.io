@@ -1,7 +1,8 @@
 import React from 'react';
 import './Home.css';
-import backgroundImg from '/src/components/body/backgroundImg.jpg';
 import { Link } from 'react-router-dom';
+
+const backgroundImg = require('./backgroundImg.jpg').default;
 
 function Home() {
   return (

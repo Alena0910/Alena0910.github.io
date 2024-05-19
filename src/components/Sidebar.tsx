@@ -3,11 +3,20 @@ import './Sidebar.css';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+
 import { SidebarData } from './SidebarData';
 
 
+interface SidebarItem {
+  title: string;
+  path: string;
+  icon: JSX.Element;
+  cName: string;
+}
+
+
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false); // Sidebar 的狀態
+  const [isOpen, setIsOpen] = useState<boolean>(false); // Sidebar 的狀態
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -29,7 +38,7 @@ const Sidebar = () => {
               </Link>
             </li>
             {
-              SidebarData.map((item, index) => {
+              SidebarData.map((item: SidebarItem, index : number) => {
                 return (
                   <li key={index} className={item.cName}>
                     <Link to={item.path}>
