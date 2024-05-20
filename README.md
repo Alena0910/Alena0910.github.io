@@ -7,7 +7,7 @@
 #### 主頁側欄
 ![image](https://github.com/Alena0910/Alena0910.github.io/assets/116648694/dcc6300e-53f5-44a6-978e-768381146011)
 ### 個人自我介紹 ( About )
-![image](https://github.com/Alena0910/Alena0910.github.io/assets/116648694/31eb8c71-0e72-4259-9294-46b83aa52b20)
+![image](https://github.com/Alena0910/Alena0910.github.io/assets/116648694/68b7c0ab-2bd0-4903-83bb-9ffc87add0b8)
 ### 文章列表 ( Issue List )
 #### 列表
 ![image](https://github.com/Alena0910/Alena0910.github.io/assets/116648694/015e1b7b-acd8-4d0a-8a6c-59ee0e801025)
