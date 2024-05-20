@@ -26,11 +26,7 @@ function IssueList(){
 
     async function getPrivateRepositories() {
         try{
-            const res = axios.get<Issue[]>('https://api.github.com/repos/Alena0910/Alena0910.github.io/issues', {
-                headers: {
-                    'Authorization': `token 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`,
-                }
-            })
+            const res = axios.get<Issue[]>('https://api.github.com/repos/Alena0910/Alena0910.github.io/issues')
             setDataFromApi((await res).data);
         }
         catch(error){
