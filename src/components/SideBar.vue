@@ -1,6 +1,14 @@
 <template>
   <div>
-    <ToggleMenu v-if="isMenuOpen && width < 768" v-model="currentContent" />
+    <ToggleMenu
+      v-if="isMenuOpen && width < 768"
+      :currentContent="currentContent"
+      :isDark="isDark"
+      :isMenuOpen="isMenuOpen"
+      @update:currentContent="(content) => (currentContent = content)"
+      @update:isDark="(dark) => emit('update:isDark', dark)"
+      @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
+    />
     <div class="w-fit flex flex-row gap-4">
       <div
         class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-dvh px-4 py-8"
@@ -108,7 +116,8 @@ import ContactMe from "@/src/components/contact/ContactMe.vue";
 import ProjectMenu from "@/src/components/project/ProjectMenu.vue";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
 
-const isMenuOpen = defineModel();
+const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
+const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
 
 const width = ref<number>(0);
 const height = ref<number>(0);
@@ -116,7 +125,6 @@ const height = ref<number>(0);
 const updateDimensions = () => {
   width.value = window.innerWidth;
   height.value = window.innerHeight;
-  console.log(width.value, height.value);
 };
 
 onMounted(() => {

@@ -20,6 +20,7 @@
     "shadcn-nuxt": "^0.11.3",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "universal-cookie": "^7.2.2",
     "vue": "latest",
     "vue-router": "latest",
     "vuex": "^4.1.0"

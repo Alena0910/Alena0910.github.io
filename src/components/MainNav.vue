@@ -1,10 +1,12 @@
 <template>
   <div
-    class="container mx-auto flex flex-col items-center py-4 border-b border-accent mb-4"
+    class="container mx-auto flex flex-col items-center py-4 border-b border-accent mb-4 w-full"
   >
-    <div class="container mx-auto flex justify-between items-center py-4">
+    <div
+      class="container mx-auto flex justify-between items-center py-4 justify-between gap-x-4"
+    >
       <div
-        class="flex items-center py-4 text-lg font-medium text-muted-foreground gap-x-4"
+        class="flex items-center py-4 text-lg font-medium text-muted-foreground"
       >
         <NuxtLink to="/">
           <span class="text-[40px] font-bold">Blog</span>
@@ -13,8 +15,9 @@
       <div class="flex items-center gap-x-4">
         <Switch
           :checked="isDark"
-          @update:checked="toggleTheme"
+          @update:checked="$emit('update:isDark', !isDark)"
           class="flex items-center align-middle"
+          v-if="width >= 768"
         >
           <template
             #thumb
@@ -27,7 +30,7 @@
         <div
           v-if="width < 768"
           class="cursor-pointer rounded-md border-2 p-2"
-          @click="toggleMenu"
+          @click.stop="$emit('update:isMenuOpen', !isMenuOpen)"
         >
           <AlignJustify />
         </div>
@@ -48,7 +51,6 @@ const height = ref<number>(0);
 const updateDimensions = () => {
   width.value = window.innerWidth;
   height.value = window.innerHeight;
-  console.log(width.value, height.value);
 };
 
 onMounted(() => {
@@ -60,14 +62,6 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", updateDimensions);
 });
 
-const isMenuOpen = defineModel();
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
-
-const isDark = ref(false);
-const toggleTheme = () => {
-  isDark.value = !isDark.value;
-  document.documentElement.classList.toggle("dark");
-};
+defineProps(["isMenuOpen", "isDark"]);
+defineEmits(["update:isMenuOpen", "update:isDark"]);
 </script>
