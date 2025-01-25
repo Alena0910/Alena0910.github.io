@@ -1,0 +1,32 @@
+[
+  {
+    "name": "About Me",
+    "hasSubItem": false
+  },
+  {
+    "name": "Article",
+    "hasSubItem": true,
+    "subItems": [
+      {
+        "name": "CTF Writeup",
+        "hasSubItem": true,
+        "subItems": [
+          {
+            "name": "Web",
+            "hasSubItem": true,
+            "subItems": [
+              { "name": "Ave Mujica", "hasSubItem": false },
+              { "name": "Web-2", "hasSubItem": false },
+              { "name": "Web-3", "hasSubItem": false }
+            ]
+          },
+          { "name": "Crypto", "hasSubItem": false },
+          { "name": "Misc", "hasSubItem": false }
+        ]
+      },
+      { "name": "Project-2", "hasSubItem": false },
+      { "name": "Project-3", "hasSubItem": false }
+    ]
+  },
+  { "name": "Contact Me", "hasSubItem": false }
+]

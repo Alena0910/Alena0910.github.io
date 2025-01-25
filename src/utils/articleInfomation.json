@@ -1,0 +1,17 @@
+{
+  "Ave Mujica": {
+    "fileName": "Web/AveMujica",
+    "title": "Ave Mujica",
+    "tags": ["TSCCTF 2025", "Web"]
+  },
+  "Web-2": {
+    "fileName": "Web/Web-2",
+    "title": "Web-2",
+    "tags": ["TSCCTF 2025", "Web"]
+  },
+  "Web-3": {
+    "fileName": "Web/Web-3",
+    "title": "Web-3",
+    "tags": ["TSCCTF 2025", "Web"]
+  }
+}

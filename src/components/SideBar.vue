@@ -32,7 +32,6 @@
           <MenuItem
             :menuItems="menuMainItems"
             :group="group"
-            :isGroupListOpen="isGroupListOpen"
             :toggleGroup="toggleGroup"
             :handleCurrentContent="handleCurrentContent"
           />
@@ -56,6 +55,8 @@ import ProjectMenu from "@/src/components/project/ProjectMenu.vue";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
 import CTFWriteupTemplate from "@/src/components/project/CTFWriteupTemplate.vue";
 import MenuItem from "@/src/components/MenuItem.vue";
+import menuItemsData from "@/src/utils/menuList.json";
+import articleInfomation from "@/src/utils/articleInfomation.json";
 
 const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
 const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
@@ -73,35 +74,7 @@ interface MenuItemProps {
   };
 }
 
-const menuMainItems = ref([
-  { name: "About Me", hasSubItem: false },
-  {
-    name: "Article",
-    hasSubItem: true,
-    subItems: [
-      {
-        name: "CTF Writeup",
-        hasSubItem: true,
-        subItems: [
-          {
-            name: "Web",
-            hasSubItem: true,
-            subItems: [
-              { name: "Ave Mujica", hasSubItem: false },
-              { name: "Web-2", hasSubItem: false },
-              { name: "Web-3", hasSubItem: false },
-            ],
-          },
-          { name: "Crypto", hasSubItem: false },
-          { name: "Misc", hasSubItem: false },
-        ],
-      },
-      "Project-2",
-      "Project-3",
-    ],
-  },
-  { name: "Contact Me", hasSubItem: false },
-]);
+const menuMainItems = ref(menuItemsData);
 
 const componentsMap = {
   about: About,
@@ -127,14 +100,14 @@ interface WriteupProps {
 }
 
 const currentWriteup = computed(() => {
-  if (currentContent.value === "Ave Mujica") {
-    return {
-      fileName: "Web/AveMujica",
-      title: "Ave Mujica",
-      tags: ["TSCCTF 2025", "Web"],
-    };
+  if (articleInfomation[currentContent.value]) {
+    return articleInfomation[currentContent.value];
   }
-  return {};
+  return {
+    fileName: "404",
+    title: "404",
+    tags: ["404"],
+  };
 });
 
 const updateDimensions = () => {
@@ -142,7 +115,7 @@ const updateDimensions = () => {
   height.value = window.innerHeight;
 };
 
-onMounted(() => {
+onMounted(async () => {
   updateDimensions();
   window.addEventListener("resize", updateDimensions);
 });
