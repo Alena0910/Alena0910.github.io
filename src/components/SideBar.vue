@@ -91,7 +91,15 @@
         <div v-else-if="currentContent === 'Project-Menu'">
           <ProjectMenu />
         </div>
-        <div v-else-if="currentContent === 'Project-1'">Project-1</div>
+        <div v-else-if="currentContent === 'Project-1'">
+          <CTFWriteupTemplate
+            :articleInfo="{
+              fileName: 'Web/AveMujica',
+              title: 'Ave Mujica',
+              tags: ['TSCCTF 2025', 'Web'],
+            }"
+          />
+        </div>
         <div v-else-if="currentContent === 'Project-2'">Project-2</div>
         <div v-else-if="currentContent === 'Project-3'">Project-3</div>
         <div v-else-if="currentContent === 'contact-me'">
@@ -115,12 +123,32 @@ import { ChevronDown, ChevronUp } from "lucide-vue-next";
 import ContactMe from "@/src/components/contact/ContactMe.vue";
 import ProjectMenu from "@/src/components/project/ProjectMenu.vue";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
+import CTFWriteupTemplate from "@/src/components/project/CTFWriteupTemplate.vue";
 
 const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
 const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
 
 const width = ref<number>(0);
 const height = ref<number>(0);
+
+const currentContent = ref<string>("about");
+
+interface ItemProps {
+  name: string;
+  hasSubItem: boolean;
+}
+
+interface MenuMainItemProps {
+  item: ItemProps[];
+}
+
+const menuMainItems = ref<MenuMainItemProps>({
+  item: [
+    { name: "About Me", hasSubItem: false },
+    { name: "Article", hasSubItem: true },
+    { name: "Contact Me", hasSubItem: false },
+  ],
+});
 
 const updateDimensions = () => {
   width.value = window.innerWidth;
@@ -151,5 +179,4 @@ const toggleGroup = (groupName: string) => {
 const handleCurrentContent = (content: string) => {
   currentContent.value = content;
 };
-const currentContent = ref<string>("about");
 </script>

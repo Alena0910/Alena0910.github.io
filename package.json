@@ -10,8 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/content": "^3.0.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@vueuse/core": "^12.5.0",
+    "babel-runtime": "^6.26.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.474.0",
@@ -22,6 +24,8 @@
     "tailwindcss-animate": "^1.0.7",
     "universal-cookie": "^7.2.2",
     "vue": "latest",
+    "vue-markdown": "^2.2.4",
+    "vue-markdown-render": "^2.2.1",
     "vue-router": "latest",
     "vuex": "^4.1.0"
   },
@@ -30,6 +34,7 @@
     "@iconify-json/radix-icons": "^1.2.2",
     "@iconify/vue": "^4.3.0",
     "@nuxtjs/tailwindcss": "^6.13.1",
+    "@types/markdown-it": "^14.1.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
