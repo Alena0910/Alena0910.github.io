@@ -11,7 +11,7 @@
     />
     <div class="w-fit flex flex-row gap-4">
       <div
-        class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-dvh px-4 py-8"
+        class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8"
         v-if="width >= 768"
       >
         <div id="sidebar-header" class="flex flex-col items-center">
@@ -29,101 +29,33 @@
         </div>
         <Separator class="my-4" label="Menu" />
         <div id="sidbar-content" class="flex flex-col gap-2 ml-4 w-100">
-          <div
-            @click="handleCurrentContent('about')"
-            class="cursor-pointer hover:bg-secondary w-100 rounded-md p-2"
-          >
-            About Me
-          </div>
-          <div>
-            <div
-              id="sidebar-group-title"
-              class="w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md p-2"
-              @click="
-                (toggleGroup('Projects'), handleCurrentContent('Project-Menu'))
-              "
-            >
-              Article
-              <div
-                class="text-gray-400 rounded-full w-6 h-6 flex items-center justify-center"
-              >
-                <ChevronDown v-if="!isGroupListOpen" />
-                <ChevronUp v-else />
-              </div>
-            </div>
-            <div
-              id="sidebar-group-content"
-              class="w-fit flex flex-col mt-2 ml-4 gap-2"
-              v-if="group.Projects"
-            >
-              <div
-                @click="handleCurrentContent('Project-1')"
-                class="cursor-pointer hover:bg-secondary w-100 rounded-md p-2"
-              >
-                CTF Writeup
-              </div>
-              <div
-                @click="handleCurrentContent('Project-2')"
-                class="cursor-pointer hover:bg-secondary w-100 rounded-md p-2"
-              >
-                Project 2
-              </div>
-              <div
-                @click="handleCurrentContent('Project-3')"
-                class="cursor-pointer hover:bg-secondary w-100 rounded-md p-2"
-              >
-                Project 3
-              </div>
-            </div>
-          </div>
-          <div
-            @click="handleCurrentContent('contact-me')"
-            class="cursor-pointer hover:bg-secondary w-100 rounded-md p-2"
-          >
-            Contact Me
-          </div>
+          <MenuItem
+            :menuItems="menuMainItems"
+            :group="group"
+            :isGroupListOpen="isGroupListOpen"
+            :toggleGroup="toggleGroup"
+            :handleCurrentContent="handleCurrentContent"
+          />
         </div>
       </div>
       <div id="content" :style="{ maxWidth: width < 768 ? '100%' : '65%' }">
-        <div v-if="currentContent === 'about'">
-          <About />
-        </div>
-        <div v-else-if="currentContent === 'Project-Menu'">
-          <ProjectMenu />
-        </div>
-        <div v-else-if="currentContent === 'Project-1'">
-          <CTFWriteupTemplate
-            :articleInfo="{
-              fileName: 'Web/AveMujica',
-              title: 'Ave Mujica',
-              tags: ['TSCCTF 2025', 'Web'],
-            }"
-          />
-        </div>
-        <div v-else-if="currentContent === 'Project-2'">Project-2</div>
-        <div v-else-if="currentContent === 'Project-3'">Project-3</div>
-        <div v-else-if="currentContent === 'contact-me'">
-          <ContactMe />
-        </div>
-        <div v-else>
-          <div>404 Not Found</div>
-        </div>
+        <component :is="currentComponent" :articleInfo="currentWriteup" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import About from "@/src/components/about/AboutContent.vue";
 import avatar from "@/assets/images/avatar.jpg";
-import { ChevronDown, ChevronUp } from "lucide-vue-next";
 import ContactMe from "@/src/components/contact/ContactMe.vue";
 import ProjectMenu from "@/src/components/project/ProjectMenu.vue";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
 import CTFWriteupTemplate from "@/src/components/project/CTFWriteupTemplate.vue";
+import MenuItem from "@/src/components/MenuItem.vue";
 
 const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
 const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
@@ -133,21 +65,76 @@ const height = ref<number>(0);
 
 const currentContent = ref<string>("about");
 
-interface ItemProps {
-  name: string;
-  hasSubItem: boolean;
+interface MenuItemProps {
+  item: {
+    name: string;
+    hasSubItem: boolean;
+    subItems?: Array<any>;
+  };
 }
 
-interface MenuMainItemProps {
-  item: ItemProps[];
+const menuMainItems = ref([
+  { name: "About Me", hasSubItem: false },
+  {
+    name: "Article",
+    hasSubItem: true,
+    subItems: [
+      {
+        name: "CTF Writeup",
+        hasSubItem: true,
+        subItems: [
+          {
+            name: "Web",
+            hasSubItem: true,
+            subItems: [
+              { name: "Ave Mujica", hasSubItem: false },
+              { name: "Web-2", hasSubItem: false },
+              { name: "Web-3", hasSubItem: false },
+            ],
+          },
+          { name: "Crypto", hasSubItem: false },
+          { name: "Misc", hasSubItem: false },
+        ],
+      },
+      "Project-2",
+      "Project-3",
+    ],
+  },
+  { name: "Contact Me", hasSubItem: false },
+]);
+
+const componentsMap = {
+  about: About,
+  Article: ProjectMenu,
+  "CTF Writeup": ProjectMenu,
+  "Project-2": "Project2",
+  "Project-3": "Project3",
+  "contact-me": ContactMe,
+  Web: ProjectMenu,
+  Crypto: ProjectMenu,
+  Misc: ProjectMenu,
+  "Ave Mujica": CTFWriteupTemplate,
+};
+
+const currentComponent = computed(
+  () => componentsMap[currentContent.value] || "div",
+);
+
+interface WriteupProps {
+  fileName: string;
+  title: string;
+  tags?: string[];
 }
 
-const menuMainItems = ref<MenuMainItemProps>({
-  item: [
-    { name: "About Me", hasSubItem: false },
-    { name: "Article", hasSubItem: true },
-    { name: "Contact Me", hasSubItem: false },
-  ],
+const currentWriteup = computed(() => {
+  if (currentContent.value === "Ave Mujica") {
+    return {
+      fileName: "Web/AveMujica",
+      title: "Ave Mujica",
+      tags: ["TSCCTF 2025", "Web"],
+    };
+  }
+  return {};
 });
 
 const updateDimensions = () => {
