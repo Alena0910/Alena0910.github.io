@@ -9,7 +9,7 @@
         class="text-gray-400 rounded-full w-6 h-6 flex items-center justify-center"
         v-if="menuItem.hasSubItem"
       >
-        <ChevronDown v-if="!isGroupListOpen" />
+        <ChevronDown v-if="!group[menuItem.name]" />
         <ChevronUp v-else />
       </div>
     </div>
