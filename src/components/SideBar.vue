@@ -9,7 +9,7 @@
       @update:isDark="(dark) => emit('update:isDark', dark)"
       @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
     />
-    <div class="w-fit flex flex-row gap-4">
+    <div class="w-fit flex flex-row gap-6">
       <div
         class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8"
         v-if="width >= 768"
@@ -54,6 +54,7 @@ import ContactMe from "@/src/components/contact/ContactMe.vue";
 import ProjectMenu from "@/src/components/project/ProjectMenu.vue";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
 import CTFWriteupTemplate from "@/src/components/project/CTFWriteupTemplate.vue";
+import ErrorMsg from "@/src/components/ErrorMsg.vue";
 import MenuItem from "@/src/components/MenuItem.vue";
 import menuItemsData from "@/src/utils/menuList.json";
 import articleInfomation from "@/src/utils/articleInfomation.json";
@@ -64,7 +65,7 @@ const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
 const width = ref<number>(0);
 const height = ref<number>(0);
 
-const currentContent = ref<string>("about");
+const currentContent = ref<string>("About Me");
 
 interface MenuItemProps {
   item: {
@@ -75,22 +76,26 @@ interface MenuItemProps {
 }
 
 const menuMainItems = ref(menuItemsData);
+const prevContent = ref<string>("About Me");
+const prevComponent = computed(
+  () => componentsMap[prevContent.value] || ErrorMsg,
+);
 
 const componentsMap = {
-  about: About,
+  "About Me": About,
   Article: ProjectMenu,
-  "CTF Writeup": ProjectMenu,
+  "CTF Writeup": prevComponent,
   "Project-2": "Project2",
   "Project-3": "Project3",
   "contact-me": ContactMe,
-  Web: ProjectMenu,
-  Crypto: ProjectMenu,
-  Misc: ProjectMenu,
+  Web: prevComponent,
+  Crypto: prevComponent,
+  Misc: prevComponent,
   "Ave Mujica": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(
-  () => componentsMap[currentContent.value] || "div",
+  () => componentsMap[currentContent.value] || ErrorMsg,
 );
 
 interface WriteupProps {
@@ -137,6 +142,13 @@ const toggleGroup = (groupName: string) => {
   group.value[groupName] = !group.value[groupName];
 };
 const handleCurrentContent = (content: string) => {
+  prevContent.value = currentContent.value;
+  prevComponent.value = currentComponent.value;
   currentContent.value = content;
+  console.log(prevContent.value, currentContent.value);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 </script>

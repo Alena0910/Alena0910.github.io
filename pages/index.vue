@@ -1,5 +1,5 @@
 <template>
-  <div class="container w-dvh flex flex-col">
+  <div class="container mx-auto">
     <MainNav
       v-model:isMenuOpen="isMenuOpen"
       v-model:isDark="isDark"
@@ -12,6 +12,7 @@
       @update:isMenuOpen="isMenuOpen = $event"
       @update:isDark="isDark = $event"
     />
+    <BackToTop />
   </div>
 </template>
 
@@ -19,6 +20,7 @@
 import { ref, watch } from "vue";
 import MainNav from "@/src/components/MainNav.vue";
 import SideBar from "@/src/components/SideBar.vue";
+import BackToTop from "@/src/components/BackToTop.vue";
 
 const isMenuOpen = ref(false);
 const isDark = ref(false);
