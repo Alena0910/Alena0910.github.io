@@ -1,48 +1,46 @@
 [
   {
-    "name": "About Me",
-    "hasSubItem": false
+    "name": "About Me"
   },
   {
     "name": "Article",
-    "hasSubItem": true,
     "subItems": [
       {
         "name": "CTF Writeup",
-        "hasSubItem": true,
+
         "subItems": [
           {
             "name": "Web",
-            "hasSubItem": true,
+
             "subItems": [
-              { "name": "Ave Mujica", "hasSubItem": false },
-              { "name": "Be IDol", "hasSubItem": false },
-              { "name": "Mango", "hasSubItem": false }
+              { "name": "Ave Mujica" },
+              { "name": "Be IDol" },
+              { "name": "Mango" }
             ]
           },
           {
             "name": "Crypto",
-            "hasSubItem": true,
-            "subItems": [{ "name": "2DES", "hasSubItem": false }]
+
+            "subItems": [{ "name": "2DES" }]
           },
           {
             "name": "Forensics",
-            "hasSubItem": true,
+
             "subItems": [
-              { "name": "Mystery Presentation", "hasSubItem": false },
-              { "name": "Packet Detective", "hasSubItem": false }
+              { "name": "Mystery Presentation" },
+              { "name": "Packet Detective" }
             ]
           },
           {
             "name": "Misc",
-            "hasSubItem": true,
-            "subItems": [{ "name": "Math Test", "hasSubItem": false }]
+
+            "subItems": [{ "name": "Math Test" }]
           }
         ]
       },
-      { "name": "Project-2", "hasSubItem": false },
-      { "name": "Project-3", "hasSubItem": false }
+      { "name": "Project-2" },
+      { "name": "Project-3" }
     ]
   },
-  { "name": "Contact Me", "hasSubItem": false }
+  { "name": "Contact Me" }
 ]
