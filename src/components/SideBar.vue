@@ -30,7 +30,11 @@
           </div>
         </div>
         <Separator class="my-4" label="Menu" />
-        <div id="sidbar-content" class="flex flex-col gap-2 ml-4 w-100">
+        <div
+          id="sidbar-content"
+          class="flex flex-col gap-2 w-100"
+          style="max-width: 200px; overflow: hidden"
+        >
           <MenuItem
             :menuItems="menuMainItems"
             :group="group"
@@ -89,8 +93,6 @@ const componentsMap = {
   "About Me": About,
   Article: ProjectMenu,
   "CTF Writeup": prevComponent,
-  "Project-2": "Project2",
-  "Project-3": "Project3",
   "contact-me": ContactMe,
   Web: prevComponent,
   Crypto: prevComponent,

@@ -30,7 +30,7 @@ const props = defineProps<{
 }>();
 const { articleInfo } = props;
 
-const articleContent = ref<string>("123");
+const articleContent = ref<string>("Loading...");
 
 const width = ref(0);
 const height = ref(0);
@@ -59,7 +59,6 @@ onMounted(() => {
       console.log(articleInfo.fileName);
     });
   window.addEventListener("resize", updateWindowSize);
-  console.log(articleContent.value);
 });
 
 onBeforeUnmount(() => {

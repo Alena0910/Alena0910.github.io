@@ -15,7 +15,7 @@
     </div>
     <div
       id="sidebar-group-content"
-      class="w-fit flex flex-col mt-2 ml-4 gap-2"
+      class="w-fit flex flex-col mt-2 ml-2 gap-2 border-l-2 border-secondary"
       v-if="group[menuItem.name]"
     >
       <MenuItem
