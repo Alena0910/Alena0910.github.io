@@ -94,6 +94,7 @@ const componentsMap = {
   Crypto: prevComponent,
   Misc: prevComponent,
   "Ave Mujica": CTFWriteupTemplate,
+  "Be IDol": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(

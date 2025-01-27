@@ -1,39 +1,32 @@
 <template>
   <div
-    class="container mx-auto flex flex-col items-center py-4 border-b border-accent mb-4 w-full fixed top-0 z-50 bg-background/90"
+    class="container mx-auto flex flex-row justify-between items-center py-4 border-b border-accent mb-4 w-full fixed top-0 z-50 bg-background/90 px-10 m-0"
   >
     <div
-      class="container mx-auto flex justify-between items-center py-4 justify-between gap-x-4"
+      class="flex items-center py-4 text-lg font-medium text-muted-foreground"
     >
-      <div
-        class="flex items-center py-4 text-lg font-medium text-muted-foreground"
+      <NuxtLink to="/">
+        <span class="text-[40px] font-bold">Blog</span>
+      </NuxtLink>
+    </div>
+    <div class="flex items-center gap-x-4">
+      <Switch
+        :checked="isDark"
+        @update:checked="$emit('update:isDark', !isDark)"
+        class="flex items-center align-middle"
+        v-if="width >= 768"
       >
-        <NuxtLink to="/">
-          <span class="text-[40px] font-bold">Blog</span>
-        </NuxtLink>
-      </div>
-      <div class="flex items-center gap-x-4">
-        <Switch
-          :checked="isDark"
-          @update:checked="$emit('update:isDark', !isDark)"
-          class="flex items-center align-middle"
-          v-if="width >= 768"
-        >
-          <template
-            #thumb
-            class="flex items-center justify-center align-middle"
-          >
-            <Icon v-if="isDark" icon="lucide:moon" />
-            <Icon v-else icon="lucide:sun" />
-          </template>
-        </Switch>
-        <div
-          v-if="width < 768"
-          class="cursor-pointer rounded-md border-2 p-2"
-          @click.stop="$emit('update:isMenuOpen', !isMenuOpen)"
-        >
-          <AlignJustify />
-        </div>
+        <template #thumb class="flex items-center justify-center align-middle">
+          <Icon v-if="isDark" icon="lucide:moon" />
+          <Icon v-else icon="lucide:sun" />
+        </template>
+      </Switch>
+      <div
+        v-if="width < 768"
+        class="cursor-pointer rounded-md border-2 p-2"
+        @click.stop="$emit('update:isMenuOpen', !isMenuOpen)"
+      >
+        <AlignJustify />
       </div>
     </div>
   </div>
