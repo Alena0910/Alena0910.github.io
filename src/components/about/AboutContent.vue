@@ -62,5 +62,5 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-vue-next";
 import aboutImage from "@/assets/images/aboutImage.jpg";
-import ContactMe from "@/src/components/contact/ContactMe.vue";
+import ContactMe from "@/src/components/contact/contactMe.vue";
 </script>
