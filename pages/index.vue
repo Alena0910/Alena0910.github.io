@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto user-select-none m-0 p-0">
+  <div class="container user-select-none m-0 p-0 w-full">
     <div class="relative h-[160px]">
       <MainNav
         v-model:isMenuOpen="isMenuOpen"

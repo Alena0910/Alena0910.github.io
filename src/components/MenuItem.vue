@@ -31,7 +31,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
 import { ChevronDown, ChevronUp } from "lucide-vue-next";
 import MenuItem from "@/src/components/MenuItem.vue";
 

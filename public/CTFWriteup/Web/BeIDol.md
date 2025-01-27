@@ -12,8 +12,6 @@
 
 用script去掃所有檔案
 
-file 11001
-
 ```
 database:
   host: localhost
@@ -51,9 +49,9 @@ INSERT INTO users VALUES (1, 'admin');
 
 file 11500
 
-```
+```php
 <?php
-function check_auth() { /* ... */ }
+functphpion check_auth() { /* ... */ }
 ?>
 ```
 
@@ -67,8 +65,8 @@ DEBUG=false
 
 file 12001
 
-```
-        <!DOCTYPE html>
+```php
+        <!DphpOCTYPE html>
         <html>
         <head>
             <title>System Command Interface</title>

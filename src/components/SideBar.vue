@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full">
     <div class="fixed top-[130px] left-0 w-full z-50">
       <ToggleMenu
         v-if="isMenuOpen && width < 768"
@@ -11,9 +11,9 @@
         @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
       />
     </div>
-    <div class="w-fit flex flex-row gap-6">
+    <div class="w-full flex flex-row gap-6">
       <div
-        class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8"
+        class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8 ml-12"
         v-if="width >= 768"
       >
         <div id="sidebar-header" class="flex flex-col items-center">
@@ -40,7 +40,11 @@
         </div>
       </div>
       <div id="content" :style="{ maxWidth: width < 768 ? '100%' : '65%' }">
-        <component :is="currentComponent" :articleInfo="currentWriteup" />
+        <component
+          :is="currentComponent"
+          :articleInfo="currentWriteup"
+          :key="currentContent"
+        />
       </div>
     </div>
   </div>
@@ -67,7 +71,7 @@ const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
 const width = ref<number>(0);
 const height = ref<number>(0);
 
-const currentContent = ref<string>("About Me");
+const currentContent = ref<string>("Be IDol");
 
 interface MenuItemProps {
   item: {
@@ -79,9 +83,7 @@ interface MenuItemProps {
 
 const menuMainItems = ref(menuItemsData);
 const prevContent = ref<string>("About Me");
-const prevComponent = computed(
-  () => componentsMap[prevContent.value] || ErrorMsg,
-);
+const prevComponent = ref<component>(About);
 
 const componentsMap = {
   "About Me": About,
@@ -148,7 +150,7 @@ const handleCurrentContent = (content: string) => {
   prevContent.value = currentContent.value;
   prevComponent.value = currentComponent.value;
   currentContent.value = content;
-  console.log(prevContent.value, currentContent.value);
+  console.log(currentContent.value);
   window.scrollTo({
     top: 0,
     behavior: "smooth",

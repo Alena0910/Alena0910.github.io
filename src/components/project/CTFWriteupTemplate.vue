@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div>
     <div id="ctf-writeup-title" class="text-4xl font-bold mb-4">
       {{ articleInfo.title }}
     </div>
@@ -8,22 +8,16 @@
         <Badge variant="secondary" :key="tag">{{ tag }}</Badge>
       </div>
     </div>
-    <div id="ctf-writeup-content" class="break-words pb-10">
-      <vue-markdown
-        :source="articleContent"
-        :break="true"
-        :typographer="true"
-        :linkify="true"
-      >
-      </vue-markdown>
+    <div id="ctf-writeup-content" class="break-words pb-10 w-full">
+      <MarkdownSetting :articleContent="articleContent" :key="articleContent" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps, onMounted } from "vue";
-import VueMarkdown from "vue-markdown-render";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Badge } from "@/components/ui/badge";
+import MarkdownSetting from "@/src/components/MarkdownSetting.vue";
 
 interface ArticleInfoProps {
   fileName: string;
@@ -37,6 +31,14 @@ const props = defineProps<{
 const { articleInfo } = props;
 
 const articleContent = ref<string>("123");
+
+const width = ref(0);
+const height = ref(0);
+
+const updateWindowSize = () => {
+  width.value = window.innerWidth;
+  height.value = window.innerHeight;
+};
 
 onMounted(() => {
   fetch(`/CTFWriteup/${articleInfo.fileName}.md`)
@@ -56,5 +58,11 @@ onMounted(() => {
       articleContent.value = err.statusCode + " " + err.statusMessage;
       console.log(articleInfo.fileName);
     });
+  window.addEventListener("resize", updateWindowSize);
+  console.log(articleContent.value);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", updateWindowSize);
 });
 </script>
