@@ -60,7 +60,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import About from "@/src/components/about/AboutContent.vue";
 import avatar from "@/assets/images/avatar.jpg";
-import ContactMe from "@/src/components/contact/ContactMe.vue";
 import ProjectMenu from "@/src/components/project/ProjectMenu.vue";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
 import CTFWriteupTemplate from "@/src/components/project/CTFWriteupTemplate.vue";
@@ -93,7 +92,6 @@ const componentsMap: { [key: string]: Component } = {
   "About Me": About,
   Article: ProjectMenu,
   "CTF Writeup": prevComponent,
-  "contact-me": ContactMe,
   Web: prevComponent,
   Crypto: prevComponent,
   Misc: prevComponent,

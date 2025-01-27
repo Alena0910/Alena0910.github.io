@@ -1,73 +1,48 @@
 <template>
-  <div class="container mx-auto">
+  <div>
     <div class="flex justify-center items-center mt-10">
-      <Card class="w-[350px]">
-        <CardHeader>
-          <CardTitle>Contact me</CardTitle>
-          <CardDescription
-            >Deploy your new project in one-click.</CardDescription
-          >
-        </CardHeader>
-        <CardContent>
-          <form>
-            <div class="grid items-center w-full gap-4">
-              <div class="flex flex-col space-y-1.5">
-                <Label for="name">Name</Label>
-                <Input id="name" placeholder="Enter your name" />
-              </div>
-              <div class="flex flex-col space-y-1.5">
-                <Label for="email">Email</Label>
-                <Input id="email" placeholder="Enter your email" />
-              </div>
-              <div class="flex flex-col space-y-1.5">
-                <Label for="phone-number">Tel.</Label>
-                <Input
-                  id="phone-number"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              <div class="flex flex-col space-y-1.5">
-                <Label for="framework">Framework</Label>
-                <Select>
-                  <SelectTrigger id="framework">
-                    <SelectValue placeholder="Select" />
-                  </SelectTrigger>
-                  <SelectContent position="popper">
-                    <SelectItem value="nuxt"> Nuxt </SelectItem>
-                    <SelectItem value="next"> Next.js </SelectItem>
-                    <SelectItem value="sveltekit"> SvelteKit </SelectItem>
-                    <SelectItem value="astro"> Astro </SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-          </form>
+      <Card
+        class="w-full flex flex-col justify-center items-center bg-secondary"
+      >
+        <CardContent class="flex flex-col items-center pt-6">
+          <div class="flex gap-2">
+            <Mail />
+            <a href="mailto:pinzhenhuang0910@gmail.com" target="_blank"
+              >pinzhenhuang0910@gmail.com</a
+            >
+          </div>
         </CardContent>
-        <CardFooter class="flex justify-between px-6 pb-6">
-          <Button variant="outline"> Cancel </Button>
-          <Button>Send</Button>
+        <CardFooter class="flex justify-center px-6 pb-6 gap-6 items-center">
+          <NuxtLink
+            to="https://github.com/Alena0910"
+            target="_blank"
+            class="flex gap-2 items-center"
+          >
+            <Github class="size-6" />
+            <div class="w-fit">Github</div>
+          </NuxtLink>
+          <NuxtLink
+            to="https://leetcode.com/u/pinzhenhuang0910/"
+            target="_blank"
+            class="flex gap-2 items-center"
+          >
+            <Code class="size-6" />
+            <div class="w-fit">Leetcode</div>
+          </NuxtLink>
+          <NuxtLink
+            to="https://www.instagram.com/hpc_0910/"
+            target="_blank"
+            class="flex gap-2 items-center"
+          >
+            <Instagram class="size-6" />
+            <div class="w-fit">Instagram</div>
+          </NuxtLink>
         </CardFooter>
       </Card>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Mail, Github, Code, Instagram } from "lucide-vue-next";
 </script>
