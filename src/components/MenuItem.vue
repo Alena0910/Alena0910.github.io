@@ -2,7 +2,7 @@
   <div v-for="menuItem in menuItems" :key="menuItem.name">
     <div
       class="w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md p-2"
-      @click="handleClick(menuItem)"
+      @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}
       <div

@@ -1,14 +1,16 @@
 <template>
   <div>
-    <ToggleMenu
-      v-if="isMenuOpen && width < 768"
-      :currentContent="currentContent"
-      :isDark="isDark"
-      :isMenuOpen="isMenuOpen"
-      @update:currentContent="(content) => (currentContent = content)"
-      @update:isDark="(dark) => emit('update:isDark', dark)"
-      @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
-    />
+    <div class="fixed top-[130px] left-0 w-full z-50">
+      <ToggleMenu
+        v-if="isMenuOpen && width < 768"
+        :currentContent="currentContent"
+        :isDark="isDark"
+        :isMenuOpen="isMenuOpen"
+        @update:currentContent="(content) => (currentContent = content)"
+        @update:isDark="(dark) => emit('update:isDark', dark)"
+        @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
+      />
+    </div>
     <div class="w-fit flex flex-row gap-6">
       <div
         class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8"

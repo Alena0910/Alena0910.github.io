@@ -1,11 +1,13 @@
 <template>
   <div class="container mx-auto">
-    <MainNav
-      v-model:isMenuOpen="isMenuOpen"
-      v-model:isDark="isDark"
-      @update:isMenuOpen="isMenuOpen = $event"
-      @update:isDark="isDark = $event"
-    />
+    <div class="relative h-[160px]">
+      <MainNav
+        v-model:isMenuOpen="isMenuOpen"
+        v-model:isDark="isDark"
+        @update:isMenuOpen="isMenuOpen = $event"
+        @update:isDark="isDark = $event"
+      />
+    </div>
     <SideBar
       v-model:isMenuOpen="isMenuOpen"
       v-model:isDark="isDark"

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto flex flex-col items-center py-4 border-b border-accent mb-4 w-full"
+    class="container mx-auto flex flex-col items-center py-4 border-b border-accent mb-4 w-full fixed top-0 z-50 bg-background/90"
   >
     <div
       class="container mx-auto flex justify-between items-center py-4 justify-between gap-x-4"
