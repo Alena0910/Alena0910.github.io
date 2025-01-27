@@ -7,7 +7,8 @@
     "dev": "nuxt dev  --port 6060",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "npx nuxi generate && npx gh-pages -d dist"
   },
   "dependencies": {
     "@nuxt/content": "^3.0.0",
@@ -41,6 +42,7 @@
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
