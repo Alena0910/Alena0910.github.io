@@ -17,11 +17,27 @@
             "subItems": [
               { "name": "Ave Mujica", "hasSubItem": false },
               { "name": "Be IDol", "hasSubItem": false },
-              { "name": "Web-3", "hasSubItem": false }
+              { "name": "Mango", "hasSubItem": false }
             ]
           },
-          { "name": "Crypto", "hasSubItem": false },
-          { "name": "Misc", "hasSubItem": false }
+          {
+            "name": "Crypto",
+            "hasSubItem": true,
+            "subItems": [{ "name": "2DES", "hasSubItem": false }]
+          },
+          {
+            "name": "Forensics",
+            "hasSubItem": true,
+            "subItems": [
+              { "name": "Mystery Presentation", "hasSubItem": false },
+              { "name": "Packet Detective", "hasSubItem": false }
+            ]
+          },
+          {
+            "name": "Misc",
+            "hasSubItem": true,
+            "subItems": [{ "name": "Math Test", "hasSubItem": false }]
+          }
         ]
       },
       { "name": "Project-2", "hasSubItem": false },

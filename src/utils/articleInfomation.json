@@ -9,9 +9,29 @@
     "title": "Be IDol",
     "tags": ["TSCCTF 2025", "Web"]
   },
-  "Web-3": {
-    "fileName": "Web/Web-3",
-    "title": "Web-3",
-    "tags": ["TSCCTF 2025", "Web"]
+  "Mango": {
+    "fileName": "Web/Mango",
+    "title": "Mango",
+    "tags": ["IRON 2024", "Web"]
+  },
+  "2DES": {
+    "fileName": "Crypto/2DES",
+    "title": "2DES",
+    "tags": ["TSCCTF 2025", "Crypto"]
+  },
+  "Mystery Presentation": {
+    "fileName": "Forensics/MysteryPresentation",
+    "title": "Mystery Presentation",
+    "tags": ["TUCTF 2025", "Forensics"]
+  },
+  "Packet Detective": {
+    "fileName": "Forensics/PacketDetective",
+    "title": "Packet Detective",
+    "tags": ["TUCTF 2025", "Forensics"]
+  },
+  "Math Test": {
+    "fileName": "Misc/MathTest",
+    "title": "Math Test",
+    "tags": ["UofTCTF 2025", "Misc"]
   }
 }

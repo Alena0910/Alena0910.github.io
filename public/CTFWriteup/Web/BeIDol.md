@@ -4,11 +4,11 @@
 
 把phpsessid改成secretbackdoor123
 
-![cookies](/CTFWriteup/Web/MDImages/BeIDol/image.png)
+![cookies](/CTFWriteup/Web/assets/BeIDol/image.png)
 
 進入到檔案管理系統
 
-![fileExplorer](/CTFWriteup/Web/MDImages/BeIDol/image-1.png)
+![fileExplorer](/CTFWriteup/Web/assets/BeIDol/image-1.png)
 
 用script去掃所有檔案
 
@@ -95,18 +95,18 @@ cat /etc/passwd</pre>            </div>
 
 根據第12001找到的檔案輸入網址
 
-![12001](/CTFWriteup/Web/MDImages/BeIDol/image-2.png)
+![12001](/CTFWriteup/Web/assets/BeIDol/image-2.png)
 
 按照給的提示試試看
-![passwd](/CTFWriteup/Web/MDImages/BeIDol/image-3.png)
+![passwd](/CTFWriteup/Web/assets/BeIDol/image-3.png)
 
-![ls-al](/CTFWriteup/Web/MDImages/BeIDol/image-4.png)
+![ls-al](/CTFWriteup/Web/assets/BeIDol/image-4.png)
 
-![index](/CTFWriteup/Web/MDImages/BeIDol/image-5.png)
+![index](/CTFWriteup/Web/assets/BeIDol/image-5.png)
 
-![login](/CTFWriteup/Web/MDImages/BeIDol/image-6.png)
+![login](/CTFWriteup/Web/assets/BeIDol/image-6.png)
 
-![jsscript](/CTFWriteup/Web/MDImages/BeIDol/image-7.png)
+![jsscript](/CTFWriteup/Web/assets/BeIDol/image-7.png)
 
 基本上沒有看到甚麼重要的東西，找找看有沒有flag.txt
 
@@ -114,11 +114,11 @@ cat /etc/passwd</pre>            </div>
 find / -name "flag*" 2>/dev/null
 ```
 
-![findFLAG](/CTFWriteup/Web/MDImages/BeIDol/image-8.png)
+![findFLAG](/CTFWriteup/Web/assets/BeIDol/image-8.png)
 
 印出/opt/flag/flag.txt的內容
 
-![flag](/CTFWriteup/Web/MDImages/BeIDol/image-9.png)
+![flag](/CTFWriteup/Web/assets/BeIDol/image-9.png)
 
 ```
 TSC{You_can_be_ID0R_12353oujhefrgiuoewihoqweihfo}

@@ -9,14 +9,14 @@
         class="text-gray-400 rounded-full w-6 h-6 flex items-center justify-center"
         v-if="menuItem.hasSubItem"
       >
-        <ChevronDown v-if="!group[menuItem.name]" />
+        <ChevronDown v-if="group[menuItem.name]" />
         <ChevronUp v-else />
       </div>
     </div>
     <div
       id="sidebar-group-content"
       class="w-fit flex flex-col mt-2 ml-2 gap-2 border-l-2 border-secondary"
-      v-if="group[menuItem.name]"
+      v-if="!group[menuItem.name]"
     >
       <MenuItem
         v-for="subItem in menuItem.subItems"
@@ -47,10 +47,10 @@ const props = defineProps<{
 const { group, toggleGroup, handleCurrentContent, menuItems } = props;
 
 const handleClick = (menuItem: any) => {
-  if (menuItem.hasSubItem) {
-    toggleGroup(menuItem.name);
-  } else {
+  if (!menuItem.hasSubItem) {
     handleCurrentContent(menuItem.name);
+  } else {
+    toggleGroup(menuItem.name);
   }
 };
 </script>

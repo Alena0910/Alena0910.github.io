@@ -75,7 +75,7 @@ const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
 const width = ref<number>(0);
 const height = ref<number>(0);
 
-const currentContent = ref<string>("Be IDol");
+const currentContent = ref<string>("About Me");
 
 interface MenuItemProps {
   item: {
@@ -87,9 +87,9 @@ interface MenuItemProps {
 
 const menuMainItems = ref(menuItemsData);
 const prevContent = ref<string>("About Me");
-const prevComponent = ref<component>(About);
+const prevComponent = ref<Component>(About);
 
-const componentsMap = {
+const componentsMap: { [key: string]: Component } = {
   "About Me": About,
   Article: ProjectMenu,
   "CTF Writeup": prevComponent,
@@ -99,6 +99,11 @@ const componentsMap = {
   Misc: prevComponent,
   "Ave Mujica": CTFWriteupTemplate,
   "Be IDol": CTFWriteupTemplate,
+  Mango: CTFWriteupTemplate,
+  "2DES": CTFWriteupTemplate,
+  "Mystery Presentation": CTFWriteupTemplate,
+  "Packet Detective": CTFWriteupTemplate,
+  "Math Test": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(
