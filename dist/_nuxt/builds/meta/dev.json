@@ -1,1 +1,1 @@
-{"id":"dev","timestamp":1738014542059,"matcher":{"static":{"/":{"prerender":true},"/api/content/content/database.sql":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":[]}
+{"id":"dev","timestamp":1738014781342,"matcher":{"static":{"/":{"prerender":true},"/api/content/content/database.sql":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":[]}

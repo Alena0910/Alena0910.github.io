@@ -15,7 +15,6 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
       title: "Blog",
     },
-    baseURL: '/Alena0910/pages',
   },
   routeRules: {
     "/": {
