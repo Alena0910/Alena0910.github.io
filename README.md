@@ -1,6 +1,6 @@
 # Alena0910.github.io
 
-[部落格](https://alena0910.github.io/)
+[部落格](https://alena0910.github.io/Alena0910.github.io/)
 
 ## others
 
