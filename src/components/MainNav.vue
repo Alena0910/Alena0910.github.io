@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto flex flex-row justify-between items-center py-4 border-b border-accent mb-4 w-full fixed top-0 z-50 bg-background/90 px-10 m-0"
+    class="container flex flex-row justify-between items-center py-4 border-b border-accent w-dvw fixed top-0 z-50 bg-background/90 px-10 m-0"
   >
     <div
       class="flex items-center py-4 text-lg font-medium text-muted-foreground"

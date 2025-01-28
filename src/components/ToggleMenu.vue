@@ -1,7 +1,7 @@
 <template>
   <div
     id="toggle-menu"
-    class="flex flex-col w-full absolute left-0 bg-background/90 px-6 border-b overflow-x-hidden overflow-y-auto"
+    class="flex flex-col w-full absolute left-0 bg-background/90 border-b overflow-x-hidden overflow-y-auto"
     ref="toggleMenuRef"
   >
     <div
@@ -20,7 +20,7 @@
         Pin-Chen Huang
       </div>
     </div>
-    <div id="toggle-menu-content" class="flex flex-col gap-2 w-full">
+    <div id="toggle-menu-content" class="flex flex-col gap-2 w-full mb-12">
       <MenuItem
         :menuItems="menuMainItems"
         :group="group"
@@ -116,7 +116,8 @@ const handleCurrentContent = (content: string) => {
 
 <style scoped>
 #toggle-menu {
-  max-height: calc(100vh - 20px);
+  width: 100dvw;
+  max-height: calc(100dvh - 200px);
   overflow-y: auto;
 }
 </style>

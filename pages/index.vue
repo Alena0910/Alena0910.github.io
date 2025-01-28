@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box-border">
     <LoadingComponent v-if="isLoading" />
     <div class="relative h-[160px]">
       <MainNav

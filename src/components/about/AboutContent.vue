@@ -59,8 +59,24 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from "vue";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-vue-next";
 import aboutImage from "@/assets/images/aboutImage.jpg";
 import ContactMe from "@/src/components/contact/contactMe.vue";
+
+onMounted(() => {
+  const element = document.getElementById("app");
+  const scrollbarWidth =
+    window.innerWidth - document.documentElement.clientWidth;
+  if (element) {
+    element.style.width = `calc(100vw - ${scrollbarWidth}px)`;
+  }
+
+  window.addEventListener("resize", () => {
+    if (element) {
+      element.style.width = `calc(100vw - ${scrollbarWidth}px)`;
+    }
+  });
+});
 </script>

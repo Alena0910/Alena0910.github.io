@@ -19,6 +19,8 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+      maxWidth: "100dvw",
+      margin: "0",
     },
     extend: {
       colors: {

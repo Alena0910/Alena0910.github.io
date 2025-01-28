@@ -14,7 +14,7 @@
         @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
       />
     </div>
-    <div class="w-full flex flex-row gap-6">
+    <div :class="width >= 768 ? 'w-full flex flex-row gap-6' : 'w-full'">
       <div
         class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8 ml-12"
         v-if="width >= 768"
@@ -46,7 +46,11 @@
           />
         </div>
       </div>
-      <div id="content" :style="{ maxWidth: width < 768 ? '100%' : '65%' }">
+      <div
+        id="content"
+        :style="{ maxWidth: width < 768 ? '100dvw' : '65%' }"
+        class="box-border"
+      >
         <component
           :is="currentComponent"
           :articleInfo="currentWriteup"
@@ -137,7 +141,7 @@ onMounted(async () => {
   if (isMenuOpen) {
     document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "";
   }
   updateDimensions();
   window.addEventListener("resize", updateDimensions);
@@ -176,7 +180,7 @@ watch(
     if (newVal) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
     }
   },
 );
