@@ -1,20 +1,20 @@
-name: Cleanup Branch after Merge
+name: Delete Merged Branch
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types:
+      - closed
 
 jobs:
-  cleanup:
+  delete_branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Delete merged branch
+      - name: Delete the branch after merge
+        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref != 'main'
         run: |
-          BRANCH_NAME=$(echo "${GITHUB_REF}" | sed 's/refs\/heads\///')
-          if [ "$BRANCH_NAME" != "main" ]; then
-            git push origin --delete "$BRANCH_NAME"
-          fi
+          git fetch origin +refs/heads/*:refs/heads/*
+          git branch -d "${GITHUB_HEAD_REF}" || echo "Failed to delete branch locally"
+          git push origin --delete "${GITHUB_HEAD_REF}" || echo "Failed to delete branch remotely"
