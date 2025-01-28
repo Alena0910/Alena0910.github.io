@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-[9999] fixed top-0 left-0 w-full h-full flex flex-row items-center justify-center bg-white bg-opacity-98 gap-4 absolute"
+    class="z-[9999] fixed top-0 left-0 w-full h-full flex flex-row items-center justify-center bg-white bg-opacity-98 gap-4"
   >
     <div class="text-[30px]">Loading</div>
     <div class="flex flex-row gap-2 align-center">

@@ -1,7 +1,7 @@
 <template>
   <div
     id="toggle-menu"
-    class="flex flex-col w-full absolute left-0 bg-background/90 px-6 border-b"
+    class="flex flex-col w-full absolute left-0 bg-background/90 px-6 border-b overflow-x-hidden overflow-y-auto"
     ref="toggleMenuRef"
   >
     <div
@@ -56,7 +56,7 @@ import { Icon } from "@iconify/vue";
 import MenuItem from "@/src/components/MenuItem.vue";
 import menuItemsData from "@/src/utils/menuList.json";
 
-defineProps(["currentContent", "isDark", "isMenuOpen"]);
+const props = defineProps(["currentContent", "isDark", "isMenuOpen"]);
 const emit = defineEmits([
   "update:currentContent",
   "update:isDark",
@@ -84,6 +84,7 @@ const handleClickOutside = (event: MouseEvent) => {
     !toggleMenuRef.value.contains(event.target as Node)
   ) {
     emit("update:isMenuOpen", false);
+    document.body.style.overflow = "auto";
   }
 };
 
@@ -112,3 +113,10 @@ const handleCurrentContent = (content: string) => {
   handleClickOutside(new MouseEvent("click"));
 };
 </script>
+
+<style scoped>
+#toggle-menu {
+  max-height: calc(100vh - 20px);
+  overflow-y: auto;
+}
+</style>

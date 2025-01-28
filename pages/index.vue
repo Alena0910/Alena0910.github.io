@@ -1,5 +1,5 @@
 <template>
-  <div class="container user-select-none m-0 p-0 w-full">
+  <div>
     <LoadingComponent v-if="isLoading" />
     <div class="relative h-[160px]">
       <MainNav

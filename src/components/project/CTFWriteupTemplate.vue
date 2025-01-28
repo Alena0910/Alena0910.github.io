@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div id="ctf-writeup-title" class="text-4xl font-bold mb-4">
       {{ articleInfo.title }}
     </div>

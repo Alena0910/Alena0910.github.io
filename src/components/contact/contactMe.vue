@@ -4,19 +4,25 @@
       <Card
         class="w-full flex flex-col justify-center items-center bg-secondary"
       >
-        <CardContent class="flex flex-col items-center pt-6">
-          <div class="flex gap-2">
-            <Mail />
-            <a href="mailto:pinzhenhuang0910@gmail.com" target="_blank"
-              >pinzhenhuang0910@gmail.com</a
-            >
-          </div>
+        <CardContent
+          class="flex flex-col items-center pt-6 w-full justify-center"
+        >
+          <Mail />
+          <a
+            href="mailto:pinzhenhuang0910@gmail.com"
+            target="_blank"
+            class="w-full break-all text-center"
+          >
+            pinzhenhuang0910@gmail.com</a
+          >
         </CardContent>
-        <CardFooter class="flex justify-center px-6 pb-6 gap-6 items-center">
+        <CardFooter
+          class="flex justify-center px-6 pb-6 gap-6 items-center w-full flex-wrap"
+        >
           <NuxtLink
             to="https://github.com/Alena0910"
             target="_blank"
-            class="flex gap-2 items-center"
+            class="flex flex-wrap gap-2 items-center justify-center"
           >
             <Github class="size-6" />
             <div class="w-fit">Github</div>
@@ -24,7 +30,7 @@
           <NuxtLink
             to="https://leetcode.com/u/pinzhenhuang0910/"
             target="_blank"
-            class="flex gap-2 items-center"
+            class="flex flex-wrap gap-2 items-center justify-center"
           >
             <Code class="size-6" />
             <div class="w-fit">Leetcode</div>
@@ -32,7 +38,7 @@
           <NuxtLink
             to="https://www.instagram.com/hpc_0910/"
             target="_blank"
-            class="flex gap-2 items-center"
+            class="flex flex-wrap gap-2 items-center justify-center"
           >
             <Instagram class="size-6" />
             <div class="w-fit">Instagram</div>

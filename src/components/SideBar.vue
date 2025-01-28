@@ -1,6 +1,9 @@
 <template>
   <div class="w-full">
-    <div class="fixed top-[130px] left-0 w-full z-50">
+    <div
+      class="fixed top-[100px] left-0 w-full z-50"
+      style="max-height: calc(100% - 100px)"
+    >
       <ToggleMenu
         v-if="isMenuOpen && width < 768"
         :currentContent="currentContent"
@@ -131,6 +134,11 @@ const updateDimensions = () => {
 };
 
 onMounted(async () => {
+  if (isMenuOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
   updateDimensions();
   window.addEventListener("resize", updateDimensions);
 });
@@ -161,4 +169,15 @@ const handleCurrentContent = (content: string) => {
     behavior: "smooth",
   });
 };
+
+watch(
+  () => isMenuOpen,
+  (newVal) => {
+    if (newVal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  },
+);
 </script>
