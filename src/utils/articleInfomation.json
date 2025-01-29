@@ -33,5 +33,10 @@
     "fileName": "Misc/MathTest",
     "title": "Math Test",
     "tags": ["UofTCTF 2025", "Misc"]
+  },
+  "3-Cipher": {
+    "fileName": "Crypto/3-Cipher",
+    "title": "3-Cipher",
+    "tags": ["Dreamhack Blitz CTF #2", "Crypto", "2025/01/30"]
   }
 }

@@ -21,7 +21,7 @@
           {
             "name": "Crypto",
 
-            "subItems": [{ "name": "2DES" }]
+            "subItems": [{ "name": "2DES" }, { "name": "3-Cipher" }]
           },
           {
             "name": "Forensics",
