@@ -38,5 +38,10 @@
     "fileName": "Crypto/3-Cipher",
     "title": "3-Cipher",
     "tags": ["Dreamhack Blitz CTF #2", "Crypto", "2025/01/30"]
+  },
+  "addition-quiz": {
+    "fileName": "Misc/addition-quiz",
+    "title": "addition-quiz",
+    "tags": ["Dreamhack CTF Season 5 Round #2", "Misc"]
   }
 }

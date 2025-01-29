@@ -34,7 +34,7 @@
           {
             "name": "Misc",
 
-            "subItems": [{ "name": "Math Test" }]
+            "subItems": [{ "name": "Math Test" }, { "name": "addition-quiz" }]
           }
         ]
       },

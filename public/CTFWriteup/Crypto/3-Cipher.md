@@ -1,14 +1,9 @@
 題目
 
-```
-3-cipher.py는 Key1, Key2, AES_iv, AES_cipher_text를 출력하는 암호화 프로그램입니다.
-
-AES_cipher_text는 플래그를 암호화한 문자열이고, Key1, Key2, AES_iv는 플래그 복호화에 필요한 값입니다.
-
-AES_cipher_text를 복호화하여 플래그를 구하세요. 플래그는 FLAG 변수에 있습니다.
-
-플래그 형식은 DH{...} 입니다.
-```
+> 3-cipher.py는 Key1, Key2, AES_iv, AES_cipher_text를 출력하는 암호화 프로그램입니다.  
+> AES_cipher_text는 플래그를 암호화한 문자열이고, Key1, Key2, AES_iv는 플래그 복호화에 필요한 값입니다.  
+> AES_cipher_text를 복호화하여 플래그를 구하세요. 플래그는 FLAG 변수에 있습니다.  
+> 플래그 형식은 DH{...} 입니다.
 
 3-cipher.py
 

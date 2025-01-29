@@ -110,6 +110,7 @@ const componentsMap: { [key: string]: Component } = {
   "Packet Detective": CTFWriteupTemplate,
   "Math Test": CTFWriteupTemplate,
   "3-Cipher": CTFWriteupTemplate,
+  "addition-quiz": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(
