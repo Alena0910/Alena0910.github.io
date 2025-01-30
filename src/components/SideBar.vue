@@ -112,6 +112,7 @@ const componentsMap: { [key: string]: Component } = {
   "3-Cipher": CTFWriteupTemplate,
   "addition-quiz": CTFWriteupTemplate,
   php7cmp4re: CTFWriteupTemplate,
+  ROT128: CTFWriteupTemplate,
 };
 
 const currentComponent = computed(
