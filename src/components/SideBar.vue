@@ -41,6 +41,7 @@
           <MenuItem
             :menuItems="menuMainItems"
             :group="group"
+            :currentContent="currentContent"
             :toggleGroup="toggleGroup"
             :handleCurrentContent="handleCurrentContent"
           />

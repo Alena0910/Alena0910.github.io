@@ -3,9 +3,9 @@
     <div id="ctf-writeup-title" class="text-4xl font-bold mb-4">
       {{ articleInfo.title }}
     </div>
-    <div id="ctf-writeup-tag" class="mb-2 flex flex-row gap-2 w-full mb-4">
+    <div id="ctf-writeup-tag" class="mb-2 flex flex-wrap gap-2 w-full mb-4">
       <div v-for="tag in articleInfo.tags">
-        <Badge variant="secondary" :key="tag">{{ tag }}</Badge>
+        <Badge variant="secondary" :key="tag" class="w-fit">{{ tag }}</Badge>
       </div>
     </div>
     <div id="ctf-writeup-content" class="break-words pb-10 w-full">

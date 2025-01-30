@@ -1,7 +1,11 @@
 <template>
   <div v-for="menuItem in menuItems" :key="menuItem.name">
     <div
-      class="w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md p-2"
+      :class="
+        currentContent === menuItem.name
+          ? 'w-fit cursor-pointer flex flex-row items-center w-100 p-2 border-primary border-l-8'
+          : 'w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md p-2'
+      "
       @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}
@@ -23,6 +27,7 @@
         :key="subItem.name"
         :menuItems="[subItem]"
         :group="group"
+        :currentContent="currentContent"
         :toggleGroup="toggleGroup"
         :handleCurrentContent="handleCurrentContent"
       />
@@ -40,6 +45,7 @@ const props = defineProps<{
     name: string;
     subItems?: Array<any>;
   }>;
+  currentContent: string;
   toggleGroup: (key: string) => void;
   handleCurrentContent: (content: string) => void;
 }>();
