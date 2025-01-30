@@ -43,5 +43,10 @@
     "fileName": "Misc/addition-quiz",
     "title": "addition-quiz",
     "tags": ["Dreamhack CTF Season 5 Round #2", "Misc"]
+  },
+  "php7cmp4re": {
+    "fileName": "Web/php7cmp4re",
+    "title": "php7cmp4re",
+    "tags": ["Dreamhack CTF Season 5 Round #2", "Web"]
   }
 }
