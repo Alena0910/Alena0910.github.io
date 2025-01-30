@@ -53,5 +53,20 @@
     "fileName": "Crypto/ROT128",
     "title": "ROT128",
     "tags": ["Dreamhack CTF Season 3 Round #4", "Crypto"]
+  },
+  "64se64": {
+    "fileName": "Misc/64se64",
+    "title": "64se64",
+    "tags": ["Dreamhack CTF Season 3 Round #6", "Misc"]
+  },
+  "Snowing!": {
+    "fileName": "Forensics/Snowing",
+    "title": "Snowing!",
+    "tags": ["Dreamhack", "Forensics"]
+  },
+  "lolololologfile": {
+    "fileName": "Forensics/lolololologfile",
+    "title": "lolololologfile",
+    "tags": ["2022 Christmas CTF", "Dreamhack", "Forensics"]
   }
 }

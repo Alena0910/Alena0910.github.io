@@ -33,13 +33,19 @@
 
             "subItems": [
               { "name": "Mystery Presentation" },
-              { "name": "Packet Detective" }
+              { "name": "Packet Detective" },
+              { "name": "Snowing!" },
+              { "name": "lolololologfile" }
             ]
           },
           {
             "name": "Misc",
 
-            "subItems": [{ "name": "Math Test" }, { "name": "addition-quiz" }]
+            "subItems": [
+              { "name": "Math Test" },
+              { "name": "addition-quiz" },
+              { "name": "64se64" }
+            ]
           }
         ]
       },
