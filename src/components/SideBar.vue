@@ -117,6 +117,15 @@ const componentsMap: { [key: string]: Component } = {
   "64se64": CTFWriteupTemplate,
   "Snowing!": CTFWriteupTemplate,
   lolololologfile: CTFWriteupTemplate,
+  d: CTFWriteupTemplate,
+  "xss-1": CTFWriteupTemplate,
+  "xss-2": CTFWriteupTemplate,
+  "csrf-1": CTFWriteupTemplate,
+  "csrf-2": CTFWriteupTemplate,
+  simple_sqli: CTFWriteupTemplate,
+  "image-storage": CTFWriteupTemplate,
+  "Mango (Dreamhack)": CTFWriteupTemplate,
+  "session-basic": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(
@@ -175,7 +184,6 @@ const handleCurrentContent = (content: string) => {
   prevContent.value = currentContent.value;
   prevComponent.value = currentComponent.value;
   currentContent.value = content;
-  console.log(currentContent.value);
   window.scrollTo({
     top: 0,
     behavior: "smooth",

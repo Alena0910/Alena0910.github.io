@@ -106,4 +106,11 @@ img {
   -webkit-user-drag: none;
   margin: 1em 0;
 }
+
+a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
 </style>

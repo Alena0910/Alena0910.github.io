@@ -29,7 +29,10 @@
           <div id="about-dayoff-content" class="ml-4 flex flex-col gap-3">
             於2024年七月加入請假系統維護團隊，與團隊成員一同維護請假系統，並且參與後續前端開發。
             <Button class="flex items-center mt-4 w-fit">
-              <a target="_blank" href="https://portal.utaipei.edu.tw/"
+              <a
+                target="_blank"
+                href="https://portal.utaipei.edu.tw/"
+                class="text-white font-normal"
                 >請假系統</a
               >
               <ExternalLink />
@@ -46,6 +49,7 @@
               <a
                 target="_blank"
                 href="https://carbon-diary.utaipei.edu.tw/login"
+                class="text-white"
                 >Carbon Diary</a
               >
               <ExternalLink />

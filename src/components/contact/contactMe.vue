@@ -5,13 +5,13 @@
         class="w-full flex flex-col justify-center items-center bg-secondary"
       >
         <CardContent
-          class="flex flex-col items-center pt-6 w-full justify-center"
+          class="flex flex-row items-center pt-6 w-full justify-center"
         >
           <Mail />
           <a
             href="mailto:pinzhenhuang0910@gmail.com"
             target="_blank"
-            class="w-full break-all text-center"
+            class="break-all text-center ml-2"
           >
             pinzhenhuang0910@gmail.com</a
           >
@@ -52,3 +52,9 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Mail, Github, Code, Instagram } from "lucide-vue-next";
 </script>
+
+<style scoped>
+a {
+  color: hsl(var(--foreground));
+}
+</style>

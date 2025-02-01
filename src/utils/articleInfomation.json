@@ -68,5 +68,50 @@
     "fileName": "Forensics/lolololologfile",
     "title": "lolololologfile",
     "tags": ["2022 Christmas CTF", "Dreamhack", "Forensics"]
+  },
+  "d": {
+    "fileName": "Crypto/d",
+    "title": "d",
+    "tags": ["Dreamhack", "Crypto"]
+  },
+  "xss-1": {
+    "fileName": "Web/xss-1",
+    "title": "xss-1",
+    "tags": ["Dreamhack", "Web"]
+  },
+  "xss-2": {
+    "fileName": "Web/xss-2",
+    "title": "xss-2",
+    "tags": ["Dreamhack", "Web"]
+  },
+  "csrf-1": {
+    "fileName": "Web/csrf-1",
+    "title": "csrf-1",
+    "tags": ["Dreamhack", "Web"]
+  },
+  "csrf-2": {
+    "fileName": "Web/csrf-2",
+    "title": "csrf-2",
+    "tags": ["Dreamhack", "Web"]
+  },
+  "simple_sqli": {
+    "fileName": "Web/simple_sqli",
+    "title": "simple_sqli",
+    "tags": ["Dreamhack", "Web"]
+  },
+  "image-storage": {
+    "fileName": "Web/image-storage",
+    "title": "image-storage",
+    "tags": ["Dreamhack", "Web"]
+  },
+  "Mango (Dreamhack)": {
+    "fileName": "Web/MangoDH",
+    "title": "Mango (Dreamhack)",
+    "tags": ["Dreamhack CTF Season 1 Round #1", "Web"]
+  },
+  "session-basic": {
+    "fileName": "Web/session-basic",
+    "title": "session-basic",
+    "tags": ["Dreamhack", "Web"]
   }
 }

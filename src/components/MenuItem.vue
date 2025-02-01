@@ -3,8 +3,8 @@
     <div
       :class="
         currentContent === menuItem.name
-          ? 'w-fit cursor-pointer flex flex-row items-center w-100 p-2 border-primary border-l-8'
-          : 'w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md p-2'
+          ? 'w-fit cursor-pointer flex flex-row items-center w-100 py-2 px-4 border-primary border-l-8'
+          : 'w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md py-2 px-4'
       "
       @click.stop="handleClick(menuItem)"
     >
