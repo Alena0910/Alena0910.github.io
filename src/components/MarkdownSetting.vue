@@ -90,6 +90,10 @@ pre {
 
 code {
   margin: 1em 0;
+  color: hsl(var(--md-code-color));
+  background-color: hsl(var(--secondary));
+  padding: 0.05em 0.5em;
+  border-radius: 4px;
 }
 
 blockquote {
@@ -112,5 +116,9 @@ a {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 </style>

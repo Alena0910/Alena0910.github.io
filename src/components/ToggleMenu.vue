@@ -39,8 +39,8 @@
             #thumb
             class="flex items-center justify-center align-middle"
           >
-            <Icon v-if="isDark" icon="lucide:moon" />
-            <Icon v-else icon="lucide:sun" />
+            <MoonStar v-if="isDark" :size="20" />
+            <Sun v-else :size="20" />
           </template>
         </Switch>
       </div>
@@ -53,9 +53,9 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import avatar from "@/assets/images/avatar.jpg";
 import { Switch } from "@/components/ui/switch";
-import { Icon } from "@iconify/vue";
 import MenuItem from "@/src/components/MenuItem.vue";
 import menuItemsData from "@/src/utils/menuList.json";
+import { MoonStar, Sun } from "lucide-vue-next";
 
 const props = defineProps(["currentContent", "isDark", "isMenuOpen"]);
 const emit = defineEmits([

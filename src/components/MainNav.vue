@@ -17,8 +17,8 @@
         v-if="width >= 768"
       >
         <template #thumb class="flex items-center justify-center align-middle">
-          <Icon v-if="isDark" icon="lucide:moon" />
-          <Icon v-else icon="lucide:sun" />
+          <MoonStar v-if="isDark" :size="20" />
+          <Sun v-else :size="20" />
         </template>
       </Switch>
       <div
@@ -35,8 +35,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Switch } from "@/components/ui/switch";
-import { Icon } from "@iconify/vue";
-import { AlignJustify } from "lucide-vue-next";
+import { AlignJustify, MoonStar, Sun } from "lucide-vue-next";
 
 const width = ref<number>(0);
 const height = ref<number>(0);
