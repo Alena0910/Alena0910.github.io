@@ -9,6 +9,9 @@
       @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}
+      <span v-if="menuItem.subItems" class="mx-1"
+        >[{{ menuItem.subItems.length }}]</span
+      >
       <div
         class="text-gray-400 rounded-full w-6 h-6 flex items-center justify-center"
         v-if="menuItem.subItems"

@@ -8,7 +8,9 @@
     </div>
     <div id="about-content" class="flex flex-col gap-10 my-4">
       <div id="about-intro">
-        <div id="about-intro-title" class="mb-4 text-[20px]">個人經歷</div>
+        <div id="about-intro-title" class="mb-4 text-[20px] border-b">
+          個人經歷
+        </div>
         <div id="about-intro-article" class="ml-4 flex flex-col gap-2">
           <p>
             我是黃品甄，目前就讀於台北市立大學資訊工程學系，我對於學習程式有著濃厚的興趣，並且積極提升能力。最近偶爾會打CTF，是一個新手，希望能學到更多資安知識。
@@ -23,7 +25,7 @@
       </div>
       <div id="about-team" class="flex flex-col gap-10 my-4">
         <div id="about-dayoff">
-          <div id="about-dayoff-title" class="mb-4 text-[20px]">
+          <div id="about-dayoff-title" class="mb-4 text-[20px] border-b">
             請假系統維護團隊
           </div>
           <div id="about-dayoff-content" class="ml-4 flex flex-col gap-3">
@@ -40,7 +42,7 @@
           </div>
         </div>
         <div id="about-carbon-diary">
-          <div id="about-carbon-diary-title" class="mb-4 text-[20px]">
+          <div id="about-carbon-diary-title" class="mb-4 text-[20px] border-b">
             減碳系統開發團隊
           </div>
           <div id="about-dayoff-content" class="ml-4 flex flex-col gap-3">
