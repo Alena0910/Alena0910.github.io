@@ -113,5 +113,10 @@
     "fileName": "Web/session-basic",
     "title": "session-basic",
     "tags": ["Dreamhack", "Web"]
+  },
+  "Summer Fan": {
+    "fileName": "Reverse/SummerFan",
+    "title": "Summer Fan",
+    "tags": ["Blitz CTF #4", "Dreamhack", "Reverse"]
   }
 }
