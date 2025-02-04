@@ -9,7 +9,7 @@
       @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}
-      <span v-if="menuItem.subItems" class="mx-1"
+      <span v-if="menuItem.subItems" class="mx-1 text-xs"
         >[{{ menuItem.subItems.length }}]</span
       >
       <div

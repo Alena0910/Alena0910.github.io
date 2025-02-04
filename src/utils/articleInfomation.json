@@ -118,5 +118,15 @@
     "fileName": "Reverse/SummerFan",
     "title": "Summer Fan",
     "tags": ["Blitz CTF #4", "Dreamhack", "Reverse"]
+  },
+  "Secure Secret": {
+    "fileName": "Web/SecureSecret",
+    "title": "Secure Secret",
+    "tags": ["Dreamhack CTF Season 6 Round #10 (🌱Div2)", "Web"]
+  },
+  "rev-basic-1": {
+    "fileName": "Reverse/rev-basic-1",
+    "title": "rev-basic-1",
+    "tags": ["Dreamhack", "Reverse"]
   }
 }

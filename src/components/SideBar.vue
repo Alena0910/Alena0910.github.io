@@ -127,6 +127,8 @@ const componentsMap: { [key: string]: Component } = {
   "Mango (Dreamhack)": CTFWriteupTemplate,
   "session-basic": CTFWriteupTemplate,
   "Summer Fan": CTFWriteupTemplate,
+  "Secure Secret": CTFWriteupTemplate,
+  "rev-basic-1": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(

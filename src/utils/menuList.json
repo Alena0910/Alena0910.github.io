@@ -24,7 +24,8 @@
               { "name": "simple_sqli" },
               { "name": "image-storage" },
               { "name": "Mango (Dreamhack)" },
-              { "name": "session-basic" }
+              { "name": "session-basic" },
+              { "name": "Secure Secret" }
             ]
           },
           {
@@ -49,7 +50,7 @@
           },
           {
             "name": "Reverse",
-            "subItems": [{ "name": "Summer Fan" }]
+            "subItems": [{ "name": "Summer Fan" }, { "name": "rev-basic-1" }]
           },
           {
             "name": "Misc",
