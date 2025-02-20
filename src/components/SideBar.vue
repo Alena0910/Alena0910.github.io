@@ -143,8 +143,9 @@ interface WriteupProps {
 }
 
 const currentWriteup = computed(() => {
-  if (articleInfomation[currentContent.value]) {
-    return articleInfomation[currentContent.value];
+  const key = currentContent.value as keyof typeof articleInfomation;
+  if (articleInfomation[key]) {
+    return articleInfomation[key];
   }
   return {
     fileName: "404",
