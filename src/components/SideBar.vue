@@ -129,6 +129,7 @@ const componentsMap: { [key: string]: Component } = {
   "Summer Fan": CTFWriteupTemplate,
   "Secure Secret": CTFWriteupTemplate,
   "rev-basic-1": CTFWriteupTemplate,
+  "[wargame.kr] strcmp": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(

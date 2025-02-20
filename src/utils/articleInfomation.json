@@ -128,5 +128,10 @@
     "fileName": "Reverse/rev-basic-1",
     "title": "rev-basic-1",
     "tags": ["Dreamhack", "Reverse"]
+  },
+  "[wargame.kr] strcmp": {
+    "fileName": "Web/[wargame.kr]strcmp",
+    "title": "[wargame.kr] strcmp",
+    "tags": ["Blitz CTF #9", "Web"]
   }
 }
