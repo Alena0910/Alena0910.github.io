@@ -6,7 +6,7 @@
       {{ error.code }}
     </div>
     <div id="error-msg">{{ error.msg }}</div>
-    <Button class="mt-8" variant="primary">
+    <Button class="mt-8">
       <NuxtLink to="/" class="flex items-center">
         <Home class="w-4 h-4 mr-2" />回首頁
       </NuxtLink>

@@ -72,7 +72,8 @@
         "name": "Computer Network Course Notes",
         "subItems": [
           { "name": "Summary" },
-          { "name": "Basic Switch and End Device Configuration" }
+          { "name": "Basic Switch and End Device Configuration" },
+          { "name": "Protocols and Models" }
         ]
       },
       { "name": "Project-3" }

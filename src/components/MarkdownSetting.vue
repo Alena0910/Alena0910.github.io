@@ -93,14 +93,26 @@ h6 {
   margin: 1.5em 0 0.5em;
 }
 
-ul,
+ul {
+  list-style-type: disc;
+}
+
 ol {
   margin: 1em 0;
-  padding-left: 1.5em;
+  list-style-type: decimal;
 }
 
 li {
   margin-bottom: 0.5em;
+  list-style-position: inside;
+}
+
+ul li::marker {
+  color: #888;
+}
+
+ol li::marker {
+  color: #888;
 }
 
 pre {

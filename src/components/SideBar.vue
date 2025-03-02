@@ -131,8 +131,9 @@ const componentsMap: { [key: string]: Component } = {
   "rev-basic-1": CTFWriteupTemplate,
   "[wargame.kr] strcmp": CTFWriteupTemplate,
   "Small Counter": CTFWriteupTemplate,
-  "Summary": NormalArticle,
+  Summary: NormalArticle,
   "Basic Switch and End Device Configuration": NormalArticle,
+  "Protocols and Models": NormalArticle,
 };
 
 const currentComponent = computed(
