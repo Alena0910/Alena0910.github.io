@@ -8,6 +8,8 @@
 </template>
 
 <script setup lang="ts">
+import { ERROR_MESSAGE } from "../utils/constants";
+
 interface ErrorProps {
   code: number;
   msg: string;
@@ -19,7 +21,7 @@ defineProps({
     required: false,
     default: () => ({
       code: 404,
-      msg: "目前尚未開放此頁面或頁面不存在 (๑•́ ₃ •̀๑)",
+      msg: ERROR_MESSAGE[404],
     }),
   },
 });

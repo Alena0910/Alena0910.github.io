@@ -6,7 +6,9 @@
       class="flex items-center py-4 text-lg font-medium text-muted-foreground"
     >
       <NuxtLink to="/">
-        <span class="text-[40px] font-900">Blog</span>
+        <span class="text-[40px] font-900 decoration-none">{{
+          WEBSITE_NAME
+        }}</span>
       </NuxtLink>
     </div>
     <div class="flex items-center gap-x-4">
@@ -36,6 +38,7 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Switch } from "@/components/ui/switch";
 import { AlignJustify, MoonStar, Sun } from "lucide-vue-next";
+import { WEBSITE_NAME } from "@/src/utils/constants";
 
 const width = ref<number>(0);
 const height = ref<number>(0);

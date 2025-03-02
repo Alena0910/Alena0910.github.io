@@ -1,7 +1,7 @@
 <template>
   <div class="container flex flex-col gap-4 mb-10">
     <div id="about-title" class="text-[24px] font-bold mt-4">
-      Pin-Chen Huang
+      {{ FIRST_NAME }} {{ LAST_NAME }}
     </div>
     <div id="about-image" class="flex items-center">
       <img :src="aboutImage" alt="about" class="rounded-lg w-60" />
@@ -70,6 +70,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-vue-next";
 import aboutImage from "@/assets/images/aboutImage.jpg";
 import ContactMe from "@/src/components/contact/contactMe.vue";
+import { FIRST_NAME, LAST_NAME } from "@/src/utils/constants";
 
 onMounted(() => {
   const element = document.getElementById("app");

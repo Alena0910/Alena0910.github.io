@@ -22,14 +22,14 @@
         <div id="sidebar-header" class="flex flex-col items-center">
           <Avatar class="w-20 h-20 mb-2">
             <AvatarImage :src="avatar" alt="@radix-vue" />
-            <AvatarFallback>Avatar</AvatarFallback>
+            <AvatarFallback>{{ WORD_AVATAR }}</AvatarFallback>
           </Avatar>
           <div
             id="sidebar-title"
             class="text-lg font-bold mb-6 w-fit flex flex-col items-center"
           >
-            <div id="sidebar-first-name">Pin-Chen</div>
-            <div id="sidebar-last-name">Huang</div>
+            <div id="sidebar-first-name">{{ FIRST_NAME }}</div>
+            <div id="sidebar-last-name">{{ LAST_NAME }}</div>
           </div>
         </div>
         <Separator class="my-4" label="Menu" />
@@ -68,13 +68,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import About from "@/src/components/about/AboutContent.vue";
 import avatar from "@/assets/images/avatar.jpg";
-import ProjectMenu from "@/src/components/project/ProjectMenu.vue";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
 import CTFWriteupTemplate from "@/src/components/project/CTFWriteupTemplate.vue";
 import ErrorMsg from "@/src/components/ErrorMsg.vue";
 import MenuItem from "@/src/components/MenuItem.vue";
 import menuItemsData from "@/src/utils/menuList.json";
 import articleInfomation from "@/src/utils/articleInfomation.json";
+import { FIRST_NAME, LAST_NAME, WORD_AVATAR } from "@/src/utils/constants";
 
 const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
 const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
@@ -98,7 +98,6 @@ const prevComponent = ref<Component>(About);
 
 const componentsMap: { [key: string]: Component } = {
   "About Me": About,
-  Article: ProjectMenu,
   "CTF Writeup": prevComponent,
   Web: prevComponent,
   Crypto: prevComponent,
