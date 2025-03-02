@@ -117,7 +117,7 @@
   "Summer Fan": {
     "fileName": "Reverse/SummerFan",
     "title": "Summer Fan",
-    "tags": ["Blitz CTF #4", "Dreamhack", "Reverse"]
+    "tags": ["Dreamhack Blitz CTF #4", "Dreamhack", "Reverse"]
   },
   "Secure Secret": {
     "fileName": "Web/SecureSecret",
@@ -132,6 +132,11 @@
   "[wargame.kr] strcmp": {
     "fileName": "Web/[wargame.kr]strcmp",
     "title": "[wargame.kr] strcmp",
-    "tags": ["Blitz CTF #9", "Web"]
+    "tags": ["Dreamhack Blitz CTF #9", "Web"]
+  },
+  "Small Counter": {
+    "fileName": "Reverse/SmallCounter",
+    "title": "Small Counter",
+    "tags": ["Dreamhack Blitz CTF #12", "Reverse"]
   }
 }

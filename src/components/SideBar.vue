@@ -130,6 +130,7 @@ const componentsMap: { [key: string]: Component } = {
   "Secure Secret": CTFWriteupTemplate,
   "rev-basic-1": CTFWriteupTemplate,
   "[wargame.kr] strcmp": CTFWriteupTemplate,
+  "Small Counter": CTFWriteupTemplate,
 };
 
 const currentComponent = computed(
