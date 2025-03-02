@@ -60,12 +60,36 @@ p {
   margin: 1em 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h1 {
+  font-size: 2em;
+  margin: 1.5em 0 0.5em;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 1.5em 0 0.5em;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+h3 {
+  font-size: 1.25em;
+  margin: 1.5em 0 0.5em;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.5em 0 0.5em;
+}
+
+h5 {
+  font-size: 0.875em;
+  margin: 1.5em 0 0.5em;
+}
+
 h6 {
+  font-size: 0.75em;
   margin: 1.5em 0 0.5em;
 }
 

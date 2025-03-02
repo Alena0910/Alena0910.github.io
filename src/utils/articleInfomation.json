@@ -138,5 +138,17 @@
     "fileName": "Reverse/SmallCounter",
     "title": "Small Counter",
     "tags": ["Dreamhack Blitz CTF #12", "Reverse"]
+  },
+  "Summary": {
+    "fileName": "Summary",
+    "title": "",
+    "tags": [],
+    "articleTheme": "ComputerNetworkCourseNotes"
+  },
+  "Basic Switch and End Device Configuration": {
+    "fileName": "L2",
+    "title": "",
+    "tags": [],
+    "articleTheme": "ComputerNetworkCourseNotes"
   }
 }

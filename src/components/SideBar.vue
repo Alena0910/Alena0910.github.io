@@ -75,6 +75,7 @@ import MenuItem from "@/src/components/MenuItem.vue";
 import menuItemsData from "@/src/utils/menuList.json";
 import articleInfomation from "@/src/utils/articleInfomation.json";
 import { FIRST_NAME, LAST_NAME, WORD_AVATAR } from "@/src/utils/constants";
+import NormalArticle from "@/src/components/project/NormalArticle.vue";
 
 const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
 const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
@@ -130,6 +131,8 @@ const componentsMap: { [key: string]: Component } = {
   "rev-basic-1": CTFWriteupTemplate,
   "[wargame.kr] strcmp": CTFWriteupTemplate,
   "Small Counter": CTFWriteupTemplate,
+  "Summary": NormalArticle,
+  "Basic Switch and End Device Configuration": NormalArticle,
 };
 
 const currentComponent = computed(
@@ -140,6 +143,13 @@ interface WriteupProps {
   fileName: string;
   title: string;
   tags?: string[];
+}
+
+interface NormalArticleProps {
+  fileName: string;
+  title: string;
+  tags?: string[];
+  articleTheme: string;
 }
 
 const currentWriteup = computed(() => {

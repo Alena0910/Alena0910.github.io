@@ -68,7 +68,13 @@
           }
         ]
       },
-      { "name": "Project-2" },
+      {
+        "name": "Computer Network Course Notes",
+        "subItems": [
+          { "name": "Summary" },
+          { "name": "Basic Switch and End Device Configuration" }
+        ]
+      },
       { "name": "Project-3" }
     ]
   }
