@@ -9,9 +9,11 @@
       @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}
-      <span v-if="menuItem.subItems" class="mx-1 text-xs"
-        >[{{ menuItem.subItems.length }}]</span
-      >
+      <span v-if="menuItem.subItems">
+        <Badge variant="secondary" class="text-xs">{{
+          menuItem.subItems.length
+        }}</Badge>
+      </span>
       <div
         class="text-gray-400 rounded-full w-6 h-6 flex items-center justify-center"
         v-if="menuItem.subItems"
@@ -39,6 +41,7 @@
 </template>
 
 <script setup lang="ts">
+import { Badge } from "@/components/ui/badge";
 import { ChevronDown, ChevronUp } from "lucide-vue-next";
 import MenuItem from "@/src/components/MenuItem.vue";
 
