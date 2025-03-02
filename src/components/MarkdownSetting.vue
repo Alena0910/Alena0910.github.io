@@ -157,4 +157,21 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+th {
+  background-color: hsl(var(--secondary));
+  border: 1px solid hsl(var(--border));
+  padding: 0.5em;
+}
+
+td {
+  border: 1px solid hsl(var(--border));
+  padding: 0.5em;
+}
 </style>

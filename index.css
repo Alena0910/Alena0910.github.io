@@ -88,12 +88,15 @@
 }
 
 @layer base {
+  @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
   * {
     @apply border-border;
+    font-family: "Noto Sans TC", sans-serif !important;
   }
   html,
   body {
     @apply bg-background text-foreground;
+    font-family: "Noto Sans TC", sans-serif !important;
     margin: 0;
     padding: 0;
     width: 100dvw;
