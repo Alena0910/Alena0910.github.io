@@ -5,8 +5,8 @@
     <div
       class="flex items-center py-4 text-lg font-medium text-muted-foreground"
     >
-      <NuxtLink to="/">
-        <span class="text-[40px] font-900 decoration-none">{{
+      <NuxtLink to="/" class="no-underline hover:no-underline">
+        <span class="text-[40px] font-900 no-underline hover:no-underline">{{
           WEBSITE_NAME
         }}</span>
       </NuxtLink>
