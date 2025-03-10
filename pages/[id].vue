@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-0 relative top-[120px] pb-[200px]">
-    <LoadingComponent v-if="isLoading" />
+    <LoadingComponent v-if="isLoading" :isDark="isDark" />
     <div class="relative h-[160px]">
       <MainNav
         v-model:isMenuOpen="isMenuOpen"
@@ -36,6 +36,11 @@ import About from "@/src/components/about/AboutContent.vue";
 import ErrorMsg from "@/src/components/ErrorMsg.vue";
 import articleInfomation from "@/src/utils/articleInfomation.json";
 import { componentsMap } from "@/src/utils/componentsMap";
+import {
+  setThemeMode,
+  handleThemeMode,
+  checkThemeMode,
+} from "@/src/utils/cookies";
 
 definePageMeta({
   validate: async (route) => {
@@ -74,9 +79,11 @@ const isLoading = ref(true);
 
 watch(isDark, (value) => {
   if (value) {
-    document.documentElement.classList.add("dark");
+    setThemeMode("dark");
+    handleThemeMode();
   } else {
-    document.documentElement.classList.remove("dark");
+    setThemeMode("light");
+    handleThemeMode();
   }
 });
 
@@ -86,6 +93,9 @@ const updateDimensions = () => {
 };
 
 onMounted(() => {
+  if (checkThemeMode() === "dark") {
+    isDark.value = true;
+  }
   if (isMenuOpen) {
     document.body.style.overflow = "hidden";
   } else {

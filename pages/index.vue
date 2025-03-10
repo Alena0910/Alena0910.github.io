@@ -1,6 +1,6 @@
 <template>
   <div class="box-border">
-    <LoadingComponent v-if="isLoading" />
+    <LoadingComponent v-if="isLoading" :isDark="isDark" />
     <div class="relative h-[160px]">
       <MainNav
         v-model:isMenuOpen="isMenuOpen"
@@ -26,6 +26,11 @@ import MainNav from "@/src/components/MainNav.vue";
 import SideBar from "@/src/components/SideBar.vue";
 import BackToTop from "@/src/components/BackToTop.vue";
 import LoadingComponent from "@/src/components/LoadingComponent.vue";
+import {
+  setThemeMode,
+  handleThemeMode,
+  checkThemeMode,
+} from "@/src/utils/cookies";
 
 const router = useRouter();
 
@@ -35,13 +40,18 @@ const isLoading = ref(true);
 
 watch(isDark, (value) => {
   if (value) {
-    document.documentElement.classList.add("dark");
+    setThemeMode("dark");
+    handleThemeMode();
   } else {
-    document.documentElement.classList.remove("dark");
+    setThemeMode("light");
+    handleThemeMode();
   }
 });
 
 onMounted(() => {
+  if (checkThemeMode() === "dark") {
+    isDark.value = true;
+  }
   router.push({
     path: encodeURIComponent("About Me"),
   });

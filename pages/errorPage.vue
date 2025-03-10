@@ -15,13 +15,21 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, watch } from "vue";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-vue-next";
+import {
+  setThemeMode,
+  handleThemeMode,
+  checkThemeMode,
+} from "@/src/utils/cookies";
 
 interface ErrorProps {
   code: number;
   msg: string;
 }
+
+const isDark = ref(false);
 
 defineProps({
   error: {
@@ -32,5 +40,21 @@ defineProps({
       msg: "Unhandle error",
     }),
   },
+});
+
+watch(isDark, (value) => {
+  if (value) {
+    setThemeMode("dark");
+    handleThemeMode();
+  } else {
+    setThemeMode("light");
+    handleThemeMode();
+  }
+});
+
+onMounted(() => {
+  if (checkThemeMode() === "dark") {
+    isDark.value = true;
+  }
 });
 </script>
