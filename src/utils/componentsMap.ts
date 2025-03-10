@@ -40,4 +40,6 @@ export const componentsMap: { [key: string]: Component } = {
   "Basic Switch and End Device Configuration": NormalArticle,
   "Protocols and Models": NormalArticle,
   "L1 - L3 test": NormalArticle,
+  "QR Secrets": CTFWriteupTemplate,
+  "HTTP Carrier Pigeons": CTFWriteupTemplate,
 };

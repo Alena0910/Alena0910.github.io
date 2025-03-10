@@ -162,5 +162,15 @@
     "title": "",
     "tags": [],
     "articleTheme": "ComputerNetworkCourseNotes"
+  },
+  "QR Secrets": {
+    "fileName": "PearlCTF2025/Misc/qr-secrets",
+    "title": "QR Secrets",
+    "tags": ["PearlCTF 2025", "Misc"]
+  },
+  "HTTP Carrier Pigeons": {
+    "fileName": "PearlCTF2025/Forensics/HTTPCarrierPigeons",
+    "title": "HTTP Carrier Pigeons",
+    "tags": ["PearlCTF 2025", "Forensics"]
   }
 }
