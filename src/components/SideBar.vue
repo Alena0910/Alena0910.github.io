@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full">
+  <div class="w-fit">
     <div
-      class="fixed top-[100px] left-0 w-full z-50"
+      class="fixed top-[100px] left-0 w-fit z-50"
       style="max-height: calc(100% - 100px)"
     >
       <ToggleMenu
@@ -14,7 +14,9 @@
         @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
       />
     </div>
-    <div :class="width >= 768 ? 'w-full flex flex-row gap-6' : 'w-full'">
+    <div
+      :class="width >= 768 ? 'w-full flex flex-row gap-6 pb-[200px]' : 'w-full'"
+    >
       <div
         class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8 ml-12"
         v-if="width >= 768"
@@ -46,17 +48,6 @@
             :handleCurrentContent="handleCurrentContent"
           />
         </div>
-      </div>
-      <div
-        id="content"
-        :style="{ maxWidth: width < 768 ? '100dvw' : '65%' }"
-        class="box-border"
-      >
-        <component
-          :is="currentComponent"
-          :articleInfo="currentWriteup"
-          :key="currentContent"
-        />
       </div>
     </div>
   </div>

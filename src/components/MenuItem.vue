@@ -1,11 +1,15 @@
 <template>
   <div v-for="menuItem in menuItems" :key="menuItem.name">
+    <router-link
+      v-if="!menuItem.subItems"
+      :to="`/${encodeURIComponent(menuItem.name)}`"
+      class="w-fit cursor-pointer flex flex-row items-center w-100 py-2 px-4 no-underline hover:no-underline hover:bg-secondary rounded-md text-foreground font-normal"
+    >
+      {{ menuItem.name }}
+    </router-link>
     <div
-      :class="
-        currentContent === menuItem.name
-          ? 'w-fit cursor-pointer flex flex-row items-center w-100 py-2 px-4 border-primary border-l-8'
-          : 'w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md py-2 px-4'
-      "
+      v-else
+      class="w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md py-2 px-4"
       @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}
@@ -55,6 +59,7 @@ const props = defineProps<{
   toggleGroup: (key: string) => void;
   handleCurrentContent: (content: string) => void;
 }>();
+
 const { group, toggleGroup, handleCurrentContent, menuItems } = props;
 
 const handleClick = (menuItem: any) => {
