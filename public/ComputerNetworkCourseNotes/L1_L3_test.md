@@ -212,14 +212,14 @@
 > 應選`DHCP`、`FTP`、`DNS`
 
 > ## Refer to the exhibit. ServerB is attempting to contact HostA. Which two statements  correctly identify the addressing that ServerB will generate in the process? (Choose two.)
-> ![q27](/ComputerNetworkCourseNotes/assets/L1_L3_test/image-1.png)
-> ServerB 想要聯繫 HostA，但是 ServerB 和 HostA 之間有兩個路由器（RouterA 和 RouterB），因此需要跨越兩個路由器來達成這個連線。
-> ServerB 會先發送數據包給 RouterB，然後 RouterB 再將數據包轉發到 RouterA，最終到達 HostA。
+> ![q27](/ComputerNetworkCourseNotes/assets/L1_L3_test/image-1.png)  
+> ServerB 正在嘗試聯繫 HostA  
+> ServerB 通過 RouterB 與 RouterA 進行通信，RouterA 再通過 SwitchA 連接到 HostA  
 > ---
-> 當 ServerB 發送數據包時，它會先將數據發送到其默認網關 RouterB。由於 ServerB 和 RouterB 之間的直接連接是基於 Ethernet 網路（通過 SwitchB），所以 ServerB 會生成一個幀（frame），其目的地 MAC 地址是 RouterB 的 MAC 地址。
-> ServerB 發送的數據包的目標是 HostA。即使 ServerB 無法直接與 HostA 通訊，它依然會將 HostA 的 IP 地址作為目的地 IP 地址。這些數據包會被發送到 RouterB，然後由 RouterB 再轉發到 RouterA，最終到達 HostA。
+> - ServerB 必須將其數據包的目標 IP 地址設置為 HostA 的 IP 地址，這樣數據包才能最終到達 HostA  
+> - ServerB 通常不知道 RouterA 的 MAC 地址，因此它會將數據包送到 RouterB，並且 RouterB 會進一步處理數據包。在這種情況下，ServerB 會生成一個 frame，它的目標 MAC 地址是 RouterA，因為 ServerB 需要將數據傳送給 RouterA，而這是通過交換機完成的  
 > ---
-> 應選`ServerB will generate a packet with the destination IP address of HostA.`、`ServerB will generate a frame with the destination MAC address of RouterB.`
+> 應選`ServerB will generate a packet with the destination IP address of HostA.`、`ServerB will generate a frame with the destination MAC address of RouterA.`
 
 > ## Why would a Layer 2 switch need an IP address?
 > Layer 2 Switch 需要 IP 地址來進行 遠端管理
@@ -298,3 +298,60 @@ Vlan1                  192.168.5.10    YES manual up                    up
 > 在OSI模型中，目的地 MAC 地址是在數據鏈路層 (Data Link Layer) 被加入到 PDU（協議數據單元）中的
 > ---
 > 應選`data link layer`
+
+> ## An administrator is configuring a switch console port with a password. In what order will the administrator travel through the IOS modes of operation in order to reach the mode in which the configuration commands will be entered?
+> ![ans](/ComputerNetworkCourseNotes/assets/L1_L3_test/image-4.png)
+> ---
+> 1. User EXEC mode
+> 2. Privileged EXEC mode
+> 3. Global Configuration mode
+> 4. Line Configuration mode
+
+> ## While trying to solve a network issue, a technician made multiple changes to the current router configuration file. The changes did not solve the problem and were not saved. What action can the technician take to discard the changes and work with the file in NVRAM?
+> 如果技術員想要丟棄運行配置中的更改並恢復到 NVRAM 中的原始配置（startup-config），可以執行 reload 命令
+> ---
+> 應選`Issue the reload command without saving the running configuration`
+
+> ## How is SSH different from Telnet?
+> SSH（安全外殼協議）與 Telnet 的最大區別之一是 加密。SSH 提供加密保護，保證傳輸的數據是安全的，並且使用用戶身份驗證來加強安全性。相反，Telnet 會將所有傳輸的數據（包括登錄憑證）以 明文 形式發送，因此被認為是不安全的
+> ---
+> 應選`SSH provides security to remote sessions by encrypting messages and using user authentication. Telnet is considered insecure and sends messages in plaintext.`
+
+> ## Which two host names follow the guidelines for naming conventions on Cisco IOS devices? (Choose two.)
+> Cisco IOS 裝置的主機名稱（hostname）命名規範
+> 1. 不能包含特殊字符（例如 !, #, &, @ 等）
+> 2. 由字母、數字和連字符（-）組成
+> 3. 長度不能超過 63 個字符
+> 4. 不能包含空格
+> ---
+> 應選`SwBranch799`、`RM-3-Switch-2A4`
+
+> ## Which statement accurately describes a TCP/IP encapsulation process when a PC is sending data to the network?
+> 在 TCP/IP 封裝過程中，網際層（Internet Layer） 會將數據封裝成數據包，然後將其傳遞到網絡接入層（Network Access Layer），被封裝成幀並發送到物理網絡中
+> ---
+> 應選`Data is sent from the internet layer to the network access layer.`
+
+> ## Which method allows a computer to react accordingly when it requests data from a server and the server takes too long to respond?
+> 回應超時（Response Timeout）是一種在請求數據後，如果伺服器長時間未回應時，計算機會根據設定的超時時間做出反應的機制
+> ---
+> 應選`Response timeout`
+
+> ## What is a characteristic of multicast messages?
+> 多播（Multicast）消息是發送到一組特定的主機，而不是所有主機
+> ---
+> 應選`They are sent to a select group of hosts.`
+
+> ## What term describes a type of network used by people who work from home or from a small remote office?
+> 1. Converged network  
+> 指將語音、數據和視頻等多種服務合併在同一網路上來傳輸  
+> 2. SOHO network  
+> 專為小型辦公室或家庭辦公室設計的網路  
+> 3. Quality of service (QoS)  
+> 在網路中管理流量的技術，用於確保不同類型的流量（例如，視頻、語音和數據）得到不同的處理優先級  
+> 4. BYOD (Bring Your Own Device)  
+> 員工將自己擁有的設備（如筆記型電腦、智能手機等）帶到工作場所使用的政策
+> ---
+> 應選`SOHO network`
+
+> ## At which OSI layer is a source IP address added to a PDU during the encapsulation process?
+> 應選`Network layer`
