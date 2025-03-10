@@ -73,7 +73,8 @@
         "subItems": [
           { "name": "Summary" },
           { "name": "Basic Switch and End Device Configuration" },
-          { "name": "Protocols and Models" }
+          { "name": "Protocols and Models" },
+          { "name": "L1 - L3 test"}
         ]
       },
       { "name": "Project-3" }

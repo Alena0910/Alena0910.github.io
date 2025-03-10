@@ -60,13 +60,12 @@ import { Separator } from "@/components/ui/separator";
 import About from "@/src/components/about/AboutContent.vue";
 import avatar from "@/assets/images/avatar.jpg";
 import ToggleMenu from "@/src/components/ToggleMenu.vue";
-import CTFWriteupTemplate from "@/src/components/project/CTFWriteupTemplate.vue";
 import ErrorMsg from "@/src/components/ErrorMsg.vue";
 import MenuItem from "@/src/components/MenuItem.vue";
 import menuItemsData from "@/src/utils/menuList.json";
 import articleInfomation from "@/src/utils/articleInfomation.json";
 import { FIRST_NAME, LAST_NAME, WORD_AVATAR } from "@/src/utils/constants";
-import NormalArticle from "@/src/components/project/NormalArticle.vue";
+import { componentsMap } from "@/src/utils/componentsMap";
 
 const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
 const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
@@ -87,45 +86,6 @@ interface MenuItemProps {
 const menuMainItems = ref(menuItemsData);
 const prevContent = ref<string>("About Me");
 const prevComponent = ref<Component>(About);
-
-const componentsMap: { [key: string]: Component } = {
-  "About Me": About,
-  "CTF Writeup": prevComponent,
-  Web: prevComponent,
-  Crypto: prevComponent,
-  Misc: prevComponent,
-  "Ave Mujica": CTFWriteupTemplate,
-  "Be IDol": CTFWriteupTemplate,
-  Mango: CTFWriteupTemplate,
-  "2DES": CTFWriteupTemplate,
-  "Mystery Presentation": CTFWriteupTemplate,
-  "Packet Detective": CTFWriteupTemplate,
-  "Math Test": CTFWriteupTemplate,
-  "3-Cipher": CTFWriteupTemplate,
-  "addition-quiz": CTFWriteupTemplate,
-  php7cmp4re: CTFWriteupTemplate,
-  ROT128: CTFWriteupTemplate,
-  "64se64": CTFWriteupTemplate,
-  "Snowing!": CTFWriteupTemplate,
-  lolololologfile: CTFWriteupTemplate,
-  d: CTFWriteupTemplate,
-  "xss-1": CTFWriteupTemplate,
-  "xss-2": CTFWriteupTemplate,
-  "csrf-1": CTFWriteupTemplate,
-  "csrf-2": CTFWriteupTemplate,
-  simple_sqli: CTFWriteupTemplate,
-  "image-storage": CTFWriteupTemplate,
-  "Mango (Dreamhack)": CTFWriteupTemplate,
-  "session-basic": CTFWriteupTemplate,
-  "Summer Fan": CTFWriteupTemplate,
-  "Secure Secret": CTFWriteupTemplate,
-  "rev-basic-1": CTFWriteupTemplate,
-  "[wargame.kr] strcmp": CTFWriteupTemplate,
-  "Small Counter": CTFWriteupTemplate,
-  Summary: NormalArticle,
-  "Basic Switch and End Device Configuration": NormalArticle,
-  "Protocols and Models": NormalArticle,
-};
 
 const currentComponent = computed(
   () => componentsMap[currentContent.value] || ErrorMsg,
