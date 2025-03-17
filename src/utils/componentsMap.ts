@@ -42,4 +42,5 @@ export const componentsMap: { [key: string]: Component } = {
   "L1 - L3 test": NormalArticle,
   "QR Secrets": CTFWriteupTemplate,
   "HTTP Carrier Pigeons": CTFWriteupTemplate,
+  "Physical Layer": NormalArticle,
 };

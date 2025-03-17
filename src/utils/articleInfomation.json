@@ -172,5 +172,11 @@
     "fileName": "PearlCTF2025/Forensics/HTTPCarrierPigeons",
     "title": "HTTP Carrier Pigeons",
     "tags": ["PearlCTF 2025", "Forensics"]
+  },
+  "Physical Layer": {
+    "fileName": "L4",
+    "title": "",
+    "tags": [],
+    "articleTheme": "ComputerNetworkCourseNotes"
   }
 }
