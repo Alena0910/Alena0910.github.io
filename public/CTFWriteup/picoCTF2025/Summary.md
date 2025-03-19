@@ -1,4 +1,4 @@
-#
+# picoCTF 2025 賽後總結
 
 這是第一次參加 picoCTF !!!  
 還有電神隊友們一起
@@ -17,6 +17,8 @@
 ![team score - 5510](/CTFWriteup/picoCTF2025/assets/summary/image.png)
 
 ## 個人成績
+
+~~專門寫水題~~
 
 ![individual score - 1860](/CTFWriteup/picoCTF2025/assets/summary/image-1.png)
 
