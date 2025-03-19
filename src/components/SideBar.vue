@@ -135,16 +135,8 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", updateDimensions);
 });
 
-const group = ref<{ [key: string]: boolean }>({});
-const isGroupListOpen = ref<boolean>(false);
+const group = ref<{ [key: string]: boolean }>({ Article: true });
 const toggleGroup = (groupName: string) => {
-  if (groupName === "Projects") {
-    if (!group.value[groupName]) {
-      isGroupListOpen.value = true;
-    } else {
-      isGroupListOpen.value = false;
-    }
-  }
   group.value[groupName] = !group.value[groupName];
 };
 const handleCurrentContent = (content: string) => {
