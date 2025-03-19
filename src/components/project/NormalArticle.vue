@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div id="ctf-writeup-content" class="break-words pb-10 w-full">
+    <div id="ctf-writeup-content" class="break-words pb-10 w-full h-full">
       <MarkdownSetting :articleContent="articleContent" :key="articleContent" />
     </div>
     <div id="ctf-writeup-tag" class="mb-2 flex flex-wrap gap-2 w-full mb-4">

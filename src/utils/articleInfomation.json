@@ -242,7 +242,7 @@
   "picoCTF 2025 Summary": {
     "fileName": "Summary",
     "title": "",
-    "tags": [],
+    "tags": ["picoCTF 2025"],
     "articleTheme": "CTFWriteup/picoCTF2025/"
   }
 }
