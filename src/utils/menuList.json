@@ -75,6 +75,39 @@
               },
               { "name": "Misc", "subItems": [{ "name": "QR Secrets" }] }
             ]
+          },
+          {
+            "name": "picoCTF 2025",
+            "subItems": [
+              { "name": "picoCTF 2025 Summary" },
+              {
+                "name": "Crypto",
+                "subItems": [
+                  { "name": "EVEN RSA CAN BE BROKEN???" },
+                  { "name": "Guess My Cheese (Part 1)" },
+                  { "name": "Guess My Cheese (Part 2)" },
+                  { "name": "hashcrack" }
+                ]
+              },
+              {
+                "name": "Forensics",
+                "subItems": [
+                  { "name": "Bitlocker-1" },
+                  { "name": "Bitlocker-2" },
+                  { "name": "Event-Viewing" },
+                  { "name": "Ph4nt0m 1ntrud3r" },
+                  { "name": "RED" }
+                ]
+              },
+              {
+                "name": "Web",
+                "subItems": [
+                  { "name": "Cookie Monster Secret Recipe" },
+                  { "name": "head-dump" },
+                  { "name": "SSTI1" }
+                ]
+              }
+            ]
           }
         ]
       },
