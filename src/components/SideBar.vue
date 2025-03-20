@@ -135,7 +135,10 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", updateDimensions);
 });
 
-const group = ref<{ [key: string]: boolean }>({ Article: true });
+const group = ref<{ [key: string]: boolean }>({
+  Article: true,
+  "CTF Writeup": true,
+});
 const toggleGroup = (groupName: string) => {
   group.value[groupName] = !group.value[groupName];
 };
