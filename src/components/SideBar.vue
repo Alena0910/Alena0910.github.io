@@ -1,5 +1,5 @@
 <template>
-  <div class="w-fit">
+  <div class="w-fit h-full">
     <div
       class="fixed top-[100px] left-0 w-fit z-50"
       style="max-height: calc(100% - 100px)"
