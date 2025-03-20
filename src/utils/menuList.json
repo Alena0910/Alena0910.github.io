@@ -111,16 +111,6 @@
           }
         ]
       },
-      {
-        "name": "Computer Network Course Notes",
-        "subItems": [
-          { "name": "Summary" },
-          { "name": "Basic Switch and End Device Configuration" },
-          { "name": "Protocols and Models" },
-          { "name": "L1 - L3 test" },
-          { "name": "Physical Layer" }
-        ]
-      },
       { "name": "Project-3" }
     ]
   }
