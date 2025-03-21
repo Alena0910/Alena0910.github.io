@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-0 relative top-[120px] pb-[200px]">
+  <div class="flex gap-0 relative mt-[120px] pb-[200px] w-full">
     <LoadingComponent v-show="isLoading" />
     <div class="relative h-[160px]">
       <MainNav :isMenuOpen="isMenuOpen" @updateMenuStatus="updateMenuStatus" />
@@ -7,7 +7,7 @@
     <SideBar :isMenuOpen="isMenuOpen" @updateMenuStatus="updateMenuStatus" />
     <BackToTop />
     <div
-      class="box-border"
+      class="box-border h-full"
       :style="{ maxWidth: width < 768 ? '100dvw' : '65%' }"
     >
       <component :is="currentComponent" :articleInfo="currentWriteup" />

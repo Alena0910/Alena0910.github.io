@@ -3,13 +3,13 @@
     <router-link
       v-if="!menuItem.subItems"
       :to="`/${encodeURIComponent(menuItem.name)}`"
-      class="w-fit cursor-pointer flex flex-row items-center w-100 py-2 px-4 no-underline hover:no-underline hover:bg-secondary rounded-md text-foreground font-normal"
+      class="w-fit cursor-pointer flex flex-row items-center w-100 py-2 px-4 no-underline hover:no-underline hover:bg-secondary rounded-md text-foreground font-normal select-none"
     >
       {{ menuItem.name }}
     </router-link>
     <div
       v-else
-      class="w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md py-2 px-4"
+      class="w-fit cursor-pointer flex flex-row items-center hover:bg-secondary w-100 rounded-md py-2 px-4 select-none"
       @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}

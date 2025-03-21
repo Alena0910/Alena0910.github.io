@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col gap-4 mb-10 h-full">
+  <div class="container flex flex-col gap-4 mb-10 overflow-y-hidden">
     <div id="about-title" class="text-[24px] font-bold mt-4">
       {{ FIRST_NAME }} {{ LAST_NAME }}
     </div>
@@ -30,14 +30,13 @@
           </div>
           <div id="about-dayoff-content" class="ml-4 flex flex-col gap-3">
             於2024年七月加入請假系統維護團隊，與團隊成員一同維護請假系統，並且參與後續前端開發。
-            <Button class="flex items-center mt-4 w-fit">
-              <a
-                target="_blank"
-                href="https://portal.utaipei.edu.tw/"
-                class="text-white font-normal"
-                >請假系統</a
-              >
-              <ExternalLink />
+            <Button
+              class="flex items-center mt-4 w-fit"
+              target="_blank"
+              href="https://portal.utaipei.edu.tw/"
+              as-child
+            >
+              <a class="text-white font-normal">請假系統<ExternalLink /></a>
             </Button>
           </div>
         </div>
@@ -47,14 +46,13 @@
           </div>
           <div id="about-dayoff-content" class="ml-4 flex flex-col gap-3">
             2024年八月學生減碳專案開始開發，負責前端開發，並且參與後續維護。
-            <Button class="flex items-center mt-4 w-fit">
+            <Button class="flex items-center mt-4 w-fit" as-child>
               <a
                 target="_blank"
                 href="https://carbon-diary.utaipei.edu.tw/login"
                 class="text-white"
-                >Carbon Diary</a
-              >
-              <ExternalLink />
+                >Carbon Diary<ExternalLink
+              /></a>
             </Button>
           </div>
           <ContactMe />

@@ -32,7 +32,7 @@
             <div id="sidebar-last-name">{{ LAST_NAME }}</div>
           </div>
         </div>
-        <Separator class="my-4" label="Menu" />
+        <Separator class="my-4 select-none" label="Menu" />
         <div
           id="sidbar-content"
           class="flex flex-col gap-2 w-100"

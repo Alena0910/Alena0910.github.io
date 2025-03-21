@@ -44,11 +44,22 @@ onMounted(() => {
   border-radius: 8px;
 }
 
+::-moz-selection {
+  color: hsl(var(--foreground));
+  background: hsl(var(--primary));
+}
+
+::selection {
+  color: hsl(var(--foreground));
+  background: hsl(var(--primary));
+}
+
 body,
 html {
   width: 100%;
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--foreground)) transparent;
+  -webkit-user-drag: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -147,6 +158,10 @@ img {
   border-radius: 8px;
   -webkit-user-drag: none;
   margin: 1em 0;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 a {
