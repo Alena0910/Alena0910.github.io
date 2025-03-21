@@ -1,7 +1,7 @@
 <template>
   <Dialog v-if="isDesktop" v-model:open="isOpen">
     <DialogTrigger as-child>
-      <Button variant="ghost" class="w-fit select-none"
+      <Button variant="ghost" class="w-fit select-none flex align-center"
         ><Search />{{ WORD_SEARCH }}</Button
       >
     </DialogTrigger>
@@ -33,7 +33,9 @@
 
   <Drawer v-else v-model:open="isOpen">
     <DrawerTrigger as-child>
-      <Button variant="ghost" class="w-fit select-none"><Search /></Button>
+      <Button variant="ghost" class="w-fit select-none align-center"
+        ><Search
+      /></Button>
     </DrawerTrigger>
     <DrawerContent class="min-h-[60dvh]">
       <DrawerHeader class="text-center">
