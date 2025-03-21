@@ -16,7 +16,7 @@
       :class="width >= 768 ? 'w-full flex flex-row gap-6 pb-[200px]' : 'w-full'"
     >
       <div
-        class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8 ml-12"
+        class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 border-secondary w-56 h-auto px-4 py-8 ml-12"
         v-show="width >= 768"
       >
         <div id="sidebar-header" class="flex flex-col items-center">
