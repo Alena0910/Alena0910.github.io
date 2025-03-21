@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-0 relative top-[120px] pb-[200px] overflow-hidden">
+  <div class="flex gap-0 relative top-[120px] pb-[200px]">
     <LoadingComponent v-show="isLoading" />
     <div class="relative h-[160px]">
       <MainNav :isMenuOpen="isMenuOpen" @updateMenuStatus="updateMenuStatus" />

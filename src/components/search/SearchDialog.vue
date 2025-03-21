@@ -1,9 +1,9 @@
 <template>
   <Dialog v-if="isDesktop" v-model:open="isOpen">
     <DialogTrigger as-child>
-      <Button variant="ghost"><Search />{{ WORD_SEARCH }}</Button>
+      <Button variant="ghost" class="w-fit"><Search />{{ WORD_SEARCH }}</Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-[600px] min-h-[60vh] max-h-[80vh]">
+    <DialogContent class="sm:max-w-[600px] min-h-[60dvh] max-h-[80dvh]">
       <DialogHeader>
         <DialogTitle class="pb-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DialogTitle>
         <DialogDescription class="flex flex-col w-full justify-center">
@@ -31,9 +31,9 @@
 
   <Drawer v-else v-model:open="isOpen">
     <DrawerTrigger as-child>
-      <Button variant="ghost"><Search /></Button>
+      <Button variant="ghost" class="w-fit"><Search /></Button>
     </DrawerTrigger>
-    <DrawerContent class="min-h-[60vh]">
+    <DrawerContent class="min-h-[60dvh]">
       <DrawerHeader class="text-center">
         <DrawerTitle class="pb-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DrawerTitle>
         <DrawerDescription>

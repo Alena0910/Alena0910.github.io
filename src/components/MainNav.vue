@@ -11,7 +11,7 @@
         }}</span>
       </NuxtLink>
     </div>
-    <div class="flex items-center gap-x-4">
+    <div class="flex items-center gap-x-4 w-fit">
       <SearchDialog />
       <SwitchMode v-if="width >= 768" />
       <div
