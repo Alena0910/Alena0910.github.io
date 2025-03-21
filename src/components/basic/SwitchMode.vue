@@ -1,8 +1,5 @@
 <template>
-  <Switch
-    v-model="isDark"
-    class="flex items-center align-middle"
-  >
+  <Switch v-model="isDark" class="flex items-center align-middle">
     <template #thumb class="flex items-center justify-center align-middle">
       <MoonStar v-if="isDark" :size="20" />
       <Sun v-else :size="20" />

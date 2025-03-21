@@ -34,6 +34,11 @@ const ERROR_MESSAGE = {
   503: "Service unavailable",
   504: "Gateway timeout",
 };
+interface Articles {
+  title: string;
+  tags: string[];
+  subItem?: object[];
+}
 
 export {
   WEBSITE_NAME,
@@ -53,3 +58,5 @@ export {
   WORD_KEYWORD,
   ERROR_MESSAGE,
 };
+
+export type { Articles };

@@ -13,7 +13,7 @@
     </div>
     <div class="flex items-center gap-x-4">
       <SearchDialog />
-      <SwitchMode v-if="width >= 768"/>
+      <SwitchMode v-if="width >= 768" />
       <div
         v-show="width < 768"
         class="cursor-pointer rounded-md border-2 p-2"
@@ -29,7 +29,7 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { AlignJustify } from "lucide-vue-next";
 import { WEBSITE_NAME } from "@/src/utils/constants";
-import SearchDialog from "@/src/components/SearchDialog.vue";
+import SearchDialog from "~/src/components/search/SearchDialog.vue";
 import SwitchMode from "@/src/components/basic/SwitchMode.vue";
 
 const width = ref<number>(0);
