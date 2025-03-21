@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, onBeforeMount, onUnmounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import MainNav from "@/src/components/MainNav.vue";
 import SideBar from "@/src/components/SideBar.vue";
@@ -75,9 +75,15 @@ const updateDimensions = () => {
   height.value = window.innerHeight;
 };
 
-onMounted(() => {
+onBeforeMount(() => {
   isDark.value = checkThemeMode() === "dark";
-  console.log(isDark.value);
+  if (isDark.value) {
+    setThemeMode("dark");
+    handleThemeMode();
+  } else {
+    setThemeMode("light");
+    handleThemeMode();
+  }
   if (isMenuOpen) {
     document.body.style.overflow = "hidden";
   } else {
@@ -91,7 +97,7 @@ onMounted(() => {
   }, 500);
 });
 
-onBeforeUnmount(() => {
+onUnmounted(() => {
   window.removeEventListener("resize", updateDimensions);
 });
 

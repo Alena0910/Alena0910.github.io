@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, onBeforeMount } from "vue";
 import {
   checkThemeMode,
   setThemeMode,
@@ -26,13 +26,21 @@ import { WORD_LOADER } from "@/src/utils/constants";
 
 const isDark = ref(checkThemeMode() === "dark");
 
-watch(isDark, (value: boolean) => {
-  if (value) {
+const updateTheme = (isDarkMode: boolean) => {
+  if (isDarkMode) {
     setThemeMode("dark");
-    handleThemeMode();
   } else {
     setThemeMode("light");
-    handleThemeMode();
   }
+  handleThemeMode();
+};
+
+onBeforeMount(() => {
+  isDark.value = checkThemeMode() === "dark";
+  updateTheme(isDark.value);
+});
+
+watch(isDark, (value: boolean) => {
+  updateTheme(value);
 });
 </script>

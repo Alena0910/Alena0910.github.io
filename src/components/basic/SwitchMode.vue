@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { Switch } from "@/components/ui/switch";
-import { ref, onMounted } from "vue";
+import { ref, onBeforeMount, onUnmounted } from "vue";
 import {
   setThemeMode,
   handleThemeMode,
@@ -27,7 +27,7 @@ const updateDimensions = () => {
   height.value = window.innerHeight;
 };
 
-onMounted(() => {
+onBeforeMount(() => {
   if (checkThemeMode() === "dark") {
     isDark.value = true;
   }
@@ -35,7 +35,7 @@ onMounted(() => {
   window.addEventListener("resize", updateDimensions);
 });
 
-onBeforeUnmount(() => {
+onUnmounted(() => {
   window.removeEventListener("resize", updateDimensions);
 });
 
