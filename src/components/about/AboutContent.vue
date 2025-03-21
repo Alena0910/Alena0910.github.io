@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col gap-4 mb-10 overflow-y-hidden">
+  <div class="container flex flex-col gap-4 mb-10 overflow-y-hidden border-secondary">
     <div id="about-title" class="text-[24px] font-bold mt-4">
       {{ FIRST_NAME }} {{ LAST_NAME }}
     </div>
