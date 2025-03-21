@@ -1,17 +1,17 @@
 <template>
   <Card
-    class="w-[350px] border-0 shadow-none hover:bg-secondary cursor-pointer"
+    class="w-full border-0 shadow-none hover:bg-secondary cursor-pointer"
     @click="handleCardBeClicked"
   >
     <CardHeader>
       <CardTitle class="m-0 p-1">{{ props.article.title }}</CardTitle>
-      <CardDescription class="flex flex-row gap-x-2 w-fit p-1 m-0">
+      <CardDescription class="flex flex-wrap gap-2 p-1 m-0">
         <div
           v-for="tag in props.article.tags"
           :key="props.article.title + tag"
-          class="flex flex-row gap-x-2 w-fit"
+          class="flex flex-wrap gap-x-2 w-fit"
         >
-          <Badge>{{ tag }}</Badge>
+          <Badge class="w-fit">{{ tag }}</Badge>
         </div>
       </CardDescription>
     </CardHeader>

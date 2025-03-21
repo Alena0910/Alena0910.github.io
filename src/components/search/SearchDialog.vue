@@ -3,14 +3,14 @@
     <DialogTrigger as-child>
       <Button variant="ghost"><Search />{{ WORD_SEARCH }}</Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-[425px] min-h-[60vh] max-h-[80vh]">
+    <DialogContent class="sm:max-w-[600px] min-h-[60vh] max-h-[80vh]">
       <DialogHeader>
         <DialogTitle class="pb-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DialogTitle>
-        <DialogDescription>
+        <DialogDescription class="flex w-full justify-center">
           <SearchingItem @updateArticlesStatus="updateFilteredArticles" />
         </DialogDescription>
       </DialogHeader>
-      <div class="max-h-[20rem] overflow-y-auto">
+      <div class="w-full max-h-[20rem] overflow-y-auto">
         <div v-for="article in articles" :key="article.title + article.tags">
           <SearchCard :article="article" v-if="article.title != ''" />
         </div>
@@ -29,6 +29,11 @@
           <SearchingItem />
         </DrawerDescription>
       </DrawerHeader>
+      <div class="w-full max-h-[20rem] overflow-y-auto">
+        <div v-for="article in articles" :key="article.title + article.tags">
+          <SearchCard :article="article" v-if="article.title != ''" />
+        </div>
+      </div>
       <DrawerFooter class="pt-2">
         <DrawerClose as-child>
           <Button variant="outline"> Cancel </Button>
