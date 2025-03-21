@@ -37,27 +37,27 @@
   "3-Cipher": {
     "fileName": "Crypto/3-Cipher",
     "title": "3-Cipher",
-    "tags": ["Dreamhack Blitz CTF #2", "Crypto", "2025/01/30"]
+    "tags": ["Dreamhack", "Dreamhack Blitz CTF #2", "Crypto", "2025/01/30"]
   },
   "addition-quiz": {
     "fileName": "Misc/addition-quiz",
     "title": "addition-quiz",
-    "tags": ["Dreamhack CTF Season 5 Round #2", "Misc"]
+    "tags": ["Dreamhack", "Dreamhack CTF Season 5 Round #2", "Misc"]
   },
   "php7cmp4re": {
     "fileName": "Web/php7cmp4re",
     "title": "php7cmp4re",
-    "tags": ["Dreamhack CTF Season 5 Round #2", "Web"]
+    "tags": ["Dreamhack", "Dreamhack CTF Season 5 Round #2", "Web"]
   },
   "ROT128": {
     "fileName": "Crypto/ROT128",
     "title": "ROT128",
-    "tags": ["Dreamhack CTF Season 3 Round #4", "Crypto"]
+    "tags": ["Dreamhack", "Dreamhack CTF Season 3 Round #4", "Crypto"]
   },
   "64se64": {
     "fileName": "Misc/64se64",
     "title": "64se64",
-    "tags": ["Dreamhack CTF Season 3 Round #6", "Misc"]
+    "tags": ["Dreamhack", "Dreamhack CTF Season 3 Round #6", "Misc"]
   },
   "Snowing!": {
     "fileName": "Forensics/Snowing",
@@ -107,7 +107,7 @@
   "Mango (Dreamhack)": {
     "fileName": "Web/MangoDH",
     "title": "Mango (Dreamhack)",
-    "tags": ["Dreamhack CTF Season 1 Round #1", "Web"]
+    "tags": ["Dreamhack", "Dreamhack CTF Season 1 Round #1", "Web"]
   },
   "session-basic": {
     "fileName": "Web/session-basic",
@@ -122,7 +122,7 @@
   "Secure Secret": {
     "fileName": "Web/SecureSecret",
     "title": "Secure Secret",
-    "tags": ["Dreamhack CTF Season 6 Round #10 (🌱Div2)", "Web"]
+    "tags": ["Dreamhack", "Dreamhack CTF Season 6 Round #10 (🌱Div2)", "Web"]
   },
   "rev-basic-1": {
     "fileName": "Reverse/rev-basic-1",
@@ -132,12 +132,12 @@
   "[wargame.kr] strcmp": {
     "fileName": "Web/[wargame.kr]strcmp",
     "title": "[wargame.kr] strcmp",
-    "tags": ["Dreamhack Blitz CTF #9", "Web"]
+    "tags": ["Dreamhack", "Dreamhack Blitz CTF #9", "Web"]
   },
   "Small Counter": {
     "fileName": "Reverse/SmallCounter",
     "title": "Small Counter",
-    "tags": ["Dreamhack Blitz CTF #12", "Reverse"]
+    "tags": ["Dreamhack", "Dreamhack Blitz CTF #12", "Reverse"]
   },
   "Summary": {
     "fileName": "Summary",
