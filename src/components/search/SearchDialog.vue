@@ -6,14 +6,25 @@
     <DialogContent class="sm:max-w-[600px] min-h-[60vh] max-h-[80vh]">
       <DialogHeader>
         <DialogTitle class="pb-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DialogTitle>
-        <DialogDescription class="flex w-full justify-center">
-          <SearchingItem @updateArticlesStatus="updateFilteredArticles" />
+        <DialogDescription class="flex flex-col w-full justify-center">
+          <SearchingItem
+            @updateArticlesStatus="updateFilteredArticles"
+            class="flex justify-center"
+          />
+          <div class="text-center pt-2">
+            {{ filteredArticles.length + WORD_SEARCH_RESULT }}
+          </div>
         </DialogDescription>
       </DialogHeader>
-      <div class="w-full max-h-[20rem] overflow-y-auto">
-        <div v-for="article in articles" :key="article.title + article.tags">
+      <div class="w-full max-h-[16rem] overflow-y-auto">
+        <div
+          v-if="filteredArticles.length > 0"
+          v-for="article in filteredArticles"
+          :key="article.title + article.tags"
+        >
           <SearchCard :article="article" v-if="article.title != ''" />
         </div>
+        <div v-else class="w-full text-center">{{ WORD_SEARCH_NOT_FOUND }}</div>
       </div>
     </DialogContent>
   </Dialog>
@@ -26,13 +37,21 @@
       <DrawerHeader class="text-center">
         <DrawerTitle class="pb-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DrawerTitle>
         <DrawerDescription>
-          <SearchingItem />
+          <SearchingItem class="flex justify-center" />
+          <div class="text-center pt-2">
+            {{ filteredArticles.length + WORD_SEARCH_RESULT }}
+          </div>
         </DrawerDescription>
       </DrawerHeader>
       <div class="w-full max-h-[20rem] overflow-y-auto">
-        <div v-for="article in articles" :key="article.title + article.tags">
+        <div
+          v-if="filteredArticles.length > 0"
+          v-for="article in filteredArticles"
+          :key="article.title + article.tags"
+        >
           <SearchCard :article="article" v-if="article.title != ''" />
         </div>
+        <div v-else class="w-full text-center">{{ WORD_SEARCH_NOT_FOUND }}</div>
       </div>
       <DrawerFooter class="pt-2">
         <DrawerClose as-child>
@@ -66,7 +85,12 @@ import {
 } from "@/components/ui/drawer";
 import { useMediaQuery } from "@vueuse/core";
 import { ref } from "vue";
-import { WORD_SEARCH, WORD_SEARCH_FOR_ARTICLE } from "@/src/utils/constants";
+import {
+  WORD_SEARCH,
+  WORD_SEARCH_NOT_FOUND,
+  WORD_SEARCH_FOR_ARTICLE,
+  WORD_SEARCH_RESULT,
+} from "@/src/utils/constants";
 import SearchingItem from "./SearchingItem.vue";
 import articleInfomation from "@/src/utils/articleInfomation.json";
 import type { Articles } from "@/src/utils/constants";
@@ -85,12 +109,6 @@ const articles = ref<Articles[]>(
 );
 
 const filteredArticles = ref<Articles[]>(articles.value);
-
-const filterArticles = (articles: Articles[], modelValue: string[]) => {
-  return articles.filter((article) =>
-    article.tags.some((tag) => modelValue.includes(tag)),
-  );
-};
 
 const updateFilteredArticles = (filtered: Articles[]) => {
   filteredArticles.value = filtered;

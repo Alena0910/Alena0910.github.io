@@ -47,6 +47,8 @@ onMounted(() => {
 body,
 html {
   width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--foreground)) transparent;
 }
 
 @media screen and (max-width: 768px) {

@@ -2,8 +2,12 @@
   <Combobox v-model="modelValue" v-model:open="open" :ignore-filter="true">
     <ComboboxAnchor as-child>
       <TagsInput v-model="modelValue" class="px-2 gap-2 w-80">
-        <div class="flex gap-2 flex-wrap items-center">
-          <TagsInputItem v-for="item in modelValue" :key="item" :value="item">
+        <div class="flex gap-2 flex-wrap items-center h-[2rem] overflow-y-auto">
+          <TagsInputItem
+            v-for="(item, index) in modelValue"
+            :key="`${item}-${index}`"
+            :value="item"
+          >
             <TagsInputItemText />
             <TagsInputItemDelete />
           </TagsInputItem>
@@ -23,14 +27,13 @@
         <ComboboxEmpty />
         <ComboboxGroup>
           <ComboboxItem
-            v-for="tag in filteredTags"
-            :key="tag"
+            v-for="(tag, index) in [...new Set(filteredTags)]"
+            :key="`${tag}-${index}`"
             :value="tag"
             @select.prevent="
               (ev) => {
                 if (typeof ev.detail.value === 'string') {
-                  searchTerm = '';
-                  modelValue.push(ev.detail.value);
+                  handleNewTagAdded(ev.detail.value);
                 }
 
                 if (filteredTags.length === 0) {
@@ -65,7 +68,7 @@ import {
   TagsInputItemText,
 } from "@/components/ui/tags-input";
 import { useFilter } from "reka-ui";
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import articleInfomation from "@/src/utils/articleInfomation.json";
 import { WORD_KEYWORD } from "@/src/utils/constants";
 import type { Articles } from "@/src/utils/constants";
@@ -74,7 +77,9 @@ const emit = defineEmits(["updateArticlesStatus"]);
 
 const tags = [
   ...new Set(
-    Object.values(articleInfomation).flatMap((article) => article.tags),
+    Object.values(articleInfomation)
+      .flatMap((article: Articles) => article.tags)
+      .filter((tag: string) => tag !== "" && tag !== undefined),
   ),
 ];
 const modelValue = ref<string[]>([]);
@@ -83,32 +88,40 @@ const searchTerm = ref<string>("");
 
 const { contains } = useFilter({ sensitivity: "base" });
 const filteredTags = computed(() => {
-  const options = tags.filter((tag: string) => !modelValue.value.includes(tag));
+  const options = tags
+    .filter((tag: string) => tag && !modelValue.value.includes(tag))
+    .map((tag) => tag.trim())
+    .filter((tag) => tag.length > 0);
   return searchTerm.value
     ? options.filter((option) => contains(option, searchTerm.value))
     : options;
 });
 
-const filterArticles = (articles: Articles[], modelValue: string[]) => {
-  return articles.filter((article) => {
-    return article.tags.some((tag) => modelValue.includes(tag));
-  });
+const handleNewTagAdded = (tag: string) => {
+  const cleanTag = tag.trim();
+  if (!cleanTag || modelValue.value.includes(cleanTag)) return;
+  modelValue.value = [...modelValue.value, cleanTag];
+  searchTerm.value = "";
 };
 
-const selectTag = (tag: string) => {
-  if (!modelValue.value.includes(tag)) {
-    modelValue.value.push(tag);
-  }
-  searchTerm.value = ""; // Clear the search term after selecting a tag
-  emit(
-    "updateArticlesStatus",
-    filterArticles(Object.values(articleInfomation), modelValue.value),
+const filterArticles = (articles: Articles[], modelValue: string[]) => {
+  if (modelValue.length === 0) return articles;
+  const articlesWithAllTags = articles.filter((article: Articles) =>
+    modelValue.every((tag) => article.tags.includes(tag)),
   );
+  const articlesWithAnyTag = articles.filter((article: Articles) =>
+    modelValue.some((tag) => article.tags.includes(tag)),
+  );
+  const uniqueArticles = [
+    ...new Set([...articlesWithAllTags, ...articlesWithAnyTag]),
+  ];
+
+  return uniqueArticles;
 };
 
 watch(
   modelValue,
-  (newValue) => {
+  (newValue: string[]) => {
     const filtered = filterArticles(Object.values(articleInfomation), newValue);
     emit("updateArticlesStatus", filtered);
   },
