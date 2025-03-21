@@ -10,7 +10,7 @@
           WEBSITE_NAME
         }}</span>
       </NuxtLink>
-    </div>
+    </div><SearchDialog />
     <div class="flex items-center gap-x-4">
       <Switch
         :checked="isDark"
@@ -39,6 +39,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Switch } from "@/components/ui/switch";
 import { AlignJustify, MoonStar, Sun } from "lucide-vue-next";
 import { WEBSITE_NAME } from "@/src/utils/constants";
+import SearchDialog from "@/src/components/SearchDialog.vue";
 
 const width = ref<number>(0);
 const height = ref<number>(0);
