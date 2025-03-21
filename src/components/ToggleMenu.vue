@@ -30,19 +30,7 @@
       />
       <div class="flex flex-row justify-center gap-x-4 py-2">
         <div>Mode</div>
-        <Switch
-          :checked="isDark"
-          @update:checked="emit('update:isDark', $event)"
-          class="flex items-center align-middle"
-        >
-          <template
-            #thumb
-            class="flex items-center justify-center align-middle"
-          >
-            <MoonStar v-if="isDark" :size="20" />
-            <Sun v-else :size="20" />
-          </template>
-        </Switch>
+        <SwitchMode />
       </div>
     </div>
   </div>
@@ -52,17 +40,15 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import avatar from "@/assets/images/avatar.jpg";
-import { Switch } from "@/components/ui/switch";
 import MenuItem from "@/src/components/MenuItem.vue";
 import menuItemsData from "@/src/utils/menuList.json";
-import { MoonStar, Sun } from "lucide-vue-next";
+import SwitchMode from "@/src/components/basic/SwitchMode.vue";
 
-const props = defineProps(["currentContent", "isDark", "isMenuOpen"]);
-const emit = defineEmits([
-  "update:currentContent",
-  "update:isDark",
-  "update:isMenuOpen",
-]);
+const props = defineProps(["currentContent", "isMenuOpen"]);
+const emit = defineEmits(["update:currentContent", "updateMenuStatus"]);
+const toggleMenu = () => {
+  emit("updateMenuStatus", !props.isMenuOpen);
+};
 
 const toggleMenuRef = ref<HTMLElement | null>(null);
 
@@ -84,7 +70,7 @@ const handleClickOutside = (event: MouseEvent) => {
     toggleMenuRef.value &&
     !toggleMenuRef.value.contains(event.target as Node)
   ) {
-    emit("update:isMenuOpen", false);
+    toggleMenu();
     document.body.style.overflow = "auto";
   }
 };

@@ -1,30 +1,15 @@
 <template>
-  <UseTemplate>
-    <form class="grid items-start gap-4 px-4">
-      <div class="grid gap-2">
-        <Label html-for="email">Email</Label>
-        <Input id="email" type="email" default-value="shadcn@example.com" />
-      </div>
-      <div class="grid gap-2">
-        <Label html-for="username">Username</Label>
-        <Input id="username" default-value="@shadcn" />
-      </div>
-      <Button type="submit"> Save changes </Button>
-    </form>
-  </UseTemplate>
-
   <Dialog v-if="isDesktop" v-model:open="isOpen">
     <DialogTrigger as-child>
-      <Button variant="ghost"><Search /></Button>
+      <Button variant="ghost"><Search />{{ WORD_SEARCH }}</Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-[425px]">
+    <DialogContent class="sm:max-w-[425px] min-h-[60vh]">
       <DialogHeader>
-        <DialogTitle>Edit profile</DialogTitle>
+        <DialogTitle class="p-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DialogTitle>
         <DialogDescription>
-          Make changes to your profile here. Click save when you're done.
+          <SearchingItem />
         </DialogDescription>
       </DialogHeader>
-      <GridForm />
     </DialogContent>
   </Dialog>
 
@@ -32,14 +17,13 @@
     <DrawerTrigger as-child>
       <Button variant="ghost"><Search /></Button>
     </DrawerTrigger>
-    <DrawerContent>
-      <DrawerHeader class="text-left">
-        <DrawerTitle>Edit profile</DrawerTitle>
+    <DrawerContent class="min-h-[60vh]">
+      <DrawerHeader class="text-center">
+        <DrawerTitle class="p-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DrawerTitle>
         <DrawerDescription>
-          Make changes to your profile here. Click save when you're done.
+          <SearchingItem />
         </DrawerDescription>
       </DrawerHeader>
-      <GridForm />
       <DrawerFooter class="pt-2">
         <DrawerClose as-child>
           <Button variant="outline"> Cancel </Button>
@@ -70,12 +54,11 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { createReusableTemplate, useMediaQuery } from "@vueuse/core";
+import { useMediaQuery } from "@vueuse/core";
 import { ref } from "vue";
+import { WORD_SEARCH, WORD_SEARCH_FOR_ARTICLE } from "@/src/utils/constants";
+import SearchingItem from "./SearchingItem.vue";
 
-const [UseTemplate, GridForm] = createReusableTemplate();
 const isDesktop = useMediaQuery("(min-width: 768px)");
 
 const isOpen = ref(false);

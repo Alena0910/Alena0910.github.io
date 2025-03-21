@@ -1,11 +1,11 @@
 <template>
   <Combobox by="label">
     <ComboboxAnchor>
-      <div class="relative w-full max-w-sm items-center">
+      <div class="relative w-[100%] items-center">
         <ComboboxInput
           class="pl-9"
-          :display-value="(val: any) => val?.label ?? ''"
-          placeholder="Select framework..."
+          :display-value="(val: any) => val?.label ?? undefined"
+          :placeholder="WORD_KEYWORD"
         />
         <span
           class="absolute start-0 inset-y-0 flex items-center justify-center px-3"
@@ -16,7 +16,7 @@
     </ComboboxAnchor>
 
     <ComboboxList>
-      <ComboboxEmpty> No framework found. </ComboboxEmpty>
+      <ComboboxEmpty> {{ WORD_SEARCH_NOT_FOUND }} </ComboboxEmpty>
 
       <ComboboxGroup>
         <ComboboxItem
@@ -48,6 +48,7 @@ import {
   ComboboxList,
 } from "@/components/ui/combobox";
 import { Check, Search } from "lucide-vue-next";
+import { WORD_KEYWORD, WORD_SEARCH_NOT_FOUND } from "@/src/utils/constants";
 
 const frameworks = [
   { value: "next.js", label: "Next.js" },

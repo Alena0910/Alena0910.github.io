@@ -10,23 +10,14 @@
           WEBSITE_NAME
         }}</span>
       </NuxtLink>
-    </div><SearchDialog />
+    </div>
     <div class="flex items-center gap-x-4">
-      <Switch
-        :checked="isDark"
-        @update:checked="$emit('update:isDark', !isDark)"
-        class="flex items-center align-middle"
-        v-if="width >= 768"
-      >
-        <template #thumb class="flex items-center justify-center align-middle">
-          <MoonStar v-if="isDark" :size="20" />
-          <Sun v-else :size="20" />
-        </template>
-      </Switch>
+      <SearchDialog />
+      <SwitchMode v-if="width >= 768"/>
       <div
-        v-if="width < 768"
+        v-show="width < 768"
         class="cursor-pointer rounded-md border-2 p-2"
-        @click.stop="$emit('update:isMenuOpen', !isMenuOpen)"
+        @click.stop="toggleMenu"
       >
         <AlignJustify />
       </div>
@@ -36,14 +27,19 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { Switch } from "@/components/ui/switch";
-import { AlignJustify, MoonStar, Sun } from "lucide-vue-next";
+import { AlignJustify } from "lucide-vue-next";
 import { WEBSITE_NAME } from "@/src/utils/constants";
 import SearchDialog from "@/src/components/SearchDialog.vue";
+import SwitchMode from "@/src/components/basic/SwitchMode.vue";
 
 const width = ref<number>(0);
 const height = ref<number>(0);
 
+const props = defineProps(["isMenuOpen"]);
+const emit = defineEmits(["updateMenuStatus"]);
+const toggleMenu = () => {
+  emit("updateMenuStatus", !props.isMenuOpen);
+};
 const updateDimensions = () => {
   width.value = window.innerWidth;
   height.value = window.innerHeight;
@@ -57,7 +53,4 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("resize", updateDimensions);
 });
-
-defineProps(["isMenuOpen", "isDark"]);
-defineEmits(["update:isMenuOpen", "update:isDark"]);
 </script>

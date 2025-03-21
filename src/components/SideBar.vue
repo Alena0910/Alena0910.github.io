@@ -5,13 +5,11 @@
       style="max-height: calc(100% - 100px)"
     >
       <ToggleMenu
-        v-if="isMenuOpen && width < 768"
+        v-show="isMenuOpen && width < 768"
         :currentContent="currentContent"
-        :isDark="isDark"
-        :isMenuOpen="isMenuOpen"
         @update:currentContent="(content) => (currentContent = content)"
-        @update:isDark="(dark) => emit('update:isDark', dark)"
-        @update:isMenuOpen="(menuOpen) => emit('update:isMenuOpen', menuOpen)"
+        :isMenuOpen="isMenuOpen"
+        @updateMenuStatus="emit('updateMenuStatus', $event)"
       />
     </div>
     <div
@@ -19,7 +17,7 @@
     >
       <div
         class="flex flex-col position-fixed top-5 left-5 rounded-lg border-solid border-2 w-56 h-auto px-4 py-8 ml-12"
-        v-if="width >= 768"
+        v-show="width >= 768"
       >
         <div id="sidebar-header" class="flex flex-col items-center">
           <Avatar class="w-20 h-20 mb-2">
@@ -67,11 +65,14 @@ import articleInfomation from "@/src/utils/articleInfomation.json";
 import { FIRST_NAME, LAST_NAME, WORD_AVATAR } from "@/src/utils/constants";
 import { componentsMap } from "@/src/utils/componentsMap";
 
-const { isMenuOpen, isDark } = defineProps(["isMenuOpen", "isDark"]);
-const emit = defineEmits(["update:isMenuOpen", "update:isDark"]);
-
 const width = ref<number>(0);
 const height = ref<number>(0);
+
+const props = defineProps(["isMenuOpen"]);
+const emit = defineEmits(["updateMenuStatus"]);
+const toggleMenu = () => {
+  emit("updateMenuStatus", !props.isMenuOpen);
+};
 
 const currentContent = ref<string>("About Me");
 
@@ -122,7 +123,7 @@ const updateDimensions = () => {
 };
 
 onMounted(async () => {
-  if (isMenuOpen) {
+  if (props.isMenuOpen) {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "";
@@ -153,7 +154,7 @@ const handleCurrentContent = (content: string) => {
 };
 
 watch(
-  () => isMenuOpen,
+  () => props.isMenuOpen,
   (newVal) => {
     if (newVal) {
       document.body.style.overflow = "hidden";

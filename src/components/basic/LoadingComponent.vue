@@ -17,19 +17,16 @@
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import { setThemeMode, handleThemeMode } from "@/src/utils/cookies";
+import {
+  checkThemeMode,
+  setThemeMode,
+  handleThemeMode,
+} from "@/src/utils/cookies";
 import { WORD_LOADER } from "@/src/utils/constants";
 
-const props = defineProps({
-  isDark: {
-    type: Boolean,
-    required: true,
-  },
-});
+const isDark = ref(checkThemeMode() === "dark");
 
-const isDark = ref(props.isDark);
-
-watch(isDark, (value) => {
+watch(isDark, (value: boolean) => {
   if (value) {
     setThemeMode("dark");
     handleThemeMode();

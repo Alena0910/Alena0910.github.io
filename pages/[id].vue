@@ -1,20 +1,10 @@
 <template>
-  <div class="flex gap-0 relative top-[120px] pb-[200px]">
-    <LoadingComponent v-if="isLoading" :isDark="isDark" />
+  <div class="flex gap-0 relative top-[120px] pb-[200px] overflow-hidden">
+    <LoadingComponent v-show="isLoading" />
     <div class="relative h-[160px]">
-      <MainNav
-        v-model:isMenuOpen="isMenuOpen"
-        v-model:isDark="isDark"
-        @update:isMenuOpen="isMenuOpen = $event"
-        @update:isDark="isDark = $event"
-      />
+      <MainNav :isMenuOpen="isMenuOpen" @updateMenuStatus="updateMenuStatus" />
     </div>
-    <SideBar
-      v-model:isMenuOpen="isMenuOpen"
-      v-model:isDark="isDark"
-      @update:isMenuOpen="isMenuOpen = $event"
-      @update:isDark="isDark = $event"
-    />
+    <SideBar :isMenuOpen="isMenuOpen" @updateMenuStatus="updateMenuStatus" />
     <BackToTop />
     <div
       class="box-border"
@@ -26,12 +16,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import MainNav from "@/src/components/MainNav.vue";
 import SideBar from "@/src/components/SideBar.vue";
 import BackToTop from "@/src/components/BackToTop.vue";
-import LoadingComponent from "@/src/components/LoadingComponent.vue";
+import LoadingComponent from "~/src/components/basic/LoadingComponent.vue";
 import About from "@/src/components/about/AboutContent.vue";
 import ErrorMsg from "@/src/components/ErrorMsg.vue";
 import articleInfomation from "@/src/utils/articleInfomation.json";
@@ -73,19 +63,12 @@ const currentWriteup = computed(() => {
   return { fileName: "404", title: "404", tags: ["404"] };
 });
 
+const isDark = ref(checkThemeMode() === "dark");
 const isMenuOpen = ref(false);
-const isDark = ref(false);
+const updateMenuStatus = (status: boolean) => {
+  isMenuOpen.value = status;
+};
 const isLoading = ref(true);
-
-watch(isDark, (value) => {
-  if (value) {
-    setThemeMode("dark");
-    handleThemeMode();
-  } else {
-    setThemeMode("light");
-    handleThemeMode();
-  }
-});
 
 const updateDimensions = () => {
   width.value = window.innerWidth;
@@ -93,9 +76,8 @@ const updateDimensions = () => {
 };
 
 onMounted(() => {
-  if (checkThemeMode() === "dark") {
-    isDark.value = true;
-  }
+  isDark.value = checkThemeMode() === "dark";
+  console.log(isDark.value);
   if (isMenuOpen) {
     document.body.style.overflow = "hidden";
   } else {
@@ -111,5 +93,15 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", updateDimensions);
+});
+
+watch(isDark, (value: boolean) => {
+  if (value) {
+    setThemeMode("dark");
+    handleThemeMode();
+  } else {
+    setThemeMode("light");
+    handleThemeMode();
+  }
 });
 </script>

@@ -13,14 +13,14 @@
       @click.stop="handleClick(menuItem)"
     >
       {{ menuItem.name }}
-      <span v-if="menuItem.subItems">
+      <span v-show="menuItem.subItems">
         <Badge variant="secondary" class="text-xs">{{
           menuItem.subItems.length
         }}</Badge>
       </span>
       <div
         class="text-gray-400 rounded-full w-6 h-6 flex items-center justify-center"
-        v-if="menuItem.subItems"
+        v-show="menuItem.subItems"
       >
         <ChevronDown v-if="!group[menuItem.name]" />
         <ChevronUp v-else />
@@ -29,7 +29,7 @@
     <div
       id="sidebar-group-content"
       class="w-fit flex flex-col mt-2 ml-2 gap-2 border-l-2 border-secondary"
-      v-if="group[menuItem.name] && menuItem.subItems"
+      v-show="group[menuItem.name] && menuItem.subItems"
     >
       <MenuItem
         v-for="subItem in menuItem.subItems"

@@ -14,6 +14,13 @@ const PERSONAL_WEBSITE = {
   instagram: "https://www.instagram.com/hpc_0910/",
 };
 
+// searching
+const WORD_SEARCH = "搜尋";
+const WORD_SEARCH_FOR_ARTICLE = "搜尋文章";
+const WORD_SEARCH_NOT_FOUND = "找不到相關文章 (╥﹏╥) ";
+const WORD_NO_SIMILAR_POST = "沒有相似文章 (๑•́ ₃ •̀๑)";
+const WORD_KEYWORD = "關鍵字";
+
 // error
 const ERROR_MESSAGE = {
   400: "Bad request",
@@ -39,5 +46,10 @@ export {
   WORD_LEETCODE,
   WORD_INSTAGRAM,
   PERSONAL_WEBSITE,
+  WORD_SEARCH,
+  WORD_SEARCH_FOR_ARTICLE,
+  WORD_SEARCH_NOT_FOUND,
+  WORD_NO_SIMILAR_POST,
+  WORD_KEYWORD,
   ERROR_MESSAGE,
 };
