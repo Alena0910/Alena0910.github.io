@@ -56,4 +56,5 @@ export const componentsMap: { [key: string]: Component } = {
   "head-dump": CTFWriteupTemplate,
   SSTI1: CTFWriteupTemplate,
   "picoCTF 2025 Summary": NormalArticle,
+  "proxy-1": CTFWriteupTemplate,
 };

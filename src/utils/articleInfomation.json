@@ -37,7 +37,13 @@
   "3-Cipher": {
     "fileName": "Crypto/3-Cipher",
     "title": "3-Cipher",
-    "tags": ["Dreamhack", "Dreamhack Blitz CTF #2", "Crypto", "2025/01/30"]
+    "tags": [
+      "Dreamhack",
+      "Blitz CTF",
+      "Dreamhack Blitz CTF #2",
+      "Crypto",
+      "2025/01/30"
+    ]
   },
   "addition-quiz": {
     "fileName": "Misc/addition-quiz",
@@ -117,7 +123,7 @@
   "Summer Fan": {
     "fileName": "Reverse/SummerFan",
     "title": "Summer Fan",
-    "tags": ["Dreamhack Blitz CTF #4", "Dreamhack", "Reverse"]
+    "tags": ["Dreamhack Blitz CTF #4", "Blitz CTF", "Dreamhack", "Reverse"]
   },
   "Secure Secret": {
     "fileName": "Web/SecureSecret",
@@ -132,12 +138,12 @@
   "[wargame.kr] strcmp": {
     "fileName": "Web/[wargame.kr]strcmp",
     "title": "[wargame.kr] strcmp",
-    "tags": ["Dreamhack", "Dreamhack Blitz CTF #9", "Web"]
+    "tags": ["Dreamhack", "Blitz CTF", "Dreamhack Blitz CTF #9", "Web"]
   },
   "Small Counter": {
     "fileName": "Reverse/SmallCounter",
     "title": "Small Counter",
-    "tags": ["Dreamhack", "Dreamhack Blitz CTF #12", "Reverse"]
+    "tags": ["Dreamhack", "Blitz CTF", "Dreamhack Blitz CTF #12", "Reverse"]
   },
   "Summary": {
     "fileName": "Summary",
@@ -244,5 +250,10 @@
     "title": "",
     "tags": ["picoCTF 2025"],
     "articleTheme": "CTFWriteup/picoCTF2025/"
+  },
+  "proxy-1": {
+    "fileName": "Web/proxy-1",
+    "title": "proxy-1",
+    "tags": ["Dreamhack", "Web", "Dreamhack Blitz CTF #15", "Blitz CTF"]
   }
 }

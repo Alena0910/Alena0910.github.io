@@ -91,7 +91,8 @@ const filteredTags = computed(() => {
   const options = tags
     .filter((tag: string) => tag && !modelValue.value.includes(tag))
     .map((tag) => tag.trim())
-    .filter((tag) => tag.length > 0);
+    .filter((tag) => tag.length > 0)
+    .sort((a, b) => a.length - b.length);
   return searchTerm.value
     ? options.filter((option) => contains(option, searchTerm.value))
     : options;
