@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container flex flex-col gap-4 mb-10 overflow-y-hidden border-secondary border-0"
+    class="container flex flex-col gap-4 mb-10 overflow-hidden border-secondary border-0"
   >
     <div id="about-title" class="text-[24px] font-bold mt-4">
       {{ FIRST_NAME }} {{ LAST_NAME }}
@@ -15,7 +15,7 @@
         </div>
         <div id="about-intro-article" class="ml-4 flex flex-col gap-2">
           <p>
-            我是黃品甄，目前就讀於台北市立大學資訊工程學系，我對於學習程式有著濃厚的興趣，並且積極提升能力。最近偶爾會打
+            我是黃品甄，目前就讀於台北市立大學資訊科學學系，我對於學習程式有著濃厚的興趣，並且積極提升能力。最近偶爾會打
             CTF ，是一個新手，希望能學到更多資安知識。
           </p>
           <p>
@@ -31,6 +31,7 @@
           </p>
         </div>
       </div>
+      <TimeLine />
       <div id="about-team" class="flex flex-col gap-10 my-4">
         <div id="about-dayoff">
           <div id="about-dayoff-title" class="mb-4 text-[20px] border-b">
@@ -78,6 +79,7 @@ import { ExternalLink } from "lucide-vue-next";
 import aboutImage from "@/assets/images/aboutImage.jpg";
 import ContactMe from "@/src/components/contact/contactMe.vue";
 import { FIRST_NAME, LAST_NAME } from "@/src/utils/constants";
+import TimeLine from "../basic/TimeLine.vue";
 
 onMounted(() => {
   const element = document.getElementById("app");
