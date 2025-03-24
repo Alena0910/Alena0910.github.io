@@ -20,7 +20,7 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import MainNav from "@/src/components/MainNav.vue";
 import SideBar from "@/src/components/SideBar.vue";
-import BackToTop from "@/src/components/BackToTop.vue";
+import BackToTop from "@/src/components/basic/BackToTop.vue";
 import LoadingComponent from "~/src/components/basic/LoadingComponent.vue";
 
 const router = useRouter();

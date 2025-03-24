@@ -5,13 +5,13 @@
       <MainNav :isMenuOpen="isMenuOpen" @updateMenuStatus="updateMenuStatus" />
     </div>
     <SideBar :isMenuOpen="isMenuOpen" @updateMenuStatus="updateMenuStatus" />
-    <BackToTop />
     <div
       class="box-border h-full"
       :style="{ maxWidth: width < 768 ? '100dvw' : '65%' }"
     >
       <component :is="currentComponent" :articleInfo="currentWriteup" />
     </div>
+    <BackToTop />
   </div>
 </template>
 
@@ -20,8 +20,8 @@ import { ref, computed, onBeforeMount, onUnmounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import MainNav from "@/src/components/MainNav.vue";
 import SideBar from "@/src/components/SideBar.vue";
-import BackToTop from "@/src/components/BackToTop.vue";
-import LoadingComponent from "~/src/components/basic/LoadingComponent.vue";
+import BackToTop from "@/src/components/basic/BackToTop.vue";
+import LoadingComponent from "@/src/components/basic/LoadingComponent.vue";
 import About from "@/src/components/about/AboutContent.vue";
 import ErrorMsg from "@/src/components/ErrorMsg.vue";
 import articleInfomation from "@/src/utils/articleInfomation.json";
@@ -66,6 +66,7 @@ const currentWriteup = computed(() => {
 const isDark = ref(checkThemeMode() === "dark");
 const isMenuOpen = ref(false);
 const updateMenuStatus = (status: boolean) => {
+  console.log(status);
   isMenuOpen.value = status;
 };
 const isLoading = ref(true);

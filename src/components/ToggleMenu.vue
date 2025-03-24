@@ -37,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import avatar from "@/assets/images/avatar.jpg";
 import MenuItem from "@/src/components/MenuItem.vue";
@@ -67,6 +67,7 @@ const toggleGroup = (groupName: string) => {
 
 const handleClickOutside = (event: MouseEvent) => {
   if (
+    props.isMenuOpen &&
     toggleMenuRef.value &&
     !toggleMenuRef.value.contains(event.target as Node)
   ) {
@@ -89,7 +90,7 @@ onMounted(() => {
   document.addEventListener("click", handleClickOutside);
 });
 
-onBeforeUnmount(() => {
+onUnmounted(() => {
   window.removeEventListener("resize", updateDimensions);
   document.removeEventListener("click", handleClickOutside);
 });
