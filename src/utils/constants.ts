@@ -8,6 +8,7 @@ const WORD_LOADER = "Loading";
 const WORD_GITHUB = "GitHub";
 const WORD_LEETCODE = "LeetCode";
 const WORD_INSTAGRAM = "Instagram";
+const WORD_INDIVIDUAL_EXPERIENCE = "個人經歷";
 const PERSONAL_WEBSITE = {
   github: "https://github.com/Alena0910",
   leetcode: "https://leetcode.com/u/pinzhenhuang0910/",
@@ -51,6 +52,7 @@ export {
   WORD_GITHUB,
   WORD_LEETCODE,
   WORD_INSTAGRAM,
+  WORD_INDIVIDUAL_EXPERIENCE,
   PERSONAL_WEBSITE,
   WORD_SEARCH,
   WORD_SEARCH_FOR_ARTICLE,
