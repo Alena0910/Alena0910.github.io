@@ -41,7 +41,10 @@
       <DrawerHeader class="text-center">
         <DrawerTitle class="pb-4">{{ WORD_SEARCH_FOR_ARTICLE }}</DrawerTitle>
         <DrawerDescription>
-          <SearchingItem class="flex justify-center" />
+          <SearchingItem
+            @updateArticlesStatus="updateFilteredArticles"
+            class="flex justify-center"
+          />
           <div class="text-center pt-2">
             {{ filteredArticles.length + WORD_SEARCH_RESULT }}
           </div>
