@@ -57,4 +57,8 @@ export const componentsMap: { [key: string]: Component } = {
   SSTI1: CTFWriteupTemplate,
   "picoCTF 2025 Summary": NormalArticle,
   "proxy-1": CTFWriteupTemplate,
+  "L4 - L7 test": NormalArticle,
+  "Crypto L2": NormalArticle,
+  "Crypto L1": NormalArticle,
+  "Crypto L0": NormalArticle,
 };
