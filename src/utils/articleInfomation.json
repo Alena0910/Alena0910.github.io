@@ -279,5 +279,23 @@
     "title": "",
     "tags": [],
     "articleTheme": "CryptographyNotes"
+  },
+  "Crypto L3": {
+    "fileName": "L3",
+    "title": "",
+    "tags": [],
+    "articleTheme": "CryptographyNotes"
+  },
+  "L8 - L10 test": {
+    "fileName": "L8_L10_test",
+    "title": "",
+    "tags": [],
+    "articleTheme": "ComputerNetworkCourseNotes"
+  },
+  "L11 - L13 test": {
+    "fileName": "L11_L13_test",
+    "title": "",
+    "tags": [],
+    "articleTheme": "ComputerNetworkCourseNotes"
   }
 }
