@@ -297,5 +297,10 @@
     "title": "",
     "tags": [],
     "articleTheme": "ComputerNetworkCourseNotes"
+  },
+  "simple_sqli_chatgpt": {
+    "fileName": "Web/simple_sqli_chatgpt",
+    "title": "simple_sqli_chatgpt",
+    "tags": ["Dreamhack", "Dreamhack Blitz CTF #18", "Web", "Blitz CTF"]
   }
 }

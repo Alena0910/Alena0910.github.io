@@ -27,7 +27,8 @@
               { "name": "session-basic" },
               { "name": "Secure Secret" },
               { "name": "[wargame.kr] strcmp" },
-              { "name": "proxy-1" }
+              { "name": "proxy-1" },
+              { "name": "simple_sqli_chatgpt" }
             ]
           },
           {
