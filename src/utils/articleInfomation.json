@@ -302,5 +302,10 @@
     "fileName": "Web/simple_sqli_chatgpt",
     "title": "simple_sqli_chatgpt",
     "tags": ["Dreamhack", "Dreamhack Blitz CTF #18", "Web", "Blitz CTF"]
+  },
+  "Audio Steganography": {
+    "fileName": "Forensics/AudioSteganography",
+    "title": "Audio Steganography",
+    "tags": ["Dreamhack", "Forensics"]
   }
 }
