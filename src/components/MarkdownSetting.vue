@@ -16,6 +16,7 @@ defineProps<{
 const CustomMarkdown = (md: any) => {
   md.set({
     highlight: (str: string, lang: string) => {
+      // @ts-ignore
       if (typeof window !== "undefined" && lang && hljs.languages[lang]) {
         try {
           return `<pre class="hljs"><code class="hljs">${hljs.highlight(str, { language: lang }).value}</code></pre>`;

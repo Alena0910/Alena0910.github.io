@@ -66,4 +66,5 @@ export const componentsMap: { [key: string]: Component } = {
   "L11 - L13 test": NormalArticle,
   simple_sqli_chatgpt: CTFWriteupTemplate,
   "Audio Steganography": CTFWriteupTemplate,
+  "Crypto L3-lm": NormalArticle,
 };
