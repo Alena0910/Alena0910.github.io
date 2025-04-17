@@ -47,6 +47,8 @@ import {
 } from "@/src/utils/constants";
 import TimeLine from "../basic/TimeLine.vue";
 import ProjectDescription from "./ProjectDescription.vue";
+import PortalImage from "@/assets/images/portal_img.png";
+import CarbonImage from "@/assets/images/carbon_img.png";
 
 onMounted(() => {
   const element = document.getElementById("app");
@@ -71,18 +73,26 @@ const profileDescription = ref([
 
 const projects = ref([
   {
+    image: PortalImage,
     title: "請假系統維護團隊",
     projectName: "請假系統",
+    time: "2024/07 ~ present",
+    about: "學生可於此系統進行請假相關事宜，並檢視請假紀錄。",
     description:
-      "於 2024 年七月加入請假系統維護團隊，與團隊成員一同維護請假系統，並且參與後續前端開發。",
+      "於上線一年後加入維護團隊，與現團隊成員一同維護請假系統，並且參與後續前端開發。",
     link: "https://portal.utaipei.edu.tw/",
+    skills: ["React", "JavaScript", "CSS"],
   },
   {
+    image: CarbonImage,
     title: "減碳系統開發團隊",
     projectName: "Carbon Diary",
-    description:
-      "2024 年八月學生減碳專案開始開發，負責前端開發，並且參與後續維護。",
+    time: "2024/08 ~ present",
+    about:
+      "學生用餐時若有攜帶環保餐具，可掃描店家 QRCode，並於本系統紀錄減碳次數，管理員可於管理者介面檢視減碳紀錄、抽獎名單及下載.csv。",
+    description: "負責前端開發，並且參與後續維護。",
     link: "https://carbon-diary.utaipei.edu.tw/login",
+    skills: ["React", "Next.js", "TypeScript", "CSS"],
   },
 ]);
 </script>
