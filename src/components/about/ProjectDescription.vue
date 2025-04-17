@@ -34,12 +34,15 @@
             {{ skill }}
           </Badge>
         </div>
-        <Button class="flex items-center mt-4 w-fit" as-child>
-          <a target="_blank" :href="project.link" class="text-white">
-            {{ project.projectName }}
-            <ExternalLink />
-          </a>
-        </Button>
+        <div class="w-full flex justify-end">
+          <Button class="flex items-center mt-4 w-fit" variant="link" as-child>
+            <a target="_blank" :href="project.link">
+              查看專案 >
+              {{ project.projectName }}
+              <ExternalLink />
+            </a>
+          </Button>
+        </div>
       </div>
     </div>
   </div>
