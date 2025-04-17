@@ -1,24 +1,27 @@
 <template>
-  <div
-    class="max-w-[100vw] relative left-[60px] top-0 flex flex-col m-5 pl-5 border-l-2 border-secondary"
-    style="width: calc(100% - 60px)"
-  >
+  <div class="text-[20px] border-b">其他經歷</div>
+  <div class="flex justify-center">
     <div
-      class="w-fit relative mb-[30px]"
-      v-for="(event, index) in events"
-      :key="index"
+      class="max-w-[100vw] relative left-[60px] top-0 flex flex-col m-5 pl-5 border-l-2 border-secondary"
+      style="width: calc(100% - 60px)"
     >
       <div
-        class="w-fit absolute left-[-120px] top-0 p-2 text-foreground rounded-md"
+        class="w-fit relative mb-[30px]"
+        v-for="(event, index) in events"
+        :key="index"
       >
-        {{ event.date }}
-      </div>
-      <div
-        class="relative left-[-25px] top-[16px] w-2 h-2 rounded-[50%] bg-primary"
-      ></div>
-      <div class="w-fit ml-[40px]">
-        <div class="w-fit font-bold break-all">{{ event.title }}</div>
-        <div class="w-fit mt-2 break-all">{{ event.description }}</div>
+        <div
+          class="w-fit absolute left-[-120px] top-0 p-2 text-foreground rounded-md"
+        >
+          {{ event.date }}
+        </div>
+        <div
+          class="relative left-[-25px] top-[16px] w-2 h-2 rounded-[50%] bg-primary"
+        ></div>
+        <div class="w-fit ml-[40px]">
+          <div class="w-fit font-bold break-all">{{ event.title }}</div>
+          <div class="w-fit mt-2 break-all">{{ event.description }}</div>
+        </div>
       </div>
     </div>
   </div>

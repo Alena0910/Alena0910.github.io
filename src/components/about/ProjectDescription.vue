@@ -4,7 +4,9 @@
       {{ project.title }}
     </div>
     <div class="flex flex-col items-center gap-4 md:grid md:grid-cols-2">
-      <div class="h-full border-2 border-gray-300 rounded-lg overflow-hidden justify-center flex items-center bg-gray-100">
+      <div
+        class="h-full border-2 border-gray-300 rounded-lg overflow-hidden justify-center flex items-center bg-gray-100"
+      >
         <img
           :src="project.image"
           alt="project"
@@ -15,7 +17,9 @@
       <div class="ml-4 flex flex-col gap-3">
         <div class="text-md text-gray-700">
           <div class="text-lg text-gray-800 font-semibold">概述</div>
-        <div class="text-sm text-gray-600 w-full flex justify-end mb-3">{{ project.time }}</div>
+          <div class="text-sm text-gray-600 w-full flex justify-end mb-3">
+            {{ project.time }}
+          </div>
           <div class="text-sm text-gray-500">{{ project.about }}</div>
         </div>
         <Separator />
