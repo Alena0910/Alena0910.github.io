@@ -124,8 +124,6 @@ const skills = ref([
       "C++",
       "Java",
       "Python",
-      "HTML",
-      "CSS",
       "JavaScript",
       "TypeScript",
       "React",
