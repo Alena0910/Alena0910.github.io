@@ -15,12 +15,12 @@
         />
       </div>
       <div class="ml-4 flex flex-col gap-3">
-        <div class="text-md text-gray-700">
-          <div class="text-lg text-gray-800 font-semibold">概述</div>
-          <div class="text-sm text-gray-600 w-full flex justify-end mb-3">
+        <div class="text-md">
+          <div class="text-lg font-semibold">概述</div>
+          <div class="text-sm w-full flex justify-end mb-3">
             {{ project.time }}
           </div>
-          <div class="text-sm text-gray-500">{{ project.about }}</div>
+          <div class="text-sm">{{ project.about }}</div>
         </div>
         <Separator />
         <div>{{ project.description }}</div>

@@ -5,10 +5,10 @@
       <div class="flex flex-col gap-1 mb-2">
         <div class="text-[16px] font-bold border-b">{{ item.school }}</div>
         <div class="flex flex-col gap-1 ml-4">
-          <div class="text-[14px] text-gray-700">{{ item.major }}</div>
-          <div class="text-[14px] text-gray-700">{{ item.degree }}</div>
-          <div class="text-[14px] text-gray-700">{{ item.status }}</div>
-          <div class="text-[12px] text-gray-500 w-full flex justify-end">
+          <div class="text-[14px]">{{ item.major }}</div>
+          <div class="text-[14px]">{{ item.degree }}</div>
+          <div class="text-[14px]">{{ item.status }}</div>
+          <div class="text-[12px] w-full flex justify-end">
             {{ item.startDate }} - {{ item.endDate }}
           </div>
         </div>

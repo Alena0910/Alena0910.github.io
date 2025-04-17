@@ -7,7 +7,7 @@
       </div>
       <div v-for="item in skill.details">
         <ul class="ml-4 flex flex-col gap-2 pr-2">
-          <li class="text-sm text-gray-500">{{ item }}</li>
+          <li class="text-sm">{{ item }}</li>
         </ul>
       </div>
     </div>
