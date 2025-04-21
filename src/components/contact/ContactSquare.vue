@@ -4,11 +4,11 @@
       <TooltipTrigger as-child>
         <Button
           variant="ghost"
-          class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200 ease-in-out"
+          class="rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200 ease-in-out"
           as-child
         >
           <a :href="url" target="_blank" rel="noopener noreferrer">
-            <component :is="icon" />
+            <component :is="icon" stroke-width="2.5" />
           </a>
         </Button>
       </TooltipTrigger>
