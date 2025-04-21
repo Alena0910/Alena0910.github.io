@@ -4,7 +4,7 @@
       <TooltipTrigger as-child>
         <Button
           variant="ghost"
-          class="rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200 ease-in-out"
+          class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200 ease-in-out"
           as-child
         >
           <a :href="url" target="_blank" rel="noopener noreferrer">
