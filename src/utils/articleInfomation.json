@@ -318,5 +318,10 @@
     "fileName": "Reverse/EasyAssembly",
     "title": "Easy Assembly",
     "tags": ["Dreamhack", "Blitz CTF", "Dreamhack Blitz CTF #20", "Reverse"]
+  },
+  "ex-reg-ex": {
+    "fileName": "Web/ex-reg-ex",
+    "title": "ex-reg-ex",
+    "tags": ["Dreamhack", "Blitz CTF", "Dreamhack Blitz CTF #21", "Web"]
   }
 }

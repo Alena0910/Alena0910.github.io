@@ -68,4 +68,5 @@ export const componentsMap: { [key: string]: Component } = {
   "Audio Steganography": CTFWriteupTemplate,
   "Crypto L3-lm": NormalArticle,
   "Easy Assembly": CTFWriteupTemplate,
+  "ex-reg-ex": CTFWriteupTemplate,
 };
