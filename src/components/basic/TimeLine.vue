@@ -96,5 +96,15 @@ const events = ref([
     title: "picoCTF 2025",
     description: "231 th / 10460",
   },
+  {
+    date: "2025.05",
+    title: "MyFirstCTF 2025",
+    description: "11 th / 83 (臺灣 個人賽)，潛力獎",
+  },
+  {
+    //date: "2025.05",
+    title: "Pre-exam 2025",
+    description: "186 th / 389 (臺灣 個人賽)",
+  },
 ]);
 </script>
