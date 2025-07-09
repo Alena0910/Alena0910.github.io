@@ -10,7 +10,7 @@ interface Props {
 let { headings = [] } = Astro.props;
 
 let minDepth = 10;
-for (const heading of headings) { 
+for (const heading of headings) {
 	minDepth = Math.min(minDepth, heading.depth);
 }
 
