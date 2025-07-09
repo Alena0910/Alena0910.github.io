@@ -9,6 +9,16 @@ category: 'CTF Writeup'
 draft: false 
 ---
 
+44 th / 1024
+
+![團隊成績](/assets/PearlCTF2025/team.png)
+
+![個人成績](/assets/PearlCTF2025/personal.png)
+
+CTF 這東西，越打覺得自己越菜🥬
+
+---
+
 # Pearl CTF 2025
 
 ## Forensics

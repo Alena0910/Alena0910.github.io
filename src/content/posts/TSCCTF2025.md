@@ -9,6 +9,14 @@ category: 'CTF Writeup'
 draft: false 
 ---
 
+85 th / 509  
+
+很努力地去開提示，賭自己能不能多寫幾題，現實是，不能 (╥﹏╥)  
+
+![個人成績](/assets/TSCCTF2025/score.png)
+
+---
+
 # TSC CTF 2025
 
 ## Crypto
