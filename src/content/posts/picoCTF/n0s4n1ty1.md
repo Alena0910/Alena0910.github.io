@@ -4,7 +4,7 @@ published: 2025-07-10
 updated: 2025-07-10
 description: 'picoCTF'
 image: ''
-tags: ["CTF Writeup", "picoCTF", "web"]
+tags: ["CTF Writeup", "picoCTF", "Web"]
 category: 'picoCTF'
 draft: false 
 ---

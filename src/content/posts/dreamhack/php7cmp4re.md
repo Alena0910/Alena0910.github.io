@@ -2,10 +2,10 @@
 title: php7cmp4re
 published: 2025-02-20
 updated: 2025-07-09
-description: 'DreamHack'
+description: 'Dreamhack'
 image: ''
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'DreamHack'
+category: 'Dreamhack'
 draft: false 
 ---
 

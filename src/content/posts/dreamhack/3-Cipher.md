@@ -5,7 +5,7 @@ updated: 2025-07-09
 description: 'Dreamhack Blitz CTF#2'
 image: ''
 tags: ["CTF Writeup", "Dreamhack", "Crypto"]
-category: 'DreamHack'
+category: 'Dreamhack'
 draft: false 
 ---
 

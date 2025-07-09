@@ -5,7 +5,7 @@ updated: 2025-07-09
 description: 'Dreamhack'
 image: ''
 tags: ["CTF Writeup", "Dreamhack", "Reverse"]
-category: 'DreamHack'
+category: 'Dreamhack'
 draft: false 
 ---
 

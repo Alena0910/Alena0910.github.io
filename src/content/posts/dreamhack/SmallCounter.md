@@ -2,10 +2,10 @@
 title: Small Counter
 published: 2025-02-20
 updated: 2025-07-09
-description: 'DreamHack Blitz CTF #12'
+description: 'Dreamhack Blitz CTF #12'
 image: ''
 tags: ["CTF Writeup", "Dreamhack", "Reverse"]
-category: 'DreamHack'
+category: 'Dreamhack'
 draft: false 
 ---
 
