@@ -57,3 +57,16 @@ lang: ''
 fs.writeFileSync(path.join(targetDir, fileName), content)
 
 console.log(`Post ${fullPath} created`)
+
+
+const parsed = path.parse(fileName); 
+const imageSubPath = path.join(parsed.dir, parsed.name);
+const imageDir = path.join("public", "assets");
+const fullImagePath = path.join(imageDir, imageSubPath);
+
+if (!fs.existsSync(fullImagePath)) {
+  fs.mkdirSync(fullImagePath, { recursive: true });
+  console.log(`Image directory ${fullImagePath} created`);
+} else {
+  console.log(`Image directory ${fullImagePath} already exists`);
+}
