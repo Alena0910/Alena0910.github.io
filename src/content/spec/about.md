@@ -28,10 +28,10 @@ draft: false
   - 大二上擔任「Java 程式設計」課程助教
   - CPE 最高題數 4 題
 
-[picoCTF](https://play.picoctf.org/users/pinzhen0910)  
-[LeetCode](https://leetcode.com/u/pinzhenhuang0910/)  
+學習與挑戰紀錄
 
-::github{repo="Alena0910/Alena0910"}
+- [picoCTF](https://play.picoctf.org/users/pinzhen0910)  
+- [LeetCode](https://leetcode.com/u/pinzhenhuang0910/)  
 
 ---
 
@@ -154,3 +154,7 @@ draft: false
 
 ### 資料庫
 - MySQL
+
+---
+
+::github{repo="Alena0910/Alena0910"}
