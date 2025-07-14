@@ -100,7 +100,7 @@ draft: false
 
 - **2025.07**  
   - **No Hack No CTF 2025**  
-    28th / 473  
+    28 th / 473  
 
 ---
 
@@ -110,7 +110,7 @@ draft: false
 <img src="/assets/images/project/portal_img.png" alt="portal" style="max-height: 400px; max-width: 50%; border-radius: 16px;" />
 
 
-2024/07 ~ present
+2024/07 - present
 > 學生可於此系統進行請假相關事宜，並檢視請假紀錄。  
 
 於上線一年後加入維護團隊，與現團隊成員一同維護請假系統，並且參與後續前端開發。
@@ -123,7 +123,7 @@ draft: false
 
 <img src="/assets/images/project/carbon_img.png" alt="carbon diary" style="max-height: 400px; max-width: 50%; border-radius: 16px;" />
 
-2024/08 ~ present
+2024/08 - present
 > 學生用餐時若有攜帶環保餐具，可掃描店家 QRCode，並於本系統紀錄減碳次數，管理員可於管理者介面檢視減碳紀錄、抽獎名單及下載.csv。  
 
 負責前端開發，並且參與後續維護。
