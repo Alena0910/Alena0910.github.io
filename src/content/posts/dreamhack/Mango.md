@@ -2,14 +2,15 @@
 title: Mango
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # Mango
+
 題目
 
 > 이 문제는 데이터베이스에 저장된 플래그를 획득하는 문제입니다.  
@@ -29,7 +30,7 @@ draft: false
 
 ![ban](/assets/dreamhack/MangoDH/image-2.png)
 
-用 script 去用正則表示法跳過DH檢查猜密碼
+用 script 去用正則表示法跳過 DH 檢查猜密碼
 
 ```py
 import requests

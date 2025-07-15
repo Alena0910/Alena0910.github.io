@@ -2,11 +2,11 @@
 title: PearlCTF 2025
 published: 2025-03-10
 updated: 2025-07-09
-description: 'PearlCTF 2025 writeup'
-image: ''
+description: "PearlCTF 2025 writeup"
+image: ""
 tags: ["CTF Writeup"]
-category: 'CTF Writeup'
-draft: false 
+category: "CTF Writeup"
+draft: false
 ---
 
 44 th / 1024
@@ -15,7 +15,7 @@ draft: false
 
 ![個人成績](/assets/PearlCTF2025/personal.png)
 
-CTF 這東西，越打覺得自己越菜🥬
+CTF 這東西，越打覺得自己越菜 🥬
 
 ---
 
@@ -24,7 +24,8 @@ CTF 這東西，越打覺得自己越菜🥬
 ## Forensics
 
 ### HTTP Carrier Pigeons
-透過題目給的網站 [連結](https://fingerprint.byu.edu)，去對照兩份request
+
+透過題目給的網站 [連結](https://fingerprint.byu.edu)，去對照兩份 request
 
 ![request1](/assets/PearlCTF2025/Forensics/HTTPCarrierPigeons/image.png)  
 ![request2](/assets/PearlCTF2025/Forensics/HTTPCarrierPigeons/image-1.png)
@@ -39,7 +40,7 @@ pearl{haproxy_evilginx}
 
 這一題用到工具 [QRazyBox](https://merri.cx/qrazybox/)
 
-原圖把 qr code 可以辨識的地方都塗掉了，從橫向去數就會發現這是33\*33，且邊緣可以對照出是 ver.4，然後慢慢把其他黑白區域填回去
+原圖把 qr code 可以辨識的地方都塗掉了，從橫向去數就會發現這是 33\*33，且邊緣可以對照出是 ver.4，然後慢慢把其他黑白區域填回去
 
 ![version and size](/assets/PearlCTF2025/Misc/qr-secrets/image-1.png)
 

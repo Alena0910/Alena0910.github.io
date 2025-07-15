@@ -1,23 +1,23 @@
 ---
 title: shell_basic
 published: 2025-07-10
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF writeup", "Dreamhack", "pwnable"]
-category: 'Dreamhack'
-draft: false 
-lang: ''
+category: "Dreamhack"
+draft: false
+lang: ""
 ---
 
 # shell_basic
 
-[題目連結](https://dreamhack.io/wargame/challenges/410)  
+[題目連結](https://dreamhack.io/wargame/challenges/410)
 
-這一題限制在 10 內完成  
+這一題限制在 10 內完成
 
-seccomp (secure computing mode) 增加的規則會封鎖 `execve` 和 `execveat`  
+seccomp (secure computing mode) 增加的規則會封鎖 `execve` 和 `execveat`
 
-題目說 flag 在 `/home/shell_basic/flag_name_is_loooooong`  
+題目說 flag 在 `/home/shell_basic/flag_name_is_loooooong`
 
 找 chatgpt 生 shellcode (這應該不會是需要自己刻的東西...吧)
 

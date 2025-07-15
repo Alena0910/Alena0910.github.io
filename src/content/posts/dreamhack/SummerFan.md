@@ -2,14 +2,15 @@
 title: SummerFan
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack Blitz CTF #4'
-image: ''
+description: "Dreamhack Blitz CTF #4"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Reverse"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # Summer Fan
+
 題目
 
 > 여름은 갔지만,, 열이올라요... 더울 때 이걸 사용해줘! :fan:

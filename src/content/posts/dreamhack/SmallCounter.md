@@ -2,14 +2,15 @@
 title: Small Counter
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack Blitz CTF #12'
-image: ''
+description: "Dreamhack Blitz CTF #12"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Reverse"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # Small Counter
+
 題目：
 
 > 플래그를 생성하는 함수 flag_gen()을 호출하고 플래그를 출력하세요.  

@@ -2,15 +2,15 @@
 title: proxy-1
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
-
 # proxy-1
+
 題目：
 
 > Raw Socket Sender가 구현된 서비스입니다.  
@@ -20,7 +20,7 @@ draft: false
 
 ![/admin](/assets/dreamhack/proxy-1/image-2.png)
 
-根據原始碼給的更改datd並填寫到`/socket`
+根據原始碼給的更改 datd 並填寫到`/socket`
 
 ![/socket](/assets/dreamhack/proxy-1/image-1.png)
 

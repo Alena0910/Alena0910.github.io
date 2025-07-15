@@ -2,16 +2,16 @@
 title: TSC CTF 2025
 published: 2025-01-17
 updated: 2025-07-09
-description: 'TSC CTF 2025 writeup'
-image: ''
+description: "TSC CTF 2025 writeup"
+image: ""
 tags: ["CTF Writeup"]
-category: 'CTF Writeup'
-draft: false 
+category: "CTF Writeup"
+draft: false
 ---
 
-85 th / 509  
+85 th / 509
 
-很努力地去開提示，賭自己能不能多寫幾題，現實是，不能 (╥﹏╥)  
+很努力地去開提示，賭自己能不能多寫幾題，現實是，不能 (╥﹏╥)
 
 ![個人成績](/assets/TSCCTF2025/score.png)
 
@@ -31,14 +31,14 @@ draft: false
 
 > Hint: NIST SP 800-67 are sometimes helpful
 
-去找到 NIST SP 800-67 並上傳到notebooklm，會發現TDEA有弱金鑰的問題
+去找到 NIST SP 800-67 並上傳到 notebooklm，會發現 TDEA 有弱金鑰的問題
 
 > 弱金鑰: 會將明文加密為相同密文  
 > 半弱金鑰: 成對的金鑰會將明文加密為相同的密文
 
 ![NotebookLM](/assets/TSCCTF2025/2DES/image.png)
 
-從題目中給的code可知，其中有一對在弱金鑰的範圍內
+從題目中給的 code 可知，其中有一對在弱金鑰的範圍內
 
 ```
 #!/usr/bin/env python
@@ -114,9 +114,10 @@ TSC{th3_Key_t0_br34k_DES_15_tHe_keY}
 ## Web
 
 ### Ave Mujica
+
 ![index](/assets/TSCCTF2025/AveMujica/image.png)
 
-進入網頁後開F12，可以觀察到所有圖片的來源都是由 `image?name=example.webp` 取得
+進入網頁後開 F12，可以觀察到所有圖片的來源都是由 `image?name=example.webp` 取得
 
 ![src](/assets/TSCCTF2025/AveMujica/image-1.png)
 
@@ -124,7 +125,7 @@ TSC{th3_Key_t0_br34k_DES_15_tHe_keY}
 
 ![mygo](/assets/TSCCTF2025/AveMujica/image-3.png)
 
-經過嘗試後找到`image?name=../../../proc/self/environ`，打開檔案後就可以看到flag
+經過嘗試後找到`image?name=../../../proc/self/environ`，打開檔案後就可以看到 flag
 
 ![flag](/assets/TSCCTF2025/AveMujica/image-2.png)
 
@@ -133,11 +134,12 @@ TSC{敬愛爽🍷}
 ```
 
 ### BeIDol
+
 剛開始試過 sql injection，但發現不是，接著去看程式碼
 
-發現有一個secretbackdoor123
+發現有一個 secretbackdoor123
 
-把phpsessid改成secretbackdoor123
+把 phpsessid 改成 secretbackdoor123
 
 ![cookies](/assets/TSCCTF2025/BeIDol/image.png)
 
@@ -145,7 +147,7 @@ TSC{敬愛爽🍷}
 
 ![fileExplorer](/assets/TSCCTF2025/BeIDol/image-1.png)
 
-用script去掃所有檔案
+用 script 去掃所有檔案
 
 ```
 database:
@@ -228,7 +230,7 @@ cat /etc/passwd</pre>            </div>
 
 ```
 
-根據第12001找到的檔案輸入網址
+根據第 12001 找到的檔案輸入網址
 
 ![12001](/assets/TSCCTF2025/BeIDol/image-2.png)
 
@@ -243,7 +245,7 @@ cat /etc/passwd</pre>            </div>
 
 ![jsscript](/assets/TSCCTF2025/BeIDol/image-7.png)
 
-基本上沒有看到甚麼重要的東西，找找看有沒有flag.txt
+基本上沒有看到甚麼重要的東西，找找看有沒有 flag.txt
 
 ```
 find / -name "flag*" 2>/dev/null
@@ -251,11 +253,10 @@ find / -name "flag*" 2>/dev/null
 
 ![findFLAG](/assets/TSCCTF2025/BeIDol/image-8.png)
 
-印出/opt/flag/flag.txt的內容
+印出/opt/flag/flag.txt 的內容
 
 ![flag](/assets/TSCCTF2025/BeIDol/image-9.png)
 
 ```
 TSC{You_can_be_ID0R_12353oujhefrgiuoewihoqweihfo}
 ```
-

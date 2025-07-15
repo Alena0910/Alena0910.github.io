@@ -2,14 +2,15 @@
 title: session-basic
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # session-basic
+
 題目
 
 > 쿠키와 세션으로 인증 상태를 관리하는 간단한 로그인 서비스입니다.  

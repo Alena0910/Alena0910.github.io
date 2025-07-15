@@ -2,15 +2,16 @@
 title: d
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Crypto"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # d
-題目給了一個script
+
+題目給了一個 script
 
 ```py
 from Crypto.Util.number import *

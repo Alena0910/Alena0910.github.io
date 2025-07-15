@@ -2,11 +2,11 @@
 title: Apriti sesamo
 published: 2025-07-13
 updated: 2025-07-14
-description: 'picoCTF'
-image: ''
+description: "picoCTF"
+image: ""
 tags: ["CTF Writeup", "picoCTF", "Web"]
-category: 'picoCTF'
-draft: false 
+category: "picoCTF"
+draft: false
 ---
 
 # Apriti sesamo
@@ -15,7 +15,7 @@ draft: false
 
 ![index](/assets/picoCTF/Apriti_sesamo/image.png)
 
-有先試試看是不是 sql injection ，但是沒有甚麼反應  
+有先試試看是不是 sql injection ，但是沒有甚麼反應
 
 ![login](/assets/picoCTF/Apriti_sesamo/image-1.png)
 
@@ -23,9 +23,9 @@ draft: false
 
 ![alt text](/assets/picoCTF/Apriti_sesamo/image-2.png)
 
-從 error message 可以知道有用 `sha1()` 去驗證  
+從 error message 可以知道有用 `sha1()` 去驗證
 
-之後沒有甚麼想法就去看題目給的提示，提示是 `Backup file` ，檢查出存在 `/impossibleLogin.php~`，程式註解中有判斷的邏輯  
+之後沒有甚麼想法就去看題目給的提示，提示是 `Backup file` ，檢查出存在 `/impossibleLogin.php~`，程式註解中有判斷的邏輯
 
 ![alt text](/assets/picoCTF/Apriti_sesamo/image-3.png)
 
@@ -37,18 +37,18 @@ draft: false
 ```
 
 根據 PHP 特性，當傳入 username[]=A 與 password[]=B 時
-- `$_POST['username']` 與 `$_POST['password']` 會是陣列  
-- $a == $b：當兩個陣列內容不相等時，`==` 會回傳 false  
-- sha1(array)：在 PHP 中，sha1(array) 會觸發 warning 並回傳 NULL  
 
-用 `Burp Suite` 去改成 `username[]=0&password[]=1`  
+- `$_POST['username']` 與 `$_POST['password']` 會是陣列
+- $a == $b：當兩個陣列內容不相等時，`==` 會回傳 false
+- sha1(array)：在 PHP 中，sha1(array) 會觸發 warning 並回傳 NULL
+
+用 `Burp Suite` 去改成 `username[]=0&password[]=1`
 
 ![alt text](/assets/picoCTF/Apriti_sesamo/image-5.png)
 
-得到 flag  
+得到 flag
 
 ![alt text](/assets/picoCTF/Apriti_sesamo/image-4.png)
-
 
 ```txt
 picoCTF{w3Ll_d3sErV3d_Ch4mp_b88bdb32}

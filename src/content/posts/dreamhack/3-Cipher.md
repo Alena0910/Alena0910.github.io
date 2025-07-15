@@ -2,14 +2,15 @@
 title: 3-Cipher
 published: 2025-01-30
 updated: 2025-07-09
-description: 'Dreamhack Blitz CTF#2'
-image: ''
+description: "Dreamhack Blitz CTF#2"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Crypto"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # 3-Cipher
+
 題目
 
 > 3-cipher.py는 Key1, Key2, AES_iv, AES_cipher_text를 출력하는 암호화 프로그램입니다.  
@@ -94,7 +95,7 @@ AES_iv: 0FVXK8rOgrGWpXSrTAhDYg==
 AES_cipher_text: qqD5QHpddaV0QxWsfeTa3A==
 ```
 
-`Key1` 是 `ac_key` 的前14個字符，用 RSA 加密過
+`Key1` 是 `ac_key` 的前 14 個字符，用 RSA 加密過
 
 `Key2` 是 `ac_key` 後半部分，用 ROT13 (Caesar Cipher) 加密過
 
@@ -104,7 +105,7 @@ Key1 + Key2 會獲得完整 ac_key
 
 用 unpad 移除填充，取得 FLAG
 
-把 n拿去 factordb
+把 n 拿去 factordb
 
 ![factorDB](/assets/dreamhack/3-Cipher/image.png)
 

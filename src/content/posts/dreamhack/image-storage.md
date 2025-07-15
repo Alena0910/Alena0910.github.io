@@ -2,14 +2,15 @@
 title: image-storage
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # image-storage
+
 題目
 
 > php로 작성된 파일 저장 서비스입니다.  

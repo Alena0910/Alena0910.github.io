@@ -2,14 +2,15 @@
 title: Audio Steganography
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Forensics"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # Audio Steganography
+
 題目：
 
 > WAV 파일에서 이상한 소리가 나요!  

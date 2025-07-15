@@ -2,14 +2,15 @@
 title: Secure Secret
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # Secure Secret
+
 題目
 
 > The flag file is placed hidden in a random directory, and concealed its directory inside the session.  

@@ -2,17 +2,18 @@
 title: csrf-2
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # csrf-2
+
 ![home](/assets/dreamhack/csrf-2/image.png)
 
-題目會比對輸入的密碼是否等於users[password]
+題目會比對輸入的密碼是否等於 users[password]
 
 ![script](/assets/dreamhack/csrf-2/image-2.png)
 

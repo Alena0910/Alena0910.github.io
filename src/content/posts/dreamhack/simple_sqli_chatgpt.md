@@ -2,15 +2,15 @@
 title: simple_sqli_chatgpt
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
-
 # simple_sqli_chatgpt
+
 題目：
 
 > 어딘가 이상한 로그인 서비스입니다.  

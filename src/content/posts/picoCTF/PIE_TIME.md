@@ -2,11 +2,11 @@
 title: PIE TIME &  PIE TIME 2
 published: 2025-07-11
 updated: 2025-07-12
-description: 'picoCTF'
-image: ''
+description: "picoCTF"
+image: ""
 tags: ["CTF Writeup", "picoCTF", "pwnable"]
-category: 'picoCTF'
-draft: false 
+category: "picoCTF"
+draft: false
 ---
 
 # PIE TIME
@@ -73,7 +73,7 @@ win = base + offset_win
 print(hex(win)) # 0x5c84c7ebc2a7
 ```
 
-![flag](/assets/picoCTF/PIE_TIME/image-1.png)  
+![flag](/assets/picoCTF/PIE_TIME/image-1.png)
 
 ```txt
 picoCTF{b4s1c_p051t10n_1nd3p3nd3nc3_3d38fb4b}
@@ -144,10 +144,7 @@ main 的位址是 `0x0000555555555400`
 
 ![main](/assets/picoCTF/PIE_TIME/image-3.png)
 
-
-
 ![rsp](/assets/picoCTF/PIE_TIME/image-6.png)
-
 
 嘗試之後好像第 25 個 %p 印出來的值，正好是 main 的位址，nc 過去試試看
 
@@ -172,7 +169,7 @@ print(hex(leak - offset))
 picoCTF{p13_5h0u1dn'7_134k_1ef23143}
 ```
 
-我覺得這類型的題目還不是很熟，常常都算不好 (╥﹏╥)  
+我覺得這類型的題目還不是很熟，常常都算不好 (╥﹏╥)
 
 ---
 

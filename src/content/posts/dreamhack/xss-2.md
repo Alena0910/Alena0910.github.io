@@ -2,14 +2,15 @@
 title: xss-2
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # xss-2
+
 跟 `xss-1` 的區別在於進入 `/vuln` 之後 `<script>alert(1)</script>` 沒有效果了
 
 ![vuln](/assets/dreamhack/xss-2/image.png)
@@ -25,4 +26,3 @@ draft: false
 ```
 DH{3c01577e9542ec24d68ba0ffb846508f}
 ```
-

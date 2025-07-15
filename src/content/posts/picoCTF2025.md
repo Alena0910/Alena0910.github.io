@@ -2,11 +2,11 @@
 title: PicoCTF 2025
 published: 2025-03-20
 updated: 2025-07-09
-description: 'picoCTF 2025 writeup'
-image: ''
+description: "picoCTF 2025 writeup"
+image: ""
 tags: ["CTF Writeup", "picoCTF"]
-category: 'CTF Writeup'
-draft: false 
+category: "CTF Writeup"
+draft: false
 ---
 
 這是第一次參加 picoCTF !!!  
@@ -43,7 +43,7 @@ draft: false
 
 ---
 
-後來去看大神的 writeup，是要用 python 套件 `stepic 0.5.0`，原來提示在題目的標題阿www
+後來去看大神的 writeup，是要用 python 套件 `stepic 0.5.0`，原來提示在題目的標題阿 www
 
 ---
 
@@ -129,7 +129,6 @@ Jinja2 SSTI 漏洞允許存取 Python 的 os 模組並執行系統命令
 picoCTF{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_bd4cfc64}
 ```
 
-
 ## Crypto
 
 ### EVEN RSA CAN BE BROKEN
@@ -158,7 +157,7 @@ picoCTF{tw0_1$_pr!m3f995d086}
 
 ### Guess My Cheese (Part 1)
 
-用[Affine Cipher](https://www.dcode.fr/affine-cipher)去decode
+用[Affine Cipher](https://www.dcode.fr/affine-cipher)去 decode
 
 ```
 nc verbal-sleep.picoctf.net 58487
@@ -295,9 +294,9 @@ print("Done")
 
 ```
 
-![flag](/assets/picoCTF2025/Crypto/Guess_My_Cheese_(Part_2)/image.png)
+![flag](</assets/picoCTF2025/Crypto/Guess_My_Cheese_(Part_2)/image.png>)
 
-這次的cheese是`Gouda`，加鹽的 hex 是`9f`
+這次的 cheese 是`Gouda`，加鹽的 hex 是`9f`
 
 ```
 picoCTF{cHeEsY6ce3864c}
@@ -334,7 +333,6 @@ picoCTF{cHeEsY6ce3864c}
 ```
 picoCTF{UseStr0nG_h@shEs_&PaSswDs!_23622a7e}
 ```
-
 
 ## Forensics
 
@@ -440,16 +438,16 @@ picoCTF{B1tl0ck3r_dr1v3_d3crypt3d_9029ae5b}
 
 ![flag1](/assets/picoCTF2025/Forensics/Event-Viewing/image-1.png)
 
-把`cGljb0NURntFdjNudF92aTN3djNyXw==`拿去decode
+把`cGljb0NURntFdjNudF92aTN3djNyXw==`拿去 decode
 
 ```
 picoCTF{Ev3nt_vi3wv3r_
 ```
 
-因為第一個拿到的是 base64 形式，推斷剩下兩段都是 base64 ，用`尋找`去搜尋`==`或`=`結尾的字串，加快找flag的速度
+因為第一個拿到的是 base64 形式，推斷剩下兩段都是 base64 ，用`尋找`去搜尋`==`或`=`結尾的字串，加快找 flag 的速度
 
 ![flag2](/assets/picoCTF2025/Forensics/Event-Viewing/image-2.png)
-把`MXNfYV9wcjN0dHlfdXMzZnVsXw==`拿去decode
+把`MXNfYV9wcjN0dHlfdXMzZnVsXw==`拿去 decode
 
 ```
 1s_a_pr3tty_us3ful_
@@ -457,7 +455,7 @@ picoCTF{Ev3nt_vi3wv3r_
 
 ![flag3](/assets/picoCTF2025/Forensics/Event-Viewing/image-3.png)
 
-把`MXNfYV9wcjN0dHlfdXMzZnVsXw==`拿去decode
+把`MXNfYV9wcjN0dHlfdXMzZnVsXw==`拿去 decode
 
 ```
 t00l_81ba3fe9}
@@ -500,7 +498,7 @@ bnRfdGg0dA==
 QHESHGY=
 ```
 
-用 cyberchef 可以看到有很像flag的東西
+用 cyberchef 可以看到有很像 flag 的東西
 
 ![cyberchef](/assets/picoCTF2025/Forensics/Ph4nt0m_1ntrud3r/image-1.png)
 

@@ -2,14 +2,15 @@
 title: Easy Assembly
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Reverse"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # Easy Assembly
+
 ![enc_flag](/assets/dreamhack/EasyAssembly/image.png)
 
 `check_password`中可以看到`enc_flag[i] ^ len ^ password[i]`

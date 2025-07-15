@@ -3,23 +3,24 @@ title: "About Me"
 published: 2025-03-10
 updated: 2025-07-14
 description: "This is my about page"
-image: ''
+image: ""
 tags: ["CTF Writeup"]
-category: 'CTF Writeup'
-draft: false 
+category: "CTF Writeup"
+draft: false
 ---
 
 # Huang, Pin-Chen
 
-> 不用很厲害才開始，要先開始才會很厲害  
+> 不用很厲害才開始，要先開始才會很厲害
 
-我是黃品甄，目前就讀於臺北市立大學資訊科學系，升大三。對程式設計與資安領域充滿興趣，持續透過開發實作與 CTF 比賽累積實戰經驗。  
+我是黃品甄，目前就讀於臺北市立大學資訊科學系，升大三。對程式設計與資安領域充滿興趣，持續透過開發實作與 CTF 比賽累積實戰經驗。
 
-目前專注於後端開發與資安相關技術，未來希望朝這兩個方向深入發展。  
+目前專注於後端開發與資安相關技術，未來希望朝這兩個方向深入發展。
 
 就學期間：
 
 - **專案開發**
+
   - [請假系統維護](#請假系統維護團隊)
   - [減碳系統開發](#減碳系統開發團隊)
 
@@ -30,8 +31,8 @@ draft: false
 
 學習與挑戰紀錄
 
-- [picoCTF](https://play.picoctf.org/users/pinzhen0910)  
-- [LeetCode](https://leetcode.com/u/pinzhenhuang0910/)  
+- [picoCTF](https://play.picoctf.org/users/pinzhen0910)
+- [LeetCode](https://leetcode.com/u/pinzhenhuang0910/)
 
 ---
 
@@ -40,82 +41,90 @@ draft: false
 - **臺北市立大學**  
   資訊科學系 大二  
   就讀中  
-  2023/09 - present  
+  2023/09 - present
 - **臺北市立中山女子高級中學**  
   普通科 高中  
   畢業  
-  2019/09 - 2022/06  
+  2019/09 - 2022/06
 
 ---
 
 ## 其他經歷
 
-- **2022**  
+- **2022**
+
   - **GICS 資安女婕思**  
-    資安闖天關 高中職組 初賽  
+    資安闖天關 高中職組 初賽
 
-- **2024.05**  
+- **2024.05**
+
   - **臺北程式設計節城市儀表板大黑客松**  
-    進入決選  
+    進入決選
 
-- **2024.09**  
+- **2024.09**
+
   - **臺北程式設計節城市通微服務大黑客松**  
-    初賽  
+    初賽
   - **PatriotCTF**  
-    162 th / 1360  
+    162 th / 1360
 
-- **2024.10**  
+- **2024.10**
   - **IRON CTF 2024**  
-    29 th / 1033  
-    
-- **2024.11**  
+    29 th / 1033
+- **2024.11**
+
   - **2024 Haunted Brewery**  
-    40 th / 340  
-  - **臺北市立大學113.1全校程式設計實作競賽**  
-    佳作  
+    40 th / 340
+  - **臺北市立大學 113.1 全校程式設計實作競賽**  
+    佳作
   - **INTIGRITI 1337UP LIVE 2024**  
-    66 th / 1061  
+    66 th / 1061
 
-- **2024.12**  
+- **2024.12**
+
   - **0xL4ugh CTF**  
-    104 th / 308  
+    104 th / 308
 
-- **2025.01**  
+- **2025.01**
+
   - **IrisCTF2025**  
-    242 th / 1064   
+    242 th / 1064
   - **TSCCTF2025**  
-    85 th / 509 (臺灣 個人賽)  
+    85 th / 509 (臺灣 個人賽)
 
-- **2025.03**  
+- **2025.03**
+
   - **PearlCTF 2025**  
-    44 th / 1024  
+    44 th / 1024
   - **picoCTF 2025**  
-    231 th / 10460  
+    231 th / 10460
 
-- **2025.05**  
+- **2025.05**
+
   - **MyFirstCTF 2025**  
-    11 th / 83 (臺灣 個人賽)，潛力獎  
+    11 th / 83 (臺灣 個人賽)，潛力獎
   - **Pre-exam 2025**  
-    186 th / 389 (臺灣 個人賽)  
+    186 th / 389 (臺灣 個人賽)
 
-- **2025.07**  
+- **2025.07**
   - **No Hack No CTF 2025**  
-    28 th / 473  
+    28 th / 473
 
 ---
 
 ## 專案經歷
+
 ### 請假系統維護團隊
 
 <img src="/assets/images/project/portal_img.png" alt="portal" style="max-height: 400px; max-width: 50%; border-radius: 16px;" />
 
+2024/07 - present
 
-2024/07 - present  
-> 學生可於此系統進行請假相關事宜，並檢視請假紀錄。  
+> 學生可於此系統進行請假相關事宜，並檢視請假紀錄。
 
-於上線一年後加入維護團隊，與現團隊成員一同維護請假系統，並且參與後續前端開發。  
+於上線一年後加入維護團隊，與現團隊成員一同維護請假系統，並且參與後續前端開發。
 
-`React` | `JavaScript` | `CSS`  
+`React` | `JavaScript` | `CSS`
 
 [查看專案 > 請假系統](https://portal.utaipei.edu.tw/)
 
@@ -123,12 +132,13 @@ draft: false
 
 <img src="/assets/images/project/carbon_img.png" alt="carbon diary" style="max-height: 400px; max-width: 50%; border-radius: 16px;" />
 
-2024/08 - present  
-> 學生用餐時若有攜帶環保餐具，可掃描店家 QRCode，並於本系統紀錄減碳次數，管理員可於管理者介面檢視減碳紀錄、抽獎名單及下載.csv。  
+2024/08 - present
 
-負責前端開發，並且參與後續維護。  
+> 學生用餐時若有攜帶環保餐具，可掃描店家 QRCode，並於本系統紀錄減碳次數，管理員可於管理者介面檢視減碳紀錄、抽獎名單及下載.csv。
 
-`React` | `Next.js` | `TypeScript` | `CSS`  
+負責前端開發，並且參與後續維護。
+
+`React` | `Next.js` | `TypeScript` | `CSS`
 
 [查看專案 > Carbon Diary](https://portal.utaipei.edu.tw/)
 
@@ -137,6 +147,7 @@ draft: false
 ## Skills
 
 ### 語言與框架
+
 - C
 - C++
 - Java
@@ -149,11 +160,13 @@ draft: false
 - PHP
 
 ### DevOps
+
 - Docker
 - Git
 - GitHub
 
 ### 資料庫
+
 - MySQL
 
 ---

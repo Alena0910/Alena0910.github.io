@@ -2,15 +2,15 @@
 title: xss-1
 published: 2025-02-20
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Web"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
-
 # xss-1
+
 題目
 
 > 여러 기능과 입력받은 URL을 확인하는 봇이 구현된 서비스입니다.  

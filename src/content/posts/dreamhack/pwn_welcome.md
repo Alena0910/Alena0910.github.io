@@ -1,12 +1,12 @@
 ---
 title: welcome
 published: 2025-07-10
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF writeup", "Dreamhack", "pwnable"]
-category: 'Dreamhack'
-draft: false 
-lang: ''
+category: "Dreamhack"
+draft: false
+lang: ""
 ---
 
 # welcome
@@ -19,7 +19,7 @@ lang: ''
 #include <stdio.h>
 
 int main(void) {
-    
+
     FILE *fp;
     char buf[0x80] = {};
     size_t flag_len = 0;
@@ -49,4 +49,4 @@ DH{5cc72596cba7104569abb37f71b8ccf3}
 
 ---
 
-本來想說要來好好練 pwn！寫完這一題之後：...這題不算www
+本來想說要來好好練 pwn！寫完這一題之後：...這題不算 www

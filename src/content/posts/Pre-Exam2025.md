@@ -2,22 +2,20 @@
 title: My First CTF & Pre-exam 2025
 published: 2025-05-27
 updated: 2025-07-09
-description: 'My First CTF & Pre-exam 2025 writeup'
-image: ''
+description: "My First CTF & Pre-exam 2025 writeup"
+image: ""
 tags: ["CTF Writeup"]
-category: 'CTF Writeup'
-draft: false 
+category: "CTF Writeup"
+draft: false
 ---
 
+這個 writeup 是 6/30 以後才能放出來的，然後我發現，我忘了截圖分數啊啊啊！！！ (╥﹏╥)
 
-這個 writeup 是 6/30 以後才能放出來的，然後我發現，我忘了截圖分數啊啊啊！！！ (╥﹏╥)  
+總之這次 mfc 排名是 11 th / 83，拿到潛力獎，獲得 ais3 新型態資安實務暑期課程的門票了 xdd
 
-總之這次 mfc 排名是 11 th / 83，拿到潛力獎，獲得 ais3 新型態資安實務暑期課程的門票了xdd  
+Pre-exam 成績是 186 th / 389
 
-Pre-exam 成績是 186 th / 389  
-
-還是太菜🥬了，會多練，明年...明年爭取也能去 ais3 吧 (畫餅中)
-
+還是太菜 🥬 了，會多練，明年...明年爭取也能去 ais3 吧 (畫餅中)
 
 # My First CTF
 
@@ -40,6 +38,7 @@ AIS3{Welcome_And_Enjoy_The_CTF_!}
 ![Pasted%20image%2020250529203656.png](/assets/Pre-exam2025/Pasted%20image%2020250529203656.png)
 
 QRCode 掃描後得到：
+
 ```txt
 mf1687991111404137095000001f4000001f40000000034785923vg9sg89nfznfpnkyfrlsoa==:**********:2:2:1:蝦拉
 ```
@@ -90,11 +89,11 @@ AIS3{G01ang_H2v3_a_c0O1_way!!!_Us3ing_C0NN3ct_M3Th07_L0l@T0m0r1n_1s_cute_D0_yo7_
 
 ![Pasted%20image%2020250529212532.png](/assets/Pre-exam2025/Pasted%20image%2020250529212532.png)
 
-在網址的地方加上`/readable_flag_somerandomstring`( 比賽的時候沒有留下那一串就先不打了在圖片裡 )，找到flag
+在網址的地方加上`/readable_flag_somerandomstring`( 比賽的時候沒有留下那一串就先不打了在圖片裡 )，找到 flag
 
 ![Pasted%20image%2020250524150722.png](/assets/Pre-exam2025/Pasted%20image%2020250524150722.png)
 
-( 賽後寫 writeup 進去 flag 看起來好像不太一樣⬇️ )
+( 賽後寫 writeup 進去 flag 看起來好像不太一樣 ⬇️ )
 
 ![Pasted%20image%2020250529212940.png](/assets/Pre-exam2025/Pasted%20image%2020250529212940.png)
 
@@ -253,15 +252,15 @@ for combo in itertools.product(*all_candidates):
             print("Flag:", flag)
             break
 
-  
-  
+
+
 
 flag_bytes = bytearray()
 for val, rot in zip(values, rotations):
     rotated = rotate_right(val, rot)
     flag_bytes.extend(struct.pack("<Q", rotated))
 
-  
+
 
 flag = flag_bytes.decode("utf-8")
 print("Flag:", flag)

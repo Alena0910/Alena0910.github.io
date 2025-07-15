@@ -2,14 +2,15 @@
 title: lolololologfile
 published: 2025-01-30
 updated: 2025-07-09
-description: 'Dreamhack'
-image: ''
+description: "Dreamhack"
+image: ""
 tags: ["CTF Writeup", "Dreamhack", "Forensics"]
-category: 'Dreamhack'
-draft: false 
+category: "Dreamhack"
+draft: false
 ---
 
 # lolololologfile
+
 題目是
 
 > Someone deleted the PDF file which has flag!  
