@@ -41,12 +41,12 @@ draft: false
 
 等了 n 個小時終於等到一條提示：
 
-> Have you tested for the usual culprits? XSS, SQL injection, path injection  
+> Have you tested for the usual culprits? XSS, SQL injection, path injection
 
-那就先試試 SQL injection 吧，因為 page 的跳轉是靠數字去做查詢，先試試`' OR '1'=='1`，在 `/page/1` 沒有反應，但在 `/page/edit/1` 成功了  
+那就先試試 SQL injection 吧，因為 page 的跳轉是靠數字去做查詢，先試試`' OR '1'=='1`，在 `/page/1` 沒有反應，但在 `/page/edit/1` 成功了
 
-![alt text](/assets/hacker101/Micro-CMS_v1/image-6.png)  
+![alt text](/assets/hacker101/Micro-CMS_v1/image-6.png)
 
-下班xddd  
+下班 xddd
 
-![alt text](/assets/hacker101/Micro-CMS_v1/image-7.png)  
+![alt text](/assets/hacker101/Micro-CMS_v1/image-7.png)
