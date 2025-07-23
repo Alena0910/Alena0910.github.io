@@ -3,7 +3,7 @@ title: welcome
 published: 2025-07-10
 description: "Dreamhack"
 image: ""
-tags: ["CTF writeup", "Dreamhack", "pwnable"]
+tags: ["CTF Writeup", "Dreamhack", "pwnable"]
 category: "Dreamhack"
 draft: false
 lang: ""
