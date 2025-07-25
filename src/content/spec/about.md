@@ -1,11 +1,11 @@
 ---
 title: "About Me"
 published: 2025-03-10
-updated: 2025-07-14
+updated: 2025-07-25
 description: "This is my about page"
 image: ""
-tags: ["CTF Writeup"]
-category: "CTF Writeup"
+tags: ["About"]
+category: "About"
 draft: false
 ---
 
@@ -132,11 +132,13 @@ draft: false
 
 <img src="/assets/images/project/carbon_img.png" alt="carbon diary" style="max-height: 400px; max-width: 50%; border-radius: 16px;" />
 
-2024/08 - present
+2024/08 - 2025/07
 
 > 學生用餐時若有攜帶環保餐具，可掃描店家 QRCode，並於本系統紀錄減碳次數，管理員可於管理者介面檢視減碳紀錄、抽獎名單及下載.csv。
 
-負責前端開發，並且參與後續維護。
+負責前端開發，並且參與後續維護。  
+
+因學校政策減碳系統無後續使用規劃，於 2025 年 7 月停止維護。  
 
 `React` | `Next.js` | `TypeScript` | `CSS`
 
